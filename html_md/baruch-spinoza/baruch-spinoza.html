@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Computer Modern";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/computermodern/Sans/cmunss.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "scpro";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/sourcecodepro/SourceCodePro-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+    text-rendering: geometricPrecision;
+    font-family: "Dyslexie";
+    /*font-family:  "scpro Light";*/
+    font-family:  "Computer Modern";
+    font-size: 18px;
+    line-height: 150%;
+    color: rgba(242, 240, 205, 0.8);
+
+    background-color: #000;
+    background-color: #02090B;
+    margin: 10px 13px 10px 13px;
+    padding-bottom: 64px;
+}
+
+html * {
+    color-profile: sRGB;
+}
+
+strong {
+    font-weight: normal;
+    color: #ffd479;
+    color: rgba(100, 182, 138, 1);
+}
+
+em {
+
+    font-weight: normal;
+    font-style: normal;
+    color: #ffd479;
+    color: #64B68A;
+}
+
+table {
+    min-width: 1150px !important;
+    width: 100% !important;
+    margin: 10px 0 15px 0;
+    border-collapse: collapse;
+}
+
+table tr:nth-child(2n) {
+    background-color: #06181b;
+}
+
+td, th {
+    border: 1px solid #3C3C3E;
+    padding: 3px 10px;
+}
+
+th {
+    padding: 5px 10px;
+    color: #B3D8FD;
+    background-color: #06181b;
+}
+
+a {
+    color: #B4D9FB;
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+a:hover {
+    color: #2668D4;
+    text-decoration: none;
+}
+
+a img {
+    border: 2px solid;
+}
+
+p {
+    margin-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+img {
+    background-color: #7F7F7F;
+    max-width: 1600px;
+}
+
+ul, ol {
+    padding: 16px 0 8px 10px;
+    margin: 16px 0 8px 10px;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none; /* Hides the default checkbox style */
+    height: 15px !important;
+    width: 15px !important;
+    top: -4px !important;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: .15s;
+    border-radius: 4px;
+    background-color: #FCB8B0;
+    color: black
+}
+
+input[type="checkbox"]:checked {
+    background-color: #BCFBBA;
+}
+
+input[type="checkbox"]:before, input[type="checkbox"]:checked:before {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    height: 16px !important;
+    width: 16px !important;
+    line-height: 16px;
+    text-align: center;
+    font-weight: bold;
+    content: '✘';
+}
+
+input[type="checkbox"]:checked:before {
+    content: '✔';
+}
+
+input[type="checkbox"]:hover:before {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+li {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-left: 8px;
+    padding-left: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+li.task-list-item {
+    list-style-type: none;
+    margin-left: -20px;
+}
+
+li.task-list-item label {
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+
+li.task-list-item input {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+}
+
+ul li:nth-child(even) {
+    background-color: #06181b;
+}
+ol li:nth-child(even) {
+    background-color: #06181b;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    color: #b4d9fb;
+    margin-top: 18px;
+    text-rendering: geometricPrecision;
+    font-family: "scpro";
+    font-size: 18px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    text-transform: capitalize;
+}
+
+h1 {
+    color: #54B2BC;
+    color: rgba(255, 212, 121, 1);
+    font-weight: normal;
+    margin-top: 32px;
+    font-size: 26px;
+    margin-bottom: 12px;
+
+}
+
+h2 {
+
+    color: #ffd479;
+    color: rgba(255, 212, 121, 0.8);
+
+    margin-top: 24px;
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-size: 20px;
+
+    color: rgba(129, 206, 203, 1);
+    margin-top: 20px;
+}
+
+h4 {
+    color: rgba(129, 206, 203, 0.8);
+}
+
+h5 {
+    color: rgba(129, 206, 203, 0.7);
+}
+
+h6 {
+    color: rgba(129, 206, 203, 0.6);
+}
+
+ul, ol {
+    padding-left: 30px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+hr {
+    margin: 32px 12px;
+    border: 0;
+    border-bottom: 1px solid #B4C5C5;
+}
+
+blockquote {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-style: normal;
+}
+
+blockquote p {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+    padding-left: 8px;
+    border-left: 3px solid #54B2BC;
+}
+
+blockquote p a {
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+code, pre {
+    font-family: "scpro" !important;
+    color: #8EB1D0;
+    display: block;
+    padding: 12px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    border: 1px solid #3C3C3E;
+    background-color: #051012;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+* {
+    -webkit-print-color-adjust: exact;
+}
+
+@media screen and (min-width: 914px) {
+    body {
+        width: 1145px;
+        margin: 10px auto;
+    }
+}
+
+@media print {
+    body, code, pre code, h1, h2, h3, h4, h5, h6 {
+        color: black;
+        background: white;
+    }
+
+    table, pre {
+        page-break-inside: avoid;
+    }
+}
+
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    background-color: #051012;
+    color: #116CD6 white-space : pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+pre code {
+    background-color: #051012;
+    color: #81ddaf;
+    padding: 0;
+    border: none;
+margin-top: 0px !important;
+
+margin-bottom: 0px !important;
+}
+
+pre:not([class]) {
+    border: none;
+    padding: 0px !important;
+    color: #F2F0CD;
+
+}
+
+p {
+    white-space: pre-line;
+}
+
+
+div.sourceCode {
+    overflow-x: auto
+}
+
+table.sourceCode, td.lineNumbers, td.sourceCode, tr.sourceCode {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    border: none
+}
+
+table.sourceCode {
+    width: 100%;
+    line-height: 100%
+}
+
+td.lineNumbers {
+    text-align: right;
+    padding-right: 4px;
+    padding-left: 4px;
+    color: #aaa;
+    border-right: 1px solid #aaa
+}
+
+td.sourceCode {
+    padding-left: 5px
+}
+
+.codehilite code, .codehilite pre {
+    color: #fdce93;
+    background-color: #3f3f3f
+}
+
+code > span.kw {
+    color: #BCFBBA;
+    font-weight: 700
+}
+
+code > span.dt {
+    color: #e90
+}
+
+code > span.dv {
+    color: #8AF9F0
+}
+
+code > span.bn, code > span.fl {
+    color: #40a070
+}
+
+code > span.st {
+    color: #FBFBAB
+}
+
+code > span.ch {
+    color: #93DD9F
+}
+
+code > span.co {
+    color: #929292
+}
+
+code > span.ot {
+    color: #76AEF4
+}
+
+code > span.al {
+    color: #e90
+}
+
+code > span.fu {
+    color: #00B1B1
+}
+
+code > span.er {
+    color: #FB9BEA
+}
+img[src='Error.src']{
+    display: none;
+}
+
+</style>
+</head>
+<body>
+<h2 id="chapter-6-curriculum-philosophy">Chapter 6: curriculum: Philosophy</h2>
+<h2 id="philosophy"><a href="../category/curriculum/philosophy/index.html">Philosophy</a></h2>
+<h1 id="baruch-spinoza">Baruch Spinoza</h1>
+<p>Baruch Spinoza was a seventeenth-century Dutch philosopher who tried to reinvent religion – moving it away from something based on superstition and ideas of direct divine intervention to being a discipline that was far more impersonal, quasi-scientific and yet also, at all times, serenely consoling.</p>
+<p><a href="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/Spinoza.jpg"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/Spinoza.jpg?resize=435%2C561" alt="Spinoza" /></a></p>
+<p><span class="s1">Baruch – the word means ‘Blessed’ in Hebrew – was born in the Jewish quarter of Amsterdam in 1632, a thriving centre of Jewish commerce and thought. </span></p>
+<p><a href="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/Jodenbreestraat_Amsterdam_from_a_map_of_1625.png"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/Jodenbreestraat_Amsterdam_from_a_map_of_1625.png?resize=635%2C470" alt="Jodenbreestraat_Amsterdam_from_a_map_of_1625" /></a></p>
+<p><span class="s1">His ancestors were Sephardic Jews, who had fled the Iberian peninsula following the Catholic-inspired expulsion of 1492. Baruch, a studious highly intelligent child, received an intensely traditional Jewish education: he went to the local Jewish school, the yeshiva and followed all the Jewish High holidays and rituals.</span></p>
+<p>But gradually, he began to distance himself from the faith of his ancestors: “Although I have been educated from boyhood in the accepted beliefs concerning Scripture,” he later wrote with characteristic caution, “I have felt bound in the end to embrace other views.”</p>
+<p><span class="s1">His fully fleshed out views were to be expressed in his great work, the <em>Ethics</em>, written entirely in Latin and published in 1677. </span>In the <em>Ethics</em>, Spinoza directly challenged the main tenets of Judaism in particular and organised religion in general:</p>
+<p><span class="s1">- God is not a person who stands outside of nature </span></p>
+<ul>
+<li><p>There is no one to hear our prayers</p></li>
+<li><p>Or to create miracles</p></li>
+<li><p>Or to punish us for misdeeds</p></li>
+<li><p>There is no afterlife</p></li>
+<li><p>Man is not God’s chosen creature</p></li>
+<li><p>The Bible was only written by ordinary people</p></li>
+<li><p>God is not a craftsman or an architect. Nor is he a king or a military strategist who calls for believers to take up the Holy Sword. God does not see anything, nor does he expect anything. He does not judge. He does not even reward the virtuous person with a life after death. Every representation of God as a person is a projection of the imagination.</p></li>
+</ul>
+<p><span class="s1">- Everything in the traditional liturgical calendar is pure superstition and mumbo-jumbo</span></p>
+<p>However, despite all this, remarkably, Spinoza did not declare himself an atheist. He insisted that he remained a staunch defender of God.</p>
+<p><span class="s1">God plays an absolutely central role in Spinoza’s <em>Ethics</em>, but it isn’t anything like the God who haunts the pages of the Old Testament.</span></p>
+<p>Spinoza’s God is wholly impersonal and indistinguishable from what we might call variously call nature or existence or a world soul: God is the universe, and its laws; God is reason and truth; God is the animating force in everything that is and can be. God is the cause of everything, but he is the eternal cause. He doesn’t participate in change. He is not in time. He cannot be individuated</p>
+<p><span class="s1">Spinoza writes: </span></p>
+<p><span class="s1">“Whatever is, is in God, and nothing can exist or be conceived without God.”</span></p>
+<p><span class="s1">Throughout his text, Spinoza was keen to undermine the idea of prayer. In prayer, an individual appeals to God to change the way the universe works.</span></p>
+<p><span class="s1">But Spinoza argues that this is entirely the wrong way around. The task of human beings is to try to understand how and why things are the way they are – and then accept it, rather than protest at the workings of existence by sending little messages up into the sky.</span></p>
+<p><span class="s1">As Spinoza put it, beautifully but rather caustically:</span></p>
+<p><span class="s1">“Whosoever loves God cannot strive that God should love him in return.”</span></p>
+<p><span class="s1">In other words, only naive (but perhaps rather touching)  narcissism would lead someone at once to believe in a God who made the eternal laws of physics and then to imagine that this same God would take an interest in bending the rules of existence to improve his or her life in some way. </span></p>
+<p><span class="s1">Spinoza was deeply influenced by the philosophy of the Stoics of Ancient Greece and Rome. They had argued that wisdom lies not in protest against how things are, but in continuous attempts to understand the ways of the world – and then bow down peacefully to necessity.</span></p>
+<p><a href="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/philosopher-in-meditation-1632.jpgLarge.jpg"><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/philosopher-in-meditation-1632.jpgLarge.jpg?resize=635%2C423" alt="philosopher-in-meditation-1632.jpg!Large" /></a></p>
+<h5 id="rembrandt-philosopher-in-meditation-1632">Rembrandt, <em>Philosopher in Meditation</em> (1632)</h5>
+<p><span class="s1">Seneca, Spinoza’s favourite philosopher, had compared human beings to dogs on a leash being led by the necessities of life in a range of directions. The more one pulls against what is necessary, the more one is strangled – and therefore the wise must always endeavour to understand ahead of time how things are – for example, what love is like, or how politics works – and then change their direction accordingly so as not to be strangled unnecessarily. It is this kind of Stoic attitude that constantly pervades Spinoza’s philosophy.</span></p>
+<p><span class="s1">To understand God traditionally meant studying the Bible and other holy texts. But Spinoza now introduces another idea.</span></p>
+<p><span class="s1">The best way to know God is to understand how life and the universe work: it is through a knowledge of psychology, philosophy and the natural sciences that one comes to understand God.</span></p>
+<p><span class="s1">In traditional religion, believers will ask special favours of God. Spinoza proposes instead that we should understand what God wants and we can do so in one way above all: by studying everything that is. By reasoning, we can accede to a divine eternal perspective.</span></p>
+<p><span class="s1">Spinoza makes a famous distinction between two ways of looking at life, we can either see it egoistically, from our limited point of view, as he put it:</span></p>
+<p><strong><em><span class="s1">Sub specie durationis – under the aspect of time</span></em></strong></p>
+<p><span class="s1"> Or we can look at things globally and eternally:</span></p>
+<p><strong><em><span class="s1">Sub specie aeternitatis – under the aspect of eternity</span></em></strong></p>
+<p><span class="s1">Our nature means that we’ll always be divided between the two. Sensual life pulls us towards a time-bound, partial view. But our reasoned intelligence can give us unique access to another perspective – it can quite literally allow us – here Spinoza becomes beautifully lyrical – to participate in eternal totality.</span></p>
+<p><a href="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/01500.jpg"><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/01500.jpg?resize=400%2C529" alt="01500" /></a></p>
+<p><span class="s1">Normally, we call ‘bad’ whatever is bad for us, and good whatever increases our power and advantage, but to be truly ethical means rising above these local concerns. It might all sound forbidding, but Spinoza envisaged his philosophy as a route to a life based on freedom from guilt, from sorrow, from pity or from shame.</span></p>
+<p><span class="s1">Happiness involves aligning our will with that of the universe. The universe – God – has its own projects and its our task to understand rather than rail against these. The free person is one conscious of the necessities that compel us all.</span></p>
+<p><span class="s1">Spinoza writes, the wise man, the person who understands how and why things are, “possesses eternally true complacency (acquiescentia) of spirit.”</span></p>
+<p><span class="s1">Needless to say, these ideas got Spinoza into very deep trouble. He was excommunicated from the Jewish community of Amsterdam in 1656. The rabbis issued a writ known as a cherem against the philosopher:</span></p>
+<p>“By the decree of the angels” – it went – “and by the command of the holy men, we excommunicate, expel, curse and damn Baruch de Espinoza, with all the curses which are written in the Book of the Law. Cursed be he by day and cursed be he by night; cursed be he when he lies down, and cursed be he when he rises up…”</p>
+<p><span class="s1">Spinoza was forced to flee Amsterdam and eventually settled in the Hague, where he lived quietly and peacefully as a lens grinder and private tutor till his death in 1677.</span></p>
+<p><a href="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/Spinoza_in_levensgevaar.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/Spinoza_in_levensgevaar.jpg?resize=400%2C525" alt="Spinoza_in_levensgevaar" /></a></p>
+<h5 id="spinoza-being-forced-out-of-the-community"><span class="s1">Spinoza being forced out of the community</span></h5>
+<p><span class="s1">Spinoza’s work was largely ignored. In the 19th century, Hegel took an interest, as did Wittgenstein – and some 20th-century scholars. </span></p>
+<p><span class="s1">But on the whole Spinoza offers us a warning about the failures of philosophy.</span></p>
+<p><span class="s1">The <em>Ethics</em> is one of the world’s most beautiful books. It contains a calming, perspective-restoring take on life. It replaces the God of superstition with a wise and consoling pantheism.</span></p>
+<p><span class="s1">And yet Spinoza’s work failed utterly to convince any but a few to abandon traditional religion and to move towards a rationalist, wise system of belief.</span></p>
+<p><span class="s1">The reasons are in a way simple and banal.</span></p>
+<p><span class="s1">Spinoza failed to understand – like so many philosophers before and since – that what leads people to religion isn’t just reason, but far more importantly, emotion, belief, fear and tradition.</span></p>
+<p><a href="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/Graf_Baruch_Spinoza_Nieuwe_Kerk_Den_Haag_Nederland_-_20080906.jpg"><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/Graf_Baruch_Spinoza_Nieuwe_Kerk_Den_Haag_Nederland_-_20080906.jpg?resize=635%2C392" alt="Graf_Baruch_Spinoza,_Nieuwe_Kerk,_Den_Haag,_Nederland_-_20080906" /></a></p>
+<h5 id="spinozas-grave">Spinoza’s grave</h5>
+<p><span class="s1">People stick with their beliefs because they like the rituals, the communal meals, the yearly traditions, the beautiful architecture, the music and the sonorous language read out in synagogue or church.</span></p>
+<p><span class="s1">Spinoza’s <em>Ethics</em> arguably contains a whole lot more wisdom than the Bible – but because it comes without any of the Bible’s supporting structure, it remains a marginal work, studied here and there at universities in the west – while the traditional religion that he thought outmoded in the 1670s continues to thrive and convince people.</span></p>
+<p><span class="s1">If we’re ever to replace traditional beliefs, we must remember just how much religion is helped along by ritual, tradition, art and a desire to belong: all things that Spinoza, despite his great wisdom, ignored at his peril in his bold attempt to replace the Bible.</span></p>
+<title>thebookoflife</title>
+
+
+</body>
+</html>

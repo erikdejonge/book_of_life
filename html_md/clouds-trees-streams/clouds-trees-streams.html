@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Computer Modern";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/computermodern/Sans/cmunss.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "scpro";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/sourcecodepro/SourceCodePro-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+    text-rendering: geometricPrecision;
+    font-family: "Dyslexie";
+    /*font-family:  "scpro Light";*/
+    font-family:  "Computer Modern";
+    font-size: 18px;
+    line-height: 150%;
+    color: rgba(242, 240, 205, 0.8);
+
+    background-color: #000;
+    background-color: #02090B;
+    margin: 10px 13px 10px 13px;
+    padding-bottom: 64px;
+}
+
+html * {
+    color-profile: sRGB;
+}
+
+strong {
+    font-weight: normal;
+    color: #ffd479;
+    color: rgba(100, 182, 138, 1);
+}
+
+em {
+
+    font-weight: normal;
+    font-style: normal;
+    color: #ffd479;
+    color: #64B68A;
+}
+
+table {
+    min-width: 1150px !important;
+    width: 100% !important;
+    margin: 10px 0 15px 0;
+    border-collapse: collapse;
+}
+
+table tr:nth-child(2n) {
+    background-color: #06181b;
+}
+
+td, th {
+    border: 1px solid #3C3C3E;
+    padding: 3px 10px;
+}
+
+th {
+    padding: 5px 10px;
+    color: #B3D8FD;
+    background-color: #06181b;
+}
+
+a {
+    color: #B4D9FB;
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+a:hover {
+    color: #2668D4;
+    text-decoration: none;
+}
+
+a img {
+    border: 2px solid;
+}
+
+p {
+    margin-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+img {
+    background-color: #7F7F7F;
+    max-width: 1600px;
+}
+
+ul, ol {
+    padding: 16px 0 8px 10px;
+    margin: 16px 0 8px 10px;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none; /* Hides the default checkbox style */
+    height: 15px !important;
+    width: 15px !important;
+    top: -4px !important;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: .15s;
+    border-radius: 4px;
+    background-color: #FCB8B0;
+    color: black
+}
+
+input[type="checkbox"]:checked {
+    background-color: #BCFBBA;
+}
+
+input[type="checkbox"]:before, input[type="checkbox"]:checked:before {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    height: 16px !important;
+    width: 16px !important;
+    line-height: 16px;
+    text-align: center;
+    font-weight: bold;
+    content: '✘';
+}
+
+input[type="checkbox"]:checked:before {
+    content: '✔';
+}
+
+input[type="checkbox"]:hover:before {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+li {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-left: 8px;
+    padding-left: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+li.task-list-item {
+    list-style-type: none;
+    margin-left: -20px;
+}
+
+li.task-list-item label {
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+
+li.task-list-item input {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+}
+
+ul li:nth-child(even) {
+    background-color: #06181b;
+}
+ol li:nth-child(even) {
+    background-color: #06181b;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    color: #b4d9fb;
+    margin-top: 18px;
+    text-rendering: geometricPrecision;
+    font-family: "scpro";
+    font-size: 18px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    text-transform: capitalize;
+}
+
+h1 {
+    color: #54B2BC;
+    color: rgba(255, 212, 121, 1);
+    font-weight: normal;
+    margin-top: 32px;
+    font-size: 26px;
+    margin-bottom: 12px;
+
+}
+
+h2 {
+
+    color: #ffd479;
+    color: rgba(255, 212, 121, 0.8);
+
+    margin-top: 24px;
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-size: 20px;
+
+    color: rgba(129, 206, 203, 1);
+    margin-top: 20px;
+}
+
+h4 {
+    color: rgba(129, 206, 203, 0.8);
+}
+
+h5 {
+    color: rgba(129, 206, 203, 0.7);
+}
+
+h6 {
+    color: rgba(129, 206, 203, 0.6);
+}
+
+ul, ol {
+    padding-left: 30px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+hr {
+    margin: 32px 12px;
+    border: 0;
+    border-bottom: 1px solid #B4C5C5;
+}
+
+blockquote {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-style: normal;
+}
+
+blockquote p {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+    padding-left: 8px;
+    border-left: 3px solid #54B2BC;
+}
+
+blockquote p a {
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+code, pre {
+    font-family: "scpro" !important;
+    color: #8EB1D0;
+    display: block;
+    padding: 12px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    border: 1px solid #3C3C3E;
+    background-color: #051012;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+* {
+    -webkit-print-color-adjust: exact;
+}
+
+@media screen and (min-width: 914px) {
+    body {
+        width: 1145px;
+        margin: 10px auto;
+    }
+}
+
+@media print {
+    body, code, pre code, h1, h2, h3, h4, h5, h6 {
+        color: black;
+        background: white;
+    }
+
+    table, pre {
+        page-break-inside: avoid;
+    }
+}
+
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    background-color: #051012;
+    color: #116CD6 white-space : pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+pre code {
+    background-color: #051012;
+    color: #81ddaf;
+    padding: 0;
+    border: none;
+margin-top: 0px !important;
+
+margin-bottom: 0px !important;
+}
+
+pre:not([class]) {
+    border: none;
+    padding: 0px !important;
+    color: #F2F0CD;
+
+}
+
+p {
+    white-space: pre-line;
+}
+
+
+div.sourceCode {
+    overflow-x: auto
+}
+
+table.sourceCode, td.lineNumbers, td.sourceCode, tr.sourceCode {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    border: none
+}
+
+table.sourceCode {
+    width: 100%;
+    line-height: 100%
+}
+
+td.lineNumbers {
+    text-align: right;
+    padding-right: 4px;
+    padding-left: 4px;
+    color: #aaa;
+    border-right: 1px solid #aaa
+}
+
+td.sourceCode {
+    padding-left: 5px
+}
+
+.codehilite code, .codehilite pre {
+    color: #fdce93;
+    background-color: #3f3f3f
+}
+
+code > span.kw {
+    color: #BCFBBA;
+    font-weight: 700
+}
+
+code > span.dt {
+    color: #e90
+}
+
+code > span.dv {
+    color: #8AF9F0
+}
+
+code > span.bn, code > span.fl {
+    color: #40a070
+}
+
+code > span.st {
+    color: #FBFBAB
+}
+
+code > span.ch {
+    color: #93DD9F
+}
+
+code > span.co {
+    color: #929292
+}
+
+code > span.ot {
+    color: #76AEF4
+}
+
+code > span.al {
+    color: #e90
+}
+
+code > span.fu {
+    color: #00B1B1
+}
+
+code > span.er {
+    color: #FB9BEA
+}
+img[src='Error.src']{
+    display: none;
+}
+
+</style>
+</head>
+<body>
+<h2 id="chapter-4-self-calm">Chapter 4: self: Calm</h2>
+<h2 id="calm"><a href="../category/self/calm/index.html">Calm</a></h2>
+<h1 id="clouds-trees-streams">Clouds, Trees, Streams</h1>
+<p>No one, probably, has ever much doubted that these things are nice. Clouds, trees and streams represent nature in its most gentle, tranquil guise. Their appeal is instinctive. But we take them for granted. They form a pleasant background to other things: out of the plane window, we catch sight of a sea of clouds. Truly lovely – for a moment. Then the cabin crew come around with the sandwiches and you’ve found some episodes of <em>Mad Men</em> you’d missed. Your cousin’s wedding reception was in a garden of old oak trees, they were stunning – but that was two years ago, and you may not have looked properly at a tree since. There was that stream you used to love playing in as a child, damming up the flow till the water eventually protested and swept away your rocks. There must, theoretically, still be lots of streams. But the adult world is often decidedly stream-free.</p>
+<p><span class="s1">The problem is a lack of encouragement to focus on these natural elements. In a busy and remorselessly practical age, there are few explanations around as to what the point of such focus might be. And yet spending moments of close observation with clouds, trees and streams may in fact play a minor but important supporting role in the pursuit of a balanced and more or less sane life.</span></p>
+<p><strong><span class="s1">CLOUDS </span></strong></p>
+<p><span class="s1">We are preoccupied with ourselves in unhelpful ways. The clouds, however, are usefully indifferent to all our concerns. They don’t care about fashion. They are uninterested in gossip. They are not responsive to our status or lack of it.</span></p>
+<p><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/rexfeatures_3595903a.jpg" alt="VARIOUS" /></p>
+<p><span class="s1">We are always close to these vast, quiet things. A grey tuft detaches itself in the break up of a great continental bank of cloud. It inches its way across the sky, slowly losing definition. Ten minutes later it is barely recognisable. And shortly after that, it merges with another cloud and its brief individual career is over. Islands of clouds form, make chains, nations, empires, then drift and dissolve – like a peaceful, silent, painless repetition of the turbulent mayhem of human history.</span></p>
+<p><span class="s1">There is a constant drama above our heads: collisions, fractures, swirls, separations… Human life is no less active, but it can mean a moment of relief from our particular involvements to look up and be returned to a broader perspective, from where the agitations of the present moment will seem less significant – as they will for us too with time (even if we are incapable of holding on to this idea on most of the occasions we need it). It will all pass, even the current nastiness and enmities, like the clouds that seemed so fixed and heavy but an hour ago – and yet have now all moved on, leaving behind only two or three of their cohorts, apologetic and timid before the victorious sun, like the cowed remnants of a scattered army.</span></p>
+<p><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/rexfeatures_3337556a1.jpg" alt="VARIOUS" /></p>
+<p><strong>TREES</strong></p>
+<p><span class="s1">They are an image of patience, and resolution. Their gnarled, worn barks speak of the hundreds of seasons they have endured. They have bent and lost branches in November winds, they have been gnawed at by worms and beetles across the airless days of July, they have been knocked and hacked at by farmers and gardeners. But they endure – as we might better learn to do through their examples. It’s an unhelpful prejudice of the Western mind to think of philosophy as emanating only from books rather than, as the Eastern tradition more wisely points out, from the volumes of nature as well.</span></p>
+<p><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/rexfeatures_3749387a.jpg" alt="Nature" /></p>
+<p>Oak trees are an image of ordered complexity: the roots patiently draw nutrients from the soil, the capillaries of their trunks send water twenty-five metres upwards, each branch takes enough but not too much for the needs of its own leaves, each leaf contributes to the maintenance of the whole. The trees sit out rainy days without complaint, adjusting themselves to the slow shift of the seasons – showing no ill-temper in a storm, no desire to wander, with their many slender fingers deep in the clammy soil, metres from their central stems and far from the tallest leaves which hold rainwater in some 40,000 of their little palms.</p>
+<p><span class="s1">The trees are an education in the cycle of life as well. All those leaves, resplendent in the summer sun, will be gone by the end of November. Human life is as unstoppable, but it may be through the abstract example of trees that we can come to accept the lesson with greater ease. Our own very disturbing experiences of change are recast in more universal terms. Our thinning hair, facial lines and the stiffening of our skin can be recast as a melancholy necessity rather than an unreasonable catastrophe.</span></p>
+<p><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/rexfeatures_3437458a.jpg" alt="VARIOUS" /></p>
+<p><strong><span class="s1">STREAMS</span></strong></p>
+<p><span class="s1">Streams are always communicating: whispering, exclaiming, arguing (with a rock or twig), confiding (in a quiet vortex), dozing (in midsummer) or shouting (after a heavy shower).</span></p>
+<p><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/rexfeatures_1217115a.jpg" alt="VARIOUS" /></p>
+<p><span class="s1">Like fires, they provide an ideal object of contemplation for us when we are trying to think. Their constant activity enlivens our imaginations. They don’t stare blankly back at us, like pieces of paper on a desk. They distract our minds just enough that the good ideas, the ones that hate to be asked directly to emerge, can feel relieved of pressure and slip out, while we’re following water as it rises gracefully to meet with the objections of a group of awkward rocks just below the surface. Streams warn us too that we must be careful to hold on to those thoughts, for our minds are no less fugitive than they are: we get an insight, but in a moment, it will be gone, like a twig in the current, unless we grab it at once.</span></p>
+<p><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/046.jpg" alt="046" /></p>
+<p><span class="s1">We should not leave the encounter with clouds, trees or streams to chance alone. We would ideally have collective routines and events around them to edge us into good habits. Perhaps for a minute before lunch, we would ritually pause and look at the clouds – just as Christians have been encouraged to say a quick prayer of thanksgiving on sitting down to dinner. No week should be counted complete if it does not include three minutes given over to a tree. If streams are hard to come by, a picture of them should be a priority of interior decoration and each of us should make a point of stopping before a ‘stream-icon’ to reacquaint ourselves with its benign and beneficial moral.</span></p>
+<p>We too easily lose touch with the better and saner aspects of ourselves. Somewhere inside us, we have the potential for calm and reason, tenderness and thoughtfulness. Clouds, trees and streams are on hand to help…</p>
+<title>thebookoflife</title>
+
+
+</body>
+</html>

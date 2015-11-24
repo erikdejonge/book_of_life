@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Computer Modern";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/computermodern/Sans/cmunss.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "scpro";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/sourcecodepro/SourceCodePro-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+    text-rendering: geometricPrecision;
+    font-family: "Dyslexie";
+    /*font-family:  "scpro Light";*/
+    font-family:  "Computer Modern";
+    font-size: 18px;
+    line-height: 150%;
+    color: rgba(242, 240, 205, 0.8);
+
+    background-color: #000;
+    background-color: #02090B;
+    margin: 10px 13px 10px 13px;
+    padding-bottom: 64px;
+}
+
+html * {
+    color-profile: sRGB;
+}
+
+strong {
+    font-weight: normal;
+    color: #ffd479;
+    color: rgba(100, 182, 138, 1);
+}
+
+em {
+
+    font-weight: normal;
+    font-style: normal;
+    color: #ffd479;
+    color: #64B68A;
+}
+
+table {
+    min-width: 1150px !important;
+    width: 100% !important;
+    margin: 10px 0 15px 0;
+    border-collapse: collapse;
+}
+
+table tr:nth-child(2n) {
+    background-color: #06181b;
+}
+
+td, th {
+    border: 1px solid #3C3C3E;
+    padding: 3px 10px;
+}
+
+th {
+    padding: 5px 10px;
+    color: #B3D8FD;
+    background-color: #06181b;
+}
+
+a {
+    color: #B4D9FB;
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+a:hover {
+    color: #2668D4;
+    text-decoration: none;
+}
+
+a img {
+    border: 2px solid;
+}
+
+p {
+    margin-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+img {
+    background-color: #7F7F7F;
+    max-width: 1600px;
+}
+
+ul, ol {
+    padding: 16px 0 8px 10px;
+    margin: 16px 0 8px 10px;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none; /* Hides the default checkbox style */
+    height: 15px !important;
+    width: 15px !important;
+    top: -4px !important;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: .15s;
+    border-radius: 4px;
+    background-color: #FCB8B0;
+    color: black
+}
+
+input[type="checkbox"]:checked {
+    background-color: #BCFBBA;
+}
+
+input[type="checkbox"]:before, input[type="checkbox"]:checked:before {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    height: 16px !important;
+    width: 16px !important;
+    line-height: 16px;
+    text-align: center;
+    font-weight: bold;
+    content: '✘';
+}
+
+input[type="checkbox"]:checked:before {
+    content: '✔';
+}
+
+input[type="checkbox"]:hover:before {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+li {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-left: 8px;
+    padding-left: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+li.task-list-item {
+    list-style-type: none;
+    margin-left: -20px;
+}
+
+li.task-list-item label {
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+
+li.task-list-item input {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+}
+
+ul li:nth-child(even) {
+    background-color: #06181b;
+}
+ol li:nth-child(even) {
+    background-color: #06181b;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    color: #b4d9fb;
+    margin-top: 18px;
+    text-rendering: geometricPrecision;
+    font-family: "scpro";
+    font-size: 18px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    text-transform: capitalize;
+}
+
+h1 {
+    color: #54B2BC;
+    color: rgba(255, 212, 121, 1);
+    font-weight: normal;
+    margin-top: 32px;
+    font-size: 26px;
+    margin-bottom: 12px;
+
+}
+
+h2 {
+
+    color: #ffd479;
+    color: rgba(255, 212, 121, 0.8);
+
+    margin-top: 24px;
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-size: 20px;
+
+    color: rgba(129, 206, 203, 1);
+    margin-top: 20px;
+}
+
+h4 {
+    color: rgba(129, 206, 203, 0.8);
+}
+
+h5 {
+    color: rgba(129, 206, 203, 0.7);
+}
+
+h6 {
+    color: rgba(129, 206, 203, 0.6);
+}
+
+ul, ol {
+    padding-left: 30px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+hr {
+    margin: 32px 12px;
+    border: 0;
+    border-bottom: 1px solid #B4C5C5;
+}
+
+blockquote {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-style: normal;
+}
+
+blockquote p {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+    padding-left: 8px;
+    border-left: 3px solid #54B2BC;
+}
+
+blockquote p a {
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+code, pre {
+    font-family: "scpro" !important;
+    color: #8EB1D0;
+    display: block;
+    padding: 12px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    border: 1px solid #3C3C3E;
+    background-color: #051012;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+* {
+    -webkit-print-color-adjust: exact;
+}
+
+@media screen and (min-width: 914px) {
+    body {
+        width: 1145px;
+        margin: 10px auto;
+    }
+}
+
+@media print {
+    body, code, pre code, h1, h2, h3, h4, h5, h6 {
+        color: black;
+        background: white;
+    }
+
+    table, pre {
+        page-break-inside: avoid;
+    }
+}
+
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    background-color: #051012;
+    color: #116CD6 white-space : pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+pre code {
+    background-color: #051012;
+    color: #81ddaf;
+    padding: 0;
+    border: none;
+margin-top: 0px !important;
+
+margin-bottom: 0px !important;
+}
+
+pre:not([class]) {
+    border: none;
+    padding: 0px !important;
+    color: #F2F0CD;
+
+}
+
+p {
+    white-space: pre-line;
+}
+
+
+div.sourceCode {
+    overflow-x: auto
+}
+
+table.sourceCode, td.lineNumbers, td.sourceCode, tr.sourceCode {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    border: none
+}
+
+table.sourceCode {
+    width: 100%;
+    line-height: 100%
+}
+
+td.lineNumbers {
+    text-align: right;
+    padding-right: 4px;
+    padding-left: 4px;
+    color: #aaa;
+    border-right: 1px solid #aaa
+}
+
+td.sourceCode {
+    padding-left: 5px
+}
+
+.codehilite code, .codehilite pre {
+    color: #fdce93;
+    background-color: #3f3f3f
+}
+
+code > span.kw {
+    color: #BCFBBA;
+    font-weight: 700
+}
+
+code > span.dt {
+    color: #e90
+}
+
+code > span.dv {
+    color: #8AF9F0
+}
+
+code > span.bn, code > span.fl {
+    color: #40a070
+}
+
+code > span.st {
+    color: #FBFBAB
+}
+
+code > span.ch {
+    color: #93DD9F
+}
+
+code > span.co {
+    color: #929292
+}
+
+code > span.ot {
+    color: #76AEF4
+}
+
+code > span.al {
+    color: #e90
+}
+
+code > span.fu {
+    color: #00B1B1
+}
+
+code > span.er {
+    color: #FB9BEA
+}
+img[src='Error.src']{
+    display: none;
+}
+
+</style>
+</head>
+<body>
+<h2 id="chapter-1-capitalism-media">Chapter 1: capitalism: Media</h2>
+<h2 id="media"><a href="../category/capitalism/media/index.html">Media</a></h2>
+<h1 id="on-the-envy-of-politicians">On the Envy of Politicians</h1>
+<p><span class="s1">There’s general agreement amongst the public that most politicians are idiots. As we well know, they are universally egotistical, unprincipled, witless and, worse, devious and cunning. They’re quite literally good for nothings.</span></p>
+<p><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/Hilary.jpg" alt="Clinton Europe" /></p>
+<h6 id="alex-brandonappress-association-images">© Alex Brandon/AP/Press Association Images</h6>
+<p><span class="s1">There are always bits of evidence turning up that can be used to reinforce such ideas. MPs get rowdy during Prime Minister’s Questions; some of the them fiddled their expenses a while back; they have been known to be desperate for donations and to court unsavoury backers; they don’t know how to answer when a tenacious interviewer goes for them.</span></p>
+<p><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/Vince.jpg" alt="Debate at the Institute of Directors, London, Britain - 15 Apr 2013" /></p>
+<h6 id="rexrichard-gardner">© REX/Richard Gardner</h6>
+<p><span class="s1">But imagine if something far, far more awkward was in fact going on. What if most politicians are not in fact catastrophic, given how challenging it tends to be to govern a country? What if for the most part, they are quite hard working, occasionally intelligent, mildly narcissistic but quite well-intentioned people who in their own ways care quite a bit about the collective good of the country? This doesn’t mean they hit on perfect policies or are effective. But it does mean they’re not merely a bunch of charlatans.</span></p>
+<p><span class="s1">This thought is very hard to swallow. It’s strangely not a nice idea. We rebel against it. It’s oddly more manageable to think they are terrible than to think they might be more or less good enough.</span></p>
+<p><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/Theresa2.jpg" alt="Domestic violence report" /></p>
+<h6 id="oli-scarffpa-wirepress-association-images">© Oli Scarff/PA Wire/Press Association Images</h6>
+<h5 id="unbearable-perhaps-but-shes-working-hard-trying-her-best-doing-more-or-less-ok"><span class="s1"><strong>Unbearable perhaps: but she’s working hard, trying her best, doing more or less OK</strong></span></h5>
+<p><span class="s1">Why are we so drawn to doing our politicians down? Why do we want or need to believe the worst?</span></p>
+<p><span class="s1">Because secretly (and rather peculiarly), we envy them. A lot – like we envy anyone with fame, power and a more or less meaningful existence. We envy their connection to the big moving bits of society (the economy, the school system, the future of the air force etc.), their success in getting elected, their status, their opportunity to shape a nation’s destiny, their cars and special passes and their position as insiders in the key discussions and decisions. Furthermore, it’s in the very nature of democracies that we’re encouraged to think that at some level, these people are our equals and should require our gratitude: ‘that person could be me – and I put them there’. And yet it’s humiliating that they seem to be at the controls, and we’re at the back with the other passengers.</span></p>
+<p><span class="s1">Being cynical about a nation’s entire political class provides a comforting way of telling ourselves that our lives are in no way incomplete. But that’s not necessarily true.</span></p>
+<p><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/Osborne.jpg" alt="George Osborne regional visit to South Wales" /></p>
+<h6 id="matthew-horwoodpa-wirepress-association-images">© Matthew Horwood/PA Wire/Press Association Images</h6>
+<h5 id="yet-what-if-he-had-some-skills-just-a-few-you-didnt"><span class="s1"><strong>Yet what if he had some skills (just a few) you didn’t?</strong></span></h5>
+<p><span class="s1">Paradoxically, it’s a sign that things are going well if we are governed by people we can envy a little (and therefore, have to declare can’t govern us at all). We need to be administered by people who have some skills we don’t quite have and who are more or less honest and sane. Yet the price we end up paying for being governed by OK types is a permanent need to believe the country is in the hands of morons.</span></p>
+<title>thebookoflife</title>
+
+
+</body>
+</html>

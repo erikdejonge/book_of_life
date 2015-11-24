@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Computer Modern";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/computermodern/Sans/cmunss.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "scpro";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/sourcecodepro/SourceCodePro-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+    text-rendering: geometricPrecision;
+    font-family: "Dyslexie";
+    /*font-family:  "scpro Light";*/
+    font-family:  "Computer Modern";
+    font-size: 18px;
+    line-height: 150%;
+    color: rgba(242, 240, 205, 0.8);
+
+    background-color: #000;
+    background-color: #02090B;
+    margin: 10px 13px 10px 13px;
+    padding-bottom: 64px;
+}
+
+html * {
+    color-profile: sRGB;
+}
+
+strong {
+    font-weight: normal;
+    color: #ffd479;
+    color: rgba(100, 182, 138, 1);
+}
+
+em {
+
+    font-weight: normal;
+    font-style: normal;
+    color: #ffd479;
+    color: #64B68A;
+}
+
+table {
+    min-width: 1150px !important;
+    width: 100% !important;
+    margin: 10px 0 15px 0;
+    border-collapse: collapse;
+}
+
+table tr:nth-child(2n) {
+    background-color: #06181b;
+}
+
+td, th {
+    border: 1px solid #3C3C3E;
+    padding: 3px 10px;
+}
+
+th {
+    padding: 5px 10px;
+    color: #B3D8FD;
+    background-color: #06181b;
+}
+
+a {
+    color: #B4D9FB;
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+a:hover {
+    color: #2668D4;
+    text-decoration: none;
+}
+
+a img {
+    border: 2px solid;
+}
+
+p {
+    margin-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+img {
+    background-color: #7F7F7F;
+    max-width: 1600px;
+}
+
+ul, ol {
+    padding: 16px 0 8px 10px;
+    margin: 16px 0 8px 10px;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none; /* Hides the default checkbox style */
+    height: 15px !important;
+    width: 15px !important;
+    top: -4px !important;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: .15s;
+    border-radius: 4px;
+    background-color: #FCB8B0;
+    color: black
+}
+
+input[type="checkbox"]:checked {
+    background-color: #BCFBBA;
+}
+
+input[type="checkbox"]:before, input[type="checkbox"]:checked:before {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    height: 16px !important;
+    width: 16px !important;
+    line-height: 16px;
+    text-align: center;
+    font-weight: bold;
+    content: '✘';
+}
+
+input[type="checkbox"]:checked:before {
+    content: '✔';
+}
+
+input[type="checkbox"]:hover:before {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+li {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-left: 8px;
+    padding-left: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+li.task-list-item {
+    list-style-type: none;
+    margin-left: -20px;
+}
+
+li.task-list-item label {
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+
+li.task-list-item input {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+}
+
+ul li:nth-child(even) {
+    background-color: #06181b;
+}
+ol li:nth-child(even) {
+    background-color: #06181b;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    color: #b4d9fb;
+    margin-top: 18px;
+    text-rendering: geometricPrecision;
+    font-family: "scpro";
+    font-size: 18px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    text-transform: capitalize;
+}
+
+h1 {
+    color: #54B2BC;
+    color: rgba(255, 212, 121, 1);
+    font-weight: normal;
+    margin-top: 32px;
+    font-size: 26px;
+    margin-bottom: 12px;
+
+}
+
+h2 {
+
+    color: #ffd479;
+    color: rgba(255, 212, 121, 0.8);
+
+    margin-top: 24px;
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-size: 20px;
+
+    color: rgba(129, 206, 203, 1);
+    margin-top: 20px;
+}
+
+h4 {
+    color: rgba(129, 206, 203, 0.8);
+}
+
+h5 {
+    color: rgba(129, 206, 203, 0.7);
+}
+
+h6 {
+    color: rgba(129, 206, 203, 0.6);
+}
+
+ul, ol {
+    padding-left: 30px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+hr {
+    margin: 32px 12px;
+    border: 0;
+    border-bottom: 1px solid #B4C5C5;
+}
+
+blockquote {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-style: normal;
+}
+
+blockquote p {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+    padding-left: 8px;
+    border-left: 3px solid #54B2BC;
+}
+
+blockquote p a {
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+code, pre {
+    font-family: "scpro" !important;
+    color: #8EB1D0;
+    display: block;
+    padding: 12px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    border: 1px solid #3C3C3E;
+    background-color: #051012;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+* {
+    -webkit-print-color-adjust: exact;
+}
+
+@media screen and (min-width: 914px) {
+    body {
+        width: 1145px;
+        margin: 10px auto;
+    }
+}
+
+@media print {
+    body, code, pre code, h1, h2, h3, h4, h5, h6 {
+        color: black;
+        background: white;
+    }
+
+    table, pre {
+        page-break-inside: avoid;
+    }
+}
+
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    background-color: #051012;
+    color: #116CD6 white-space : pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+pre code {
+    background-color: #051012;
+    color: #81ddaf;
+    padding: 0;
+    border: none;
+margin-top: 0px !important;
+
+margin-bottom: 0px !important;
+}
+
+pre:not([class]) {
+    border: none;
+    padding: 0px !important;
+    color: #F2F0CD;
+
+}
+
+p {
+    white-space: pre-line;
+}
+
+
+div.sourceCode {
+    overflow-x: auto
+}
+
+table.sourceCode, td.lineNumbers, td.sourceCode, tr.sourceCode {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    border: none
+}
+
+table.sourceCode {
+    width: 100%;
+    line-height: 100%
+}
+
+td.lineNumbers {
+    text-align: right;
+    padding-right: 4px;
+    padding-left: 4px;
+    color: #aaa;
+    border-right: 1px solid #aaa
+}
+
+td.sourceCode {
+    padding-left: 5px
+}
+
+.codehilite code, .codehilite pre {
+    color: #fdce93;
+    background-color: #3f3f3f
+}
+
+code > span.kw {
+    color: #BCFBBA;
+    font-weight: 700
+}
+
+code > span.dt {
+    color: #e90
+}
+
+code > span.dv {
+    color: #8AF9F0
+}
+
+code > span.bn, code > span.fl {
+    color: #40a070
+}
+
+code > span.st {
+    color: #FBFBAB
+}
+
+code > span.ch {
+    color: #93DD9F
+}
+
+code > span.co {
+    color: #929292
+}
+
+code > span.ot {
+    color: #76AEF4
+}
+
+code > span.al {
+    color: #e90
+}
+
+code > span.fu {
+    color: #00B1B1
+}
+
+code > span.er {
+    color: #FB9BEA
+}
+img[src='Error.src']{
+    display: none;
+}
+
+</style>
+</head>
+<body>
+<h2 id="chapter-6-curriculum-philosophy">Chapter 6: curriculum: Philosophy</h2>
+<h2 id="philosophy"><a href="../category/curriculum/philosophy/index.html">Philosophy</a></h2>
+<h1 id="albert-camus">Albert Camus</h1>
+<p>Albert Camus was an extremely handsome mid-20th century French-Algerian philosopher and writer, whose claim to our attention is based on three novels, <em>The Outsider</em> (1942), <em>The Plague</em> (1947), and <em>The Fall</em> (1956), and two philosophical essays, <em>The Myth of Sisyphus</em> (1942) and <em>The Rebel</em> (1951).</p>
+<p><a href="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/Albert_Camus_gagnant_de_prix_Nobel_portrait_en_buste_posé_au_bureau_faisant_face_à_gauche_cigarette_de_tabagisme-1.jpg"><embed src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/Albert_Camus_gagnant_de_prix_Nobel_portrait_en_buste_posé_au_bureau_faisant_face_à_gauche_cigarette_de_tabagisme-1.jpg?resize=635%2C566" /></a></p>
+<p><span class="s1">Camus won the Nobel prize for literature in 1957 – and died at the age of 46, inadvertently killed by his publisher Michel Gallimard, when his Facel Vega sports car they were were in crashed into a tree. In his pocket was a train ticket he had decided not to use at the last minute.</span></p>
+<p><a href="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/Untitled-24_105.jpg"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/Untitled-24_105.jpg?resize=635%2C476" alt="Untitled-24_105" /></a></p>
+<p><span class="s1">Camus’s fame began with and still largely rests upon his novel, <em>The Outsider</em>. Set in Camus’s native Algiers, it follows the story of a laconic, detached, ironic hero called Mersault – a man who can’t see the point of love, or work, or friendship – and who one day – somewhat by mistake – shoots dead an Arab man without knowing his own motivations and ends up being put to death – partly because he doesn’t show any remorse, but not really caring for his fate one way or the other. </span></p>
+<p><span class="s1">The novel captures the state of mind defined by the sociologist Emile Durkheim as <em>anomie</em>,</span> a listless, affectless alienated condition where one feels entirely cut off from others and can’t find a way to share any of their sympathies or values.</p>
+<p><a href="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/durkheim.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/durkheim.jpg?resize=635%2C441" alt="durkheim" /></a></p>
+<h5 id="emile-durkheim">Emile Durkheim</h5>
+<p><span class="s1">Reading <em>The Outsider</em> has long been an adolescent right of passage among French and many other teenagers – which isn’t a way of doing it down, for a lot of the greatest themes are first tackled at 17 or so.</span></p>
+<p><span class="s1">The hero of <em>The Outsider</em>, Meursault cannot accept any of the standard answers for why things are the way they are. He sees hypocrisy and sentimentality everywhere – and can’t overlook it. He is a man who cannot accept the normal explanations given to explain things like the education system, the workplace, relationships and the mechanisms of government. He stands outside normal bourgeois life, highly critical of its pinched morality and narrow concerns for money and family.</span></p>
+<p><span class="s1">As Camus put it in an afterword he wrote for the American edition of the book: “Meursault doesn’t play the game. He refuses to lie… he says what he is, he refuses to hide his feelings – and so society immediately feels threatened.”</span></p>
+<p><span class="s1">Much of the unusual mesmerising quality of the book comes from the coolly-distant voice in which Meursault speaks to us, his readers.</span></p>
+<p><a href="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/1503924231_38a263c543_o.jpg"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/1503924231_38a263c543_o.jpg?resize=635%2C646" alt="1503924231_38a263c543_o" /></a></p>
+<h6 id="flickrhan-cheng-yeh">© Flickr/Han Cheng Yeh</h6>
+<p><span class="s1">The opening is one of the most legendary in 20th-century literature and sets the tone: “</span>Today mother died. Or maybe yesterday, I don’t know.”</p>
+<p><span class="s1">The ending is as stark and as defiant. Meursault, condemned to death for a murder committed almost off-hand, because it can be interesting to know what<span class="Apple-converted-space"> </span>it’s like to press the trigger, rejects all consolations and heroically accepts the universe’s total indifference to humankind: “My last wish was that there should be a crowd of spectators at my execution and that they should greet me with cries of hatred.”</span></p>
+<p><span class="s1">Even if we are not killers and will ourselves be really quite sad when our mother dies, the mood of <em>The Outsider</em> is one we are all liable to have some experience of… when we have enough freedom to realise we’re in a cage, but not quite enough freedom to escape it… when no one seems to understand… and everything appears a bit hopeless…perhaps in the summer before we go to college. </span></p>
+<p><a href="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/12554225604_ee0106c1cf_z.jpg"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/12554225604_ee0106c1cf_z.jpg?resize=635%2C476" alt="12554225604_ee0106c1cf_z" /></a></p>
+<h6 id="flickrjoan-sebastian-araujo-arena">© Flickr/Joan Sebastián Araújo Arena</h6>
+<p><span class="s1">Aside from <em>The Outsider</em>, Camus’s fame rests on an essay, published the same year as the novel, called <em>The Myth of Sisyphus.</em></span></p>
+<p><span class="s1">This book too has a bold beginning:</span></p>
+<p><span class="s1">“There is but one truly serious philosophical problem and that is suicide. Judging whether life is or is not worth living, that is the fundamental question of philosophy.”</span></p>
+<p><span class="s1">The reason for this stark choice is, in Camus’s eyes, because as soon as we start to think seriously, as philosophers do, we will see that life has no meaning – and therefore we will be compelled to wonder whether or not we should just be done with it all.</span></p>
+<p><span class="s1">To make sense of this rather extreme claim and thesis, we have to situate Camus in the history of thought. His dramatic announcement that we have to consider killing ourselves because life might be meaningless is premised on a previous notion that life could actually be rich in God-given meaning – a concept which would sound remote to many of us today. </span></p>
+<p><span class="s1">And yet, we have to bear in mind that for the last 2,000 years in the west, a sense that life was meaningful was a given, accorded by one institution above any other: the Christian Church.</span></p>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/687px-Cristo_crucificado.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/687px-Cristo_crucificado.jpg?resize=635%2C615" alt="687px-Cristo_crucificado" /></a></p>
+<p><span class="s1">Camus stands in a long line of thinkers, from Kierkegaard to Nietzsche to Heidegger and Sartre who wrestle with the chilling realisation that there is in fact no preordained meaning in life. We are just biological matter spinning senselessly on a tiny rock in a corner of an indifferent universe. We were not put here by a benevolent deity and asked to work towards salvation in the shape of 10 commandments or the dictates of the holy gospels. There’s no road map and no bigger point. And it’s this realisation that lies at the heart of so many of the crises reported by the thinkers we now know as Existentialists. </span></p>
+<p><span class="s1">A child of despairing modernity, Albert Camus accepts that all our lives are absurd in the grander scheme, but – unlike some philosophers – he ends up resisting utter hopelessness or nihilism. He argues that we have to live with the knowledge that our efforts will be largely futile, our lives soon forgotten and our species irredeemably corrupt and violent – and yet should endure nevertheless.</span></p>
+<p><span class="s1">We are like Sisyphus, the Greek figure ordered by the gods to roll a boulder up a mountain and to watch it fall back down again – in perpetuity.</span></p>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/793px-Punishment_sisyph.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/793px-Punishment_sisyph.jpg?resize=535%2C607" alt="793px-Punishment_sisyph" /></a></p>
+<p><span class="s1">But ultimately, Camus suggests, we should cope as well as we can at whatever we have to do. We have to acknowledge the absurd background to existence – and then triumph over the constant possibility of hopelessness. In his famous formulation:</span></p>
+<p><span class="s1">“One must imagine Sisyphus happy.”</span></p>
+<p><span class="s1">This brings us to the most charming and seductive side of Camus: the Camus who wants to remind himself and us of the reasons why life can be worth enduring – and who in the process writes with exceptional intensity and wisdom about relationships, nature, the summer, food and friendship.</span></p>
+<p><span class="s1">As a guide to the reasons to live, Camus is delightful. </span>Many philosophers have been ugly and cut off from their bodies.</p>
+<p>Think of sickly Pascal</p>
+<p><a href="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/Blaise_Pascal_Versailles.jpg"><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/Blaise_Pascal_Versailles.jpg?resize=635%2C594" alt="Blaise_Pascal_Versailles" /></a></p>
+<p>Crippled Leopardi</p>
+<p><a href="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/576px-Leopardi_Giacomo_1798-1837_-_ritr._A_Ferrazzi_Recanati_casa_Leopardi.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/576px-Leopardi_Giacomo_1798-1837_-_ritr._A_Ferrazzi_Recanati_casa_Leopardi.jpg?resize=635%2C623" alt="576px-Leopardi,_Giacomo_(1798-1837)_-_ritr._A_Ferrazzi,_Recanati,_casa_Leopardi" /></a></p>
+<p><span class="s1">Sexually-unsuccessful Schopenhauer</span></p>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/800px-Schopenhauer_1852.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/800px-Schopenhauer_1852.jpg?resize=635%2C623" alt="800px-Schopenhauer_1852" /></a></p>
+<p>Or poor peculiar Nietzsche</p>
+<p><a href="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/Friedrich_Nietzsche-1872-1.jpg"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/Friedrich_Nietzsche-1872-1.jpg?resize=557%2C616" alt="Friedrich_Nietzsche-1872 (1)" /></a></p>
+<p><span class="s1">Camus was by contrast</span></p>
+<p><span class="s1">- Very good looking</span></p>
+<p><span class="s1">- Extremely successful with women: for the last 10 years of his life, he never had fewer than three girlfriends on the go, and wives as well</span></p>
+<p><a href="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/Camus_stockholm.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/Camus_stockholm.jpg?resize=635%2C635" alt="Camus_stockholm" /></a></p>
+<p><span class="s1">- And he had a great dress sense, influenced by James Dean and Humphrey Bogart. It isn’t surprising he was asked to pose by American <em>Vogue</em></span></p>
+<p><span class="s1">These weren’t all just stylistic quirks. </span>Once you properly realise that life is absurd, you are on the verge of despair perhaps – but also, compelled to live life more intensely. Accordingly, Camus grew committed to, and deeply serious about, the pleasures of ordinary life. He said he saw his philosophy as “a lucid invitation to live and to create, in the very midst of the desert.”</p>
+<p><span class="s1">He was a great champion of the ordinary – which generally has a hard time finding champions in philosophy – and after pages and pages of his denser philosophy, one turns with relief to moments when Camus writes in praise of sunshine, kissing and dancing.</span></p>
+<p><span class="s1">Camus was an outstanding athlete as a young man. Once asked by his friend Charles Poncet which he preferred, football or the theatre, Camus is said to have replied, “Football, without hesitation.”</span></p>
+<p><a href="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/soccer-camus1.jpg"><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/soccer-camus1.jpg?resize=625%2C467" alt="soccer-camus" /></a></p>
+<p><span class="s1">Camus played as goalkeeper for the junior local Algiers team, Racing Universitaire d’Alger (which won both the North African Champions Cup and the North African Cup in the 1930s).</span></p>
+<p><span class="s1">The sense of team spirit, fraternity, and common purpose appealed to Camus enormously. When Camus was asked in the 1950s by a sports magazine for a few words regarding his time with the RUA, he said: </span>“After many years during which I saw many things, what I know most surely about morality and the duty of man I owe to sport.” Camus was referring to the morality he defends in his essays: sticking up for your friends and valuing bravery and fair-play.</p>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/9097166244_6505cdabee_z.jpg"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/9097166244_6505cdabee_z.jpg?resize=635%2C420" alt="9097166244_6505cdabee_z" /></a></p>
+<h6 id="flickrdon">© Flickr/Don</h6>
+<p><span class="s1">Camus was a great advocate of the sun. </span>His beautiful essay “Summer in Algiers” celebrates: “the warmth of the water and the brown bodies of women.” He writes: “For the first time in 2,000 years, the body has appeared naked on beaches… For 20 centuries, men have striven to give decency to Greek insolence and naivety, to diminish the flesh and complicate dress. Today, young men running on Mediterranean beaches repeat the gestures of the athletes of Delos.”</p>
+<p><span class="s1">He spoke up for a new paganism, based on the immediate pleasures of the body: “</span>I recall a magnificent tall girl who had danced all afternoon. She was wearing a jasmine garland on her tight blue dress, wet with perspiration from the small of her back to her legs. She was laughing as she danced and throwing back her head. As she passed the tables, she left behind her a mingled scent of flowers and flesh…”</p>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/9188225305_95f76d95f7_b.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/9188225305_95f76d95f7_b.jpg?resize=635%2C492" alt="9188225305_95f76d95f7_b" /></a></p>
+<h6 id="flickrmarrickville-library">© Flickr/Marrickville Library</h6>
+<p><span class="s1">Camus railed against those who would dismiss such things as trivial and long for something higher, better, purer:</span></p>
+<p><span class="s1">“If there is a sin against life, it consists perhaps not so much in despairing of life as in hoping for another life and in eluding the grandeur of this one.”</span></p>
+<p><span class="s1">In a letter he remarked: “People attract me in so far as they are impassioned about life and avid for happiness…”</span></p>
+<p><span class="s1">“There are causes worth dying for, but none worth killing for.”</span></p>
+<p><span class="s1">Camus achieved huge acclaim in his lifetime, but the Parisian intellectual community was deeply suspicious of him. He never was a Parisian sophisticate. He was a working-class pied-noir (that is, someone born in Algeria but of European origin), whose father had died of war wounds when he was an infant and whose mother was a cleaning lady. </span></p>
+<p><span class="s1">It isn’t a coincidence that Camus’s favourite philosopher was Montaigne – another very down-to-earth Frenchman, and someone one can love as much for what he wrote as for what he was like.</span></p>
+<title>thebookoflife</title>
+
+
+</body>
+</html>

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Computer Modern";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/computermodern/Sans/cmunss.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "scpro";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/sourcecodepro/SourceCodePro-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+    text-rendering: geometricPrecision;
+    font-family: "Dyslexie";
+    /*font-family:  "scpro Light";*/
+    font-family:  "Computer Modern";
+    font-size: 18px;
+    line-height: 150%;
+    color: rgba(242, 240, 205, 0.8);
+
+    background-color: #000;
+    background-color: #02090B;
+    margin: 10px 13px 10px 13px;
+    padding-bottom: 64px;
+}
+
+html * {
+    color-profile: sRGB;
+}
+
+strong {
+    font-weight: normal;
+    color: #ffd479;
+    color: rgba(100, 182, 138, 1);
+}
+
+em {
+
+    font-weight: normal;
+    font-style: normal;
+    color: #ffd479;
+    color: #64B68A;
+}
+
+table {
+    min-width: 1150px !important;
+    width: 100% !important;
+    margin: 10px 0 15px 0;
+    border-collapse: collapse;
+}
+
+table tr:nth-child(2n) {
+    background-color: #06181b;
+}
+
+td, th {
+    border: 1px solid #3C3C3E;
+    padding: 3px 10px;
+}
+
+th {
+    padding: 5px 10px;
+    color: #B3D8FD;
+    background-color: #06181b;
+}
+
+a {
+    color: #B4D9FB;
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+a:hover {
+    color: #2668D4;
+    text-decoration: none;
+}
+
+a img {
+    border: 2px solid;
+}
+
+p {
+    margin-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+img {
+    background-color: #7F7F7F;
+    max-width: 1600px;
+}
+
+ul, ol {
+    padding: 16px 0 8px 10px;
+    margin: 16px 0 8px 10px;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none; /* Hides the default checkbox style */
+    height: 15px !important;
+    width: 15px !important;
+    top: -4px !important;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: .15s;
+    border-radius: 4px;
+    background-color: #FCB8B0;
+    color: black
+}
+
+input[type="checkbox"]:checked {
+    background-color: #BCFBBA;
+}
+
+input[type="checkbox"]:before, input[type="checkbox"]:checked:before {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    height: 16px !important;
+    width: 16px !important;
+    line-height: 16px;
+    text-align: center;
+    font-weight: bold;
+    content: '✘';
+}
+
+input[type="checkbox"]:checked:before {
+    content: '✔';
+}
+
+input[type="checkbox"]:hover:before {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+li {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-left: 8px;
+    padding-left: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+li.task-list-item {
+    list-style-type: none;
+    margin-left: -20px;
+}
+
+li.task-list-item label {
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+
+li.task-list-item input {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+}
+
+ul li:nth-child(even) {
+    background-color: #06181b;
+}
+ol li:nth-child(even) {
+    background-color: #06181b;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    color: #b4d9fb;
+    margin-top: 18px;
+    text-rendering: geometricPrecision;
+    font-family: "scpro";
+    font-size: 18px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    text-transform: capitalize;
+}
+
+h1 {
+    color: #54B2BC;
+    color: rgba(255, 212, 121, 1);
+    font-weight: normal;
+    margin-top: 32px;
+    font-size: 26px;
+    margin-bottom: 12px;
+
+}
+
+h2 {
+
+    color: #ffd479;
+    color: rgba(255, 212, 121, 0.8);
+
+    margin-top: 24px;
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-size: 20px;
+
+    color: rgba(129, 206, 203, 1);
+    margin-top: 20px;
+}
+
+h4 {
+    color: rgba(129, 206, 203, 0.8);
+}
+
+h5 {
+    color: rgba(129, 206, 203, 0.7);
+}
+
+h6 {
+    color: rgba(129, 206, 203, 0.6);
+}
+
+ul, ol {
+    padding-left: 30px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+hr {
+    margin: 32px 12px;
+    border: 0;
+    border-bottom: 1px solid #B4C5C5;
+}
+
+blockquote {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-style: normal;
+}
+
+blockquote p {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+    padding-left: 8px;
+    border-left: 3px solid #54B2BC;
+}
+
+blockquote p a {
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+code, pre {
+    font-family: "scpro" !important;
+    color: #8EB1D0;
+    display: block;
+    padding: 12px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    border: 1px solid #3C3C3E;
+    background-color: #051012;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+* {
+    -webkit-print-color-adjust: exact;
+}
+
+@media screen and (min-width: 914px) {
+    body {
+        width: 1145px;
+        margin: 10px auto;
+    }
+}
+
+@media print {
+    body, code, pre code, h1, h2, h3, h4, h5, h6 {
+        color: black;
+        background: white;
+    }
+
+    table, pre {
+        page-break-inside: avoid;
+    }
+}
+
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    background-color: #051012;
+    color: #116CD6 white-space : pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+pre code {
+    background-color: #051012;
+    color: #81ddaf;
+    padding: 0;
+    border: none;
+margin-top: 0px !important;
+
+margin-bottom: 0px !important;
+}
+
+pre:not([class]) {
+    border: none;
+    padding: 0px !important;
+    color: #F2F0CD;
+
+}
+
+p {
+    white-space: pre-line;
+}
+
+
+div.sourceCode {
+    overflow-x: auto
+}
+
+table.sourceCode, td.lineNumbers, td.sourceCode, tr.sourceCode {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    border: none
+}
+
+table.sourceCode {
+    width: 100%;
+    line-height: 100%
+}
+
+td.lineNumbers {
+    text-align: right;
+    padding-right: 4px;
+    padding-left: 4px;
+    color: #aaa;
+    border-right: 1px solid #aaa
+}
+
+td.sourceCode {
+    padding-left: 5px
+}
+
+.codehilite code, .codehilite pre {
+    color: #fdce93;
+    background-color: #3f3f3f
+}
+
+code > span.kw {
+    color: #BCFBBA;
+    font-weight: 700
+}
+
+code > span.dt {
+    color: #e90
+}
+
+code > span.dv {
+    color: #8AF9F0
+}
+
+code > span.bn, code > span.fl {
+    color: #40a070
+}
+
+code > span.st {
+    color: #FBFBAB
+}
+
+code > span.ch {
+    color: #93DD9F
+}
+
+code > span.co {
+    color: #929292
+}
+
+code > span.ot {
+    color: #76AEF4
+}
+
+code > span.al {
+    color: #e90
+}
+
+code > span.fu {
+    color: #00B1B1
+}
+
+code > span.er {
+    color: #FB9BEA
+}
+img[src='Error.src']{
+    display: none;
+}
+
+</style>
+</head>
+<body>
+<h2 id="chapter-5-culture-art">Chapter 5: culture: Art</h2>
+<h2 id="art"><a href="../category/culture/art/index.html">Art</a></h2>
+<h1 id="on-the-price-of-art-works">On the Price of Art Works</h1>
+<p>At a recent Sotheby’s auction in London, Wall by the German painter Gerhard Richter eclipsed the already vast estimate given by the auction house, finally selling for a shade under 17.5 million GBP. It confirms Richter’s place, in financial terms, at the very top of the the league of living artists. Generally, such news is transmitted with a degree of excitement and approval. It seems a sign of cultural health. Actually it shows we just don’t know what we want from art.</p>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/PM-190214-sothebyA.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/PM-190214-sothebyA.jpg?resize=635%2C498" alt="PM-190214-sothebyA" /></a></p>
+<p><span class="s1">It’s not that there is anything wrong with the painting. It’s moving and tender. It’s a big square of red, through which streaks of blue and black and lilac tentatively emerge, as if a crucial message was straining to be heard. But not quite making it to the surface. At key moments in our lives, we might feel as if we, too, had something of deep importance to say – to a partner, a child or parent – and yet we didn’t. It was there in the atmosphere, but never got through. The painting gives dignity to our troubles and unfulfilled hopes.</span></p>
+<p><span class="s1">But there’s an uncomfortable fact about all this: you can get the ‘message’ or, if you like, the benefit of this lovely work quite well by looking at a postcard or indeed, the reproduction on this website. The facsimile doesn’t of course quite have everything about the physical presence of the original. But it does convey almost everything, let’s say 96%, of what is important. That’s not a bad figure – given the price difference.</span></p>
+<p><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/PM-190214-sothebyB.jpg" alt="FRANCE SAINT LAURENT AUCTION" /></p>
+<p><span class="s1">Auction houses – just like the National Gallery, the Louvre and the Metropolitan Museum of Art – are in the habit of insisting that, in order to derive the benefit of art, we have to go and see (and in some cases own) the original thing, the actual piece of canvas worked on by the actual hand of the great artist. It’s such an entrenched attitude, it’s got such prestige in our society, we hardly ever notice how strange and unhelpful it really is.</span></p>
+<p><span class="s1">When it comes to literature, we’re streets ahead – and by reflex, far wiser. We don’t feel that, in order to read <em>A Tale of Two Cities</em> by Charles Dickens, we have to head off to the Victoria and Albert Museum every time to go through the original manuscript. We’re rightly sure that we can get everything that matters from a free e-book or a paperback (£4.99).</span></p>
+<p><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/PM-190214-sothebyC.jpg" alt="PM-190214-sothebyC" /></p>
+<p><span class="s1">The difference is: we know what novels are for. We’re far far more confident around books. We’ve been handling them since childhood. We know the deal: you get to meet the characters, hear their stories, enter their imaginary world. They help with perspective, self-knowledge, consolation and inspiration. We might not often say it, but we get a direct therapeutic benefit from reading them. And we understand instinctively that this can happen not in an archive, but on the train or, even better, tucked up in bed or at the beach.</span></p>
+<p><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/PM-190214-sothebyD.jpg" alt="PM-190214-sothebyD" /></p>
+<h5 id="you-dont-need-to-go-there"><span class="s1">You don’t need to go there</span></h5>
+<p><span class="s1">We should become equally confident about art; it would be so much wiser, cheaper and easier. Works of art aren’t endlessly mysterious things to which we invariably have to go and pay a physical homage. The national museums want us to, and one can see why – but we don’t always have to follow their call. We’ve been doing so long enough. Works of art are tools that can help our lives to go a little better. They influence our moods, remind us of important truths that are constantly slipping from our minds and – like Richter’s Wall – lend dignity to our sufferings. These are very valuable things. But nobody needs to pay millions, or take a day off and make a trip to an art gallery, just to get hold of them. The postcard is enough. 96% of the value of the Richter painting is available if you just scroll it up and take a look at it for two concentrated minutes. That’s a big saving. No wonder Sotheby’s, the National Galleries and anyone in their pay would be deeply unhappy to read this.</span></p>
+<p><span class="s1">For more on the therapeutic benefits of art, see: <a href="http://www.artastherapy.com/">artastherapy.com</a></span></p>
+<title>thebookoflife</title>
+
+
+</body>
+</html>

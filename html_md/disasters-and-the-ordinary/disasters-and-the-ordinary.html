@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Computer Modern";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/computermodern/Sans/cmunss.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "scpro";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/sourcecodepro/SourceCodePro-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+    text-rendering: geometricPrecision;
+    font-family: "Dyslexie";
+    /*font-family:  "scpro Light";*/
+    font-family:  "Computer Modern";
+    font-size: 18px;
+    line-height: 150%;
+    color: rgba(242, 240, 205, 0.8);
+
+    background-color: #000;
+    background-color: #02090B;
+    margin: 10px 13px 10px 13px;
+    padding-bottom: 64px;
+}
+
+html * {
+    color-profile: sRGB;
+}
+
+strong {
+    font-weight: normal;
+    color: #ffd479;
+    color: rgba(100, 182, 138, 1);
+}
+
+em {
+
+    font-weight: normal;
+    font-style: normal;
+    color: #ffd479;
+    color: #64B68A;
+}
+
+table {
+    min-width: 1150px !important;
+    width: 100% !important;
+    margin: 10px 0 15px 0;
+    border-collapse: collapse;
+}
+
+table tr:nth-child(2n) {
+    background-color: #06181b;
+}
+
+td, th {
+    border: 1px solid #3C3C3E;
+    padding: 3px 10px;
+}
+
+th {
+    padding: 5px 10px;
+    color: #B3D8FD;
+    background-color: #06181b;
+}
+
+a {
+    color: #B4D9FB;
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+a:hover {
+    color: #2668D4;
+    text-decoration: none;
+}
+
+a img {
+    border: 2px solid;
+}
+
+p {
+    margin-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+img {
+    background-color: #7F7F7F;
+    max-width: 1600px;
+}
+
+ul, ol {
+    padding: 16px 0 8px 10px;
+    margin: 16px 0 8px 10px;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none; /* Hides the default checkbox style */
+    height: 15px !important;
+    width: 15px !important;
+    top: -4px !important;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: .15s;
+    border-radius: 4px;
+    background-color: #FCB8B0;
+    color: black
+}
+
+input[type="checkbox"]:checked {
+    background-color: #BCFBBA;
+}
+
+input[type="checkbox"]:before, input[type="checkbox"]:checked:before {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    height: 16px !important;
+    width: 16px !important;
+    line-height: 16px;
+    text-align: center;
+    font-weight: bold;
+    content: '✘';
+}
+
+input[type="checkbox"]:checked:before {
+    content: '✔';
+}
+
+input[type="checkbox"]:hover:before {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+li {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-left: 8px;
+    padding-left: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+li.task-list-item {
+    list-style-type: none;
+    margin-left: -20px;
+}
+
+li.task-list-item label {
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+
+li.task-list-item input {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+}
+
+ul li:nth-child(even) {
+    background-color: #06181b;
+}
+ol li:nth-child(even) {
+    background-color: #06181b;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    color: #b4d9fb;
+    margin-top: 18px;
+    text-rendering: geometricPrecision;
+    font-family: "scpro";
+    font-size: 18px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    text-transform: capitalize;
+}
+
+h1 {
+    color: #54B2BC;
+    color: rgba(255, 212, 121, 1);
+    font-weight: normal;
+    margin-top: 32px;
+    font-size: 26px;
+    margin-bottom: 12px;
+
+}
+
+h2 {
+
+    color: #ffd479;
+    color: rgba(255, 212, 121, 0.8);
+
+    margin-top: 24px;
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-size: 20px;
+
+    color: rgba(129, 206, 203, 1);
+    margin-top: 20px;
+}
+
+h4 {
+    color: rgba(129, 206, 203, 0.8);
+}
+
+h5 {
+    color: rgba(129, 206, 203, 0.7);
+}
+
+h6 {
+    color: rgba(129, 206, 203, 0.6);
+}
+
+ul, ol {
+    padding-left: 30px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+hr {
+    margin: 32px 12px;
+    border: 0;
+    border-bottom: 1px solid #B4C5C5;
+}
+
+blockquote {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-style: normal;
+}
+
+blockquote p {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+    padding-left: 8px;
+    border-left: 3px solid #54B2BC;
+}
+
+blockquote p a {
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+code, pre {
+    font-family: "scpro" !important;
+    color: #8EB1D0;
+    display: block;
+    padding: 12px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    border: 1px solid #3C3C3E;
+    background-color: #051012;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+* {
+    -webkit-print-color-adjust: exact;
+}
+
+@media screen and (min-width: 914px) {
+    body {
+        width: 1145px;
+        margin: 10px auto;
+    }
+}
+
+@media print {
+    body, code, pre code, h1, h2, h3, h4, h5, h6 {
+        color: black;
+        background: white;
+    }
+
+    table, pre {
+        page-break-inside: avoid;
+    }
+}
+
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    background-color: #051012;
+    color: #116CD6 white-space : pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+pre code {
+    background-color: #051012;
+    color: #81ddaf;
+    padding: 0;
+    border: none;
+margin-top: 0px !important;
+
+margin-bottom: 0px !important;
+}
+
+pre:not([class]) {
+    border: none;
+    padding: 0px !important;
+    color: #F2F0CD;
+
+}
+
+p {
+    white-space: pre-line;
+}
+
+
+div.sourceCode {
+    overflow-x: auto
+}
+
+table.sourceCode, td.lineNumbers, td.sourceCode, tr.sourceCode {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    border: none
+}
+
+table.sourceCode {
+    width: 100%;
+    line-height: 100%
+}
+
+td.lineNumbers {
+    text-align: right;
+    padding-right: 4px;
+    padding-left: 4px;
+    color: #aaa;
+    border-right: 1px solid #aaa
+}
+
+td.sourceCode {
+    padding-left: 5px
+}
+
+.codehilite code, .codehilite pre {
+    color: #fdce93;
+    background-color: #3f3f3f
+}
+
+code > span.kw {
+    color: #BCFBBA;
+    font-weight: 700
+}
+
+code > span.dt {
+    color: #e90
+}
+
+code > span.dv {
+    color: #8AF9F0
+}
+
+code > span.bn, code > span.fl {
+    color: #40a070
+}
+
+code > span.st {
+    color: #FBFBAB
+}
+
+code > span.ch {
+    color: #93DD9F
+}
+
+code > span.co {
+    color: #929292
+}
+
+code > span.ot {
+    color: #76AEF4
+}
+
+code > span.al {
+    color: #e90
+}
+
+code > span.fu {
+    color: #00B1B1
+}
+
+code > span.er {
+    color: #FB9BEA
+}
+img[src='Error.src']{
+    display: none;
+}
+
+</style>
+</head>
+<body>
+<h2 id="chapter-1-capitalism-media">Chapter 1: capitalism: Media</h2>
+<h2 id="media"><a href="../category/capitalism/media/index.html">Media</a></h2>
+<h1 id="tragedies-and-ordinary-lives-in-the-media">Tragedies and Ordinary Lives in the Media</h1>
+<p>Media organisations want us to care about the bad stuff that is happening out there – and the best way they feel they can do this is to tell us about the gore, the bombs, the landslides, the murders and the calamities.</p>
+<p>In the media’s coverage of global events, the focus is relentlessly on the shocking and the bloody. It’s a strategy that sees complacency as the obstacle to progress. People don’t realise how bad it is out there. If they knew, they’d act.</p>
+<p><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/157044107-1.jpg" alt="SYRIA-CONFLICT" /></p>
+<h6 id="getty">© Getty</h6>
+<p><span class="s1">But this involves a fundamental misunderstanding of human psychology: when a troubled bit of the earth is seen as deeply awful, news of outrage and horror make little impact. It confirms the bleak belief that the region is beyond all reason and redemption already.</span></p>
+<p><span class="s1">That is in part what makes the photographs of Tanya Habjouqa so striking – and so shocking, because rather than showing us hackneyed imagery reducing Palestinians to either proponents or victims of violence in the West Bank and Gaza, she has trained her lens on very different things. She has looked at what is fun, charming, sweet and deeply normal in one of the most troubled regions on earth – the kind of stuff we know intimately and intuitively from our own lives.</span></p>
+<p><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/TANYA_0002.jpg" alt="TANYA_0002" /></p>
+<h6 id="tanya-habjouqa">© Tanya Habjouqa</h6>
+<h5 id="what-every-12-year-old-does-in-pools-around-the-world-they-see-how-long-they-can-float-and-hold-their-breath-for.-ain-farah-west-bank"><span class="s1">What every 12-year-old does in pools around the world: they see how long they can float and hold their breath for. Ain Farah, West Bank</span></h5>
+<p><span class="s1">In theory, we know that ordinary things continue in places associated with terror, hatred and intractable conflict. But the media generally only shows us things that make lives there different. Countries disappear into their worst moments.</span></p>
+<p><span class="s1">The occupied territories of Gaza and the West Bank become suicide bombers and tanks; virulent extremists and wailing mothers. And so we stop caring, which has serious policy implications. Widespread indifference makes diplomatic disengagement inevitable.</span></p>
+<p><span class="s1">The route to caring about the extraordinary is through the ordinary. We need to feel close to the ordinary moments of others’ lives before we can care about what happens to them in their tragedies. This is a brute fact about the mechanics of sympathy which the media has forgotten.</span></p>
+<p><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/TANYA_0011.jpg" alt="TANYA_0011" /></p>
+<h6 id="tanya-habjouqa-1">© Tanya Habjouqa</h6>
+<h5 id="girls-from-ramallah-trying-on-dresses-for-an-upcoming-school-dance"><span class="s1">Girls from Ramallah, trying on dresses for an upcoming school dance</span></h5>
+<p><span class="s1">If these girls were in Essex or Hamburg, it would be merely another night out. Here it becomes an achievement. It radiates hope. The people doing the bombing suddenly seem shallow by comparison. Why don’t they care about the things that actually matter to people and the real pleasures of existence? It’s moving and reassuring that the attractions of dancing and high heels are not going to be extinguished, for they are astonishingly resilient, much harder to get rid of than fear and prejudice.</span></p>
+<p><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/Occupied-Pleasures-by-Tanya-Habjouqa_31-1024x682.jpg?resize=1024%2C682" alt="A toy store van drives along Gaza&#39;s beach high way." /></p>
+<h6 id="tanya-habjouqa-2">© Tanya Habjouqa</h6>
+<h5 id="the-power-of-normality.-sponge-bob-might-not-seem-impressive-in-a-shopping-centre-in-manchester-or-lyon.-but-it-becomes-moving-to-imagine-a-child-coveting-a-squarepants-doll-or-the-parents-organising-a-themed-party-in-the-gaza-strip"><span class="s1">The power of normality. Sponge Bob might not seem impressive in a shopping centre in Manchester or Lyon. But it becomes moving to imagine a child coveting a SquarePants doll or the parents organising a themed party – in the Gaza strip</span></h5>
+<p><span class="s1">It feels paradoxical, but if we don’t see people as sharing our concerns, our pity will be abstract and insubstantial, easily put aside.</span></p>
+<p><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/6-ladies-who-rally-photograph-series-by-tanya-habjouqa.jpg" alt="6-ladies-who-rally-photograph-series-by-tanya-habjouqa" /></p>
+<h6 id="tanya-habjouqa-3">© Tanya Habjouqa</h6>
+<h5 id="women-who-rally-in-the-west-bank.-like-the-women-in-nashville.-like-your-cousin.-like-your-best-friends-sister.-the-driver-loves-top-gear.-she-cant-be-denied-basic-rights.-she-is-why-diplomacy-matters-intensely"><span class="s1">Women who rally in the West Bank. Like the women in Nashville. Like your cousin. Like your best friend’s sister. The driver loves Top Gear. She can’t be denied basic rights. She is why diplomacy matters intensely</span></h5>
+<p><span class="s1">We need to retrain our war photographers to show us not just the horror, but also – as importantly – the everyday. Currently, despite the media’s amazing technological capabilities, despite the bureaux, correspondents, photographers and camera operators, we are given no information whatsoever about ordinary occurrences. We don’t know whether anyone has ever had a normal day in the Democratic Republic of the Congo, for no such thing has ever been recorded by a Western news organisation. We have no idea what it’s like to go to school or visit the hairdresser in Bolivia; it’s entirely mysterious whether anything like a good marriage is possible in Somalia; and we are equally in the dark about office life in Turkmenistan and what people do on the weekend in Algeria.</span></p>
+<p><span class="s1">That should change. The ideal news organisation of the future, recognising that an interest in the anomalous depends on a prior knowledge of the normal, would tell us about street parties in Addis Ababa, love in Peru, in-laws in Mongolia and rally-driving in Nablus, so that audiences would be prepared to care just a little more about the next devastating typhoon, violent coup and appalling cluster bomb.</span></p>
+<title>thebookoflife</title>
+
+
+</body>
+</html>

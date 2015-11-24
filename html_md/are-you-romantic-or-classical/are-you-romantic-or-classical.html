@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Computer Modern";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/computermodern/Sans/cmunss.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "scpro";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/sourcecodepro/SourceCodePro-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+    text-rendering: geometricPrecision;
+    font-family: "Dyslexie";
+    /*font-family:  "scpro Light";*/
+    font-family:  "Computer Modern";
+    font-size: 18px;
+    line-height: 150%;
+    color: rgba(242, 240, 205, 0.8);
+
+    background-color: #000;
+    background-color: #02090B;
+    margin: 10px 13px 10px 13px;
+    padding-bottom: 64px;
+}
+
+html * {
+    color-profile: sRGB;
+}
+
+strong {
+    font-weight: normal;
+    color: #ffd479;
+    color: rgba(100, 182, 138, 1);
+}
+
+em {
+
+    font-weight: normal;
+    font-style: normal;
+    color: #ffd479;
+    color: #64B68A;
+}
+
+table {
+    min-width: 1150px !important;
+    width: 100% !important;
+    margin: 10px 0 15px 0;
+    border-collapse: collapse;
+}
+
+table tr:nth-child(2n) {
+    background-color: #06181b;
+}
+
+td, th {
+    border: 1px solid #3C3C3E;
+    padding: 3px 10px;
+}
+
+th {
+    padding: 5px 10px;
+    color: #B3D8FD;
+    background-color: #06181b;
+}
+
+a {
+    color: #B4D9FB;
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+a:hover {
+    color: #2668D4;
+    text-decoration: none;
+}
+
+a img {
+    border: 2px solid;
+}
+
+p {
+    margin-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+img {
+    background-color: #7F7F7F;
+    max-width: 1600px;
+}
+
+ul, ol {
+    padding: 16px 0 8px 10px;
+    margin: 16px 0 8px 10px;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none; /* Hides the default checkbox style */
+    height: 15px !important;
+    width: 15px !important;
+    top: -4px !important;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: .15s;
+    border-radius: 4px;
+    background-color: #FCB8B0;
+    color: black
+}
+
+input[type="checkbox"]:checked {
+    background-color: #BCFBBA;
+}
+
+input[type="checkbox"]:before, input[type="checkbox"]:checked:before {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    height: 16px !important;
+    width: 16px !important;
+    line-height: 16px;
+    text-align: center;
+    font-weight: bold;
+    content: '✘';
+}
+
+input[type="checkbox"]:checked:before {
+    content: '✔';
+}
+
+input[type="checkbox"]:hover:before {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+li {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-left: 8px;
+    padding-left: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+li.task-list-item {
+    list-style-type: none;
+    margin-left: -20px;
+}
+
+li.task-list-item label {
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+
+li.task-list-item input {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+}
+
+ul li:nth-child(even) {
+    background-color: #06181b;
+}
+ol li:nth-child(even) {
+    background-color: #06181b;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    color: #b4d9fb;
+    margin-top: 18px;
+    text-rendering: geometricPrecision;
+    font-family: "scpro";
+    font-size: 18px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    text-transform: capitalize;
+}
+
+h1 {
+    color: #54B2BC;
+    color: rgba(255, 212, 121, 1);
+    font-weight: normal;
+    margin-top: 32px;
+    font-size: 26px;
+    margin-bottom: 12px;
+
+}
+
+h2 {
+
+    color: #ffd479;
+    color: rgba(255, 212, 121, 0.8);
+
+    margin-top: 24px;
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-size: 20px;
+
+    color: rgba(129, 206, 203, 1);
+    margin-top: 20px;
+}
+
+h4 {
+    color: rgba(129, 206, 203, 0.8);
+}
+
+h5 {
+    color: rgba(129, 206, 203, 0.7);
+}
+
+h6 {
+    color: rgba(129, 206, 203, 0.6);
+}
+
+ul, ol {
+    padding-left: 30px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+hr {
+    margin: 32px 12px;
+    border: 0;
+    border-bottom: 1px solid #B4C5C5;
+}
+
+blockquote {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-style: normal;
+}
+
+blockquote p {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+    padding-left: 8px;
+    border-left: 3px solid #54B2BC;
+}
+
+blockquote p a {
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+code, pre {
+    font-family: "scpro" !important;
+    color: #8EB1D0;
+    display: block;
+    padding: 12px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    border: 1px solid #3C3C3E;
+    background-color: #051012;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+* {
+    -webkit-print-color-adjust: exact;
+}
+
+@media screen and (min-width: 914px) {
+    body {
+        width: 1145px;
+        margin: 10px auto;
+    }
+}
+
+@media print {
+    body, code, pre code, h1, h2, h3, h4, h5, h6 {
+        color: black;
+        background: white;
+    }
+
+    table, pre {
+        page-break-inside: avoid;
+    }
+}
+
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    background-color: #051012;
+    color: #116CD6 white-space : pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+pre code {
+    background-color: #051012;
+    color: #81ddaf;
+    padding: 0;
+    border: none;
+margin-top: 0px !important;
+
+margin-bottom: 0px !important;
+}
+
+pre:not([class]) {
+    border: none;
+    padding: 0px !important;
+    color: #F2F0CD;
+
+}
+
+p {
+    white-space: pre-line;
+}
+
+
+div.sourceCode {
+    overflow-x: auto
+}
+
+table.sourceCode, td.lineNumbers, td.sourceCode, tr.sourceCode {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    border: none
+}
+
+table.sourceCode {
+    width: 100%;
+    line-height: 100%
+}
+
+td.lineNumbers {
+    text-align: right;
+    padding-right: 4px;
+    padding-left: 4px;
+    color: #aaa;
+    border-right: 1px solid #aaa
+}
+
+td.sourceCode {
+    padding-left: 5px
+}
+
+.codehilite code, .codehilite pre {
+    color: #fdce93;
+    background-color: #3f3f3f
+}
+
+code > span.kw {
+    color: #BCFBBA;
+    font-weight: 700
+}
+
+code > span.dt {
+    color: #e90
+}
+
+code > span.dv {
+    color: #8AF9F0
+}
+
+code > span.bn, code > span.fl {
+    color: #40a070
+}
+
+code > span.st {
+    color: #FBFBAB
+}
+
+code > span.ch {
+    color: #93DD9F
+}
+
+code > span.co {
+    color: #929292
+}
+
+code > span.ot {
+    color: #76AEF4
+}
+
+code > span.al {
+    color: #e90
+}
+
+code > span.fu {
+    color: #00B1B1
+}
+
+code > span.er {
+    color: #FB9BEA
+}
+img[src='Error.src']{
+    display: none;
+}
+
+</style>
+</head>
+<body>
+<h2 id="chapter-3-relationships-romanticism">Chapter 3: relationships: Romanticism</h2>
+<h2 id="romanticism"><a href="../category/relationships/romanticism/index.html">Romanticism</a></h2>
+<h1 id="on-being-romantic-or-classical">On Being Romantic or Classical</h1>
+<p>We are – each one of us – probably more one than the other. The categories explain a lot about us; how we approach nature, what makes us laugh, our attitudes to love, what our politics are… We may not be used to conceiving ourselves in these terms, but the labels Romantic and Classical usefully bring into focus some of the central themes of our personalities and help us to gain a clearer hold on the underlying structure of our enthusiasms and concerns.</p>
+<p><span class="s1">What follows are a few of the central contrasting characteristics of Romantic and Classical personalities:</span></p>
+<p><strong><span class="s1">1. Intuition vs. Analysis</span></strong></p>
+<p><span class="s1">Romantics relish things that seem slightly to defy rational explanations. They are enthusiastic about feelings and wary of the intellect as a guide to life. They believe one shouldn’t always think too much. In their eyes, it may be slightly unfair to probe a decision or a mood too hard; they like instinct.</span></p>
+<p><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/176451971.jpg" alt="MYANMAR-ASTRONOMY-METEOR-SHOWER-PERSEIDS" /></p>
+<p><span class="s1">In particular, they think one shouldn’t always attempt to take apart emotions as they relate to love, to the more spiritual varieties of experiences and to art and literature. They have (in appropriate contexts) a deep respect for unclear language and obscure modes of expression, which seem to them to hint at valuable yet ineffable aspects of existence.</span></p>
+<p>Classicists, on the other hand, are wary of intuition. They tend to have learnt, often through bitter experience, how misguided and deluded their own feelings may be and hence look rather sceptically and caustically upon them. They see no conflict between loving art and taking it apart and asking what it should be for. They favour clear modes of expression (even about rare and evanescent emotions, like those one might have looking at the stars) and like language that an intelligent 12-year-old could understand.</p>
+<p><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/pngbase64aa8cbe482f11ad6d.png" alt="pngbase64aa8cbe482f11ad6d" /></p>
+<p><strong><span class="s1">2.  Spontaneity vs. Education</span></strong></p>
+<p><span class="s1">Romantics have often been wary of teaching and instruction. They think that important and serious activities should be spontaneous rather than taught. The idea that people might need to think rationally and exhaustively about what career to choose for themselves or whom they should marry strikes the Romantic as a misguided intrusion of education into things which should be spontaneous and natural (they like the notion of a ‘calling’ and of ‘love at first sight’).</span></p>
+<p><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/57210933.jpg" alt="Pillow fight" /></p>
+<p><span class="s1">Part of Romantics’ respect for spontaneity leads them to look with particular interest at children, who seem to them to have more direct access to the kind of truths and sensibilities that adults have lost. To the Romantic, it will always be a child who points out that the emperor is wearing no clothes.</span></p>
+<p><span class="s1">Those of a Classical temperament don’t necessarily respect the current education system as we know it, but the abstract idea of education seems to them very important. They believe that training is vital if we are to avoid making too many mistakes in our emotional or professional lives. The Classically minded person sees education as perfectly placed to make good the shortfalls of our wayward natures.</span></p>
+<p><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/102580313.jpg" alt="TO GO WITH AFP STORY BY SOFIA MISELEM A" /></p>
+<p><strong><span class="s1">3. Honesty vs. Politeness</span></strong></p>
+<p><span class="s1">The Romantic person is devoted to saying what they think or feel. They are allergic to the idea of being fake or of having secrets. Authenticity is vital. They imagine politeness as a very dull lid that suppresses what really matters.</span></p>
+<p><span class="s1">The Classical person reveres politeness as a very important lid that suppresses what might destroy us. They believe deeply in getting on around other people. It is not that they are afraid of ruffling anyone’s feathers per se – but they just doubt whether it is ever really a constructive move and they are not interested in merely symbolic victories. They would prefer to have civil relations with someone rather than tell them frankly what is on their mind. They’re alive to how difficult it is for us to take on board challenging information from someone else. They accept an important role for secrets and white lies.</span></p>
+<p><strong><span class="s1">4. Idealism vs. Realism</span></strong></p>
+<p><span class="s1">The Romantic is excited by how things might ideally be, and judges what currently exists in the world by the standard of a better imagined alternative. Most of the time, the current state of things arouses them to intense disappointment and anger as they consider the injustices, prevarications, compromises, and timidity of the powerful. They are often furious with governments and surprised and outraged by evidence of venal and self-interested conduct in society.</span></p>
+<p><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/129451067.jpg" alt="Demonstrators Continue To Occupy London&#39;s Financial District In A Protest Against City Greed" /></p>
+<p><span class="s1">For their part, the Classical person pays special attention to what can go wrong. They are very concerned to mitigate the downside. They are aware that most things could be a lot worse. Before condemning a government, they consider the standard of governments across history and may regard a current arrangement as bearable, under the circumstances… Their view of people is fundamentally rather dark. They believe that everyone is probably slightly worse than they seem. They feel humans have deeply dangerous impulses, lusts and drives, and take it for granted when bad behaviour manifests itself. They simply feel this is what humans are prone to. High ideals make them nervous.</span></p>
+<p><strong><span class="s1">5. Earnestness vs. Irony</span></strong></p>
+<p><span class="s1">Romantics don’t believe in how things are. Their attention is fixed on how they should be. They therefore resist the deflationary call of ironic humour, which seems defeatist. They are earnest in their search for a better future.</span></p>
+<p><a href="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/1292177721.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/1292177721.jpg?resize=635%2C474" alt="Hillary Clinton Gives Foreign Policy Economics Address In New York" /></a></p>
+<p><span class="s1">The Classical conviction is not that the world is a cheerful place, far from it; but rather that a cheerful mood is good starting point for living in a radically imperfect and deeply unsatisfactory realm – where the priority is not to give up, despair and kill oneself. Ironic humour is a standard recourse for them, because it emerges from the constant collision between how one would want things to be – and how it seems they in fact are. They like a bit of gallows humour.</span></p>
+<p><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/rexfeatures_1388438j.jpg" alt="Curb Your Enthusiasm - 2011" /></p>
+<p><strong><span class="s1">6. The Rare vs. The Everyday</span></strong></p>
+<p><span class="s1">The Romantic rebels against the ordinary. They are keen on the exotic and the rare. They like things which the mass of the population won’t yet know about. The fact that something is popular will always be a mark against it. Nor do they much like routine, especially in domestic life. They are anxious about higher things being put under pressure to become ‘useful’ or commercial. They want heroism, excitement and an end to boredom.</span></p>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/Caspar_David_Friedrich_032_The_wanderer_above_the_sea_of_fog.jpg"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/Caspar_David_Friedrich_032_The_wanderer_above_the_sea_of_fog.jpg?resize=635%2C547" alt="Caspar_David_Friedrich_032_The_wanderer_above_the_sea_of_fog" /></a></p>
+<p><span class="s1">The Classical personality welcomes routine as a defence against chaos. They would very much like good things to be popular. They don’t necessarily think that what is popular is good; though they see popularity as, in principle, a mark of virtue. They are familiar enough with extremes as to welcome things that are a little boring. They can see the charm of doing the laundry.</span></p>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/1024px-Pieter_de_Hooch_-_At_the_Linen_Closet.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/1024px-Pieter_de_Hooch_-_At_the_Linen_Closet.jpg?resize=635%2C471" alt="1024px-Pieter_de_Hooch_-_At_the_Linen_Closet" /></a></p>
+<p><strong><span class="s1">7. Purity vs. Ambivalence</span></strong></p>
+<p><span class="s1">The Romantic is drawn to either whole-hearted endorsement or total rejection. Ideally partners should love everything about each other. A political party should be admirable at every turn. A philanthropist should draw no personal benefit from acts of charity. The Romantic is dismayed by compromise. They feel the attraction of the lost cause. It is very important for the Romantic to feel they are right; winning is – by comparison – not such an urgent matter.</span></p>
+<p><a href="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/800px-Eugène_Delacroix_-_La_liberté_guidant_le_peuple1.jpg"><embed src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/800px-Eugène_Delacroix_-_La_liberté_guidant_le_peuple1.jpg?resize=635%2C425" /></a></p>
+<p><span class="s1">The Classical person takes the view that very few things, and no people, are either wholly good or entirely bad. They assume that there is likely to be some worth in opposing ideas and something to be learned from both sides. It is Classical to think that a decent person might in many areas hold views you find deeply unpalatable.</span></p>
+<p><span class="s1">For a long time now, perhaps since around 1750, Romantic attitudes have been dominant in the Western imagination. The prevailing approach to children, relationships, politics and culture has all been coloured more by a Romantic spirit than by a Classical one.</span></p>
+<p><a href="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/1144px-Claude_Monet_-_Graystaks_I.jpeg"><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/1144px-Claude_Monet_-_Graystaks_I.jpeg?resize=635%2C480" alt="1144px-Claude_Monet_-_Graystaks_I" /></a></p>
+<p><span class="s1">Both Romantic and Classical orientations have important truths to impart. Neither is wholly right or wrong. They need to be balanced. And none of us are in any case ever simply one or the other. But because a good life requires a judicious balance of both, at this point in history, it might be the Classical attitude whose distinctive claims and wisdom we need to listen to most intently. It is a mode of approaching life which is ripe for rediscovery – and it can be repeatedly sampled in these pages.</span></p>
+<title>thebookoflife</title>
+
+
+</body>
+</html>

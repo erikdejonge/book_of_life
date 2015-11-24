@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Computer Modern";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/computermodern/Sans/cmunss.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "scpro";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/sourcecodepro/SourceCodePro-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+    text-rendering: geometricPrecision;
+    font-family: "Dyslexie";
+    /*font-family:  "scpro Light";*/
+    font-family:  "Computer Modern";
+    font-size: 18px;
+    line-height: 150%;
+    color: rgba(242, 240, 205, 0.8);
+
+    background-color: #000;
+    background-color: #02090B;
+    margin: 10px 13px 10px 13px;
+    padding-bottom: 64px;
+}
+
+html * {
+    color-profile: sRGB;
+}
+
+strong {
+    font-weight: normal;
+    color: #ffd479;
+    color: rgba(100, 182, 138, 1);
+}
+
+em {
+
+    font-weight: normal;
+    font-style: normal;
+    color: #ffd479;
+    color: #64B68A;
+}
+
+table {
+    min-width: 1150px !important;
+    width: 100% !important;
+    margin: 10px 0 15px 0;
+    border-collapse: collapse;
+}
+
+table tr:nth-child(2n) {
+    background-color: #06181b;
+}
+
+td, th {
+    border: 1px solid #3C3C3E;
+    padding: 3px 10px;
+}
+
+th {
+    padding: 5px 10px;
+    color: #B3D8FD;
+    background-color: #06181b;
+}
+
+a {
+    color: #B4D9FB;
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+a:hover {
+    color: #2668D4;
+    text-decoration: none;
+}
+
+a img {
+    border: 2px solid;
+}
+
+p {
+    margin-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+img {
+    background-color: #7F7F7F;
+    max-width: 1600px;
+}
+
+ul, ol {
+    padding: 16px 0 8px 10px;
+    margin: 16px 0 8px 10px;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none; /* Hides the default checkbox style */
+    height: 15px !important;
+    width: 15px !important;
+    top: -4px !important;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: .15s;
+    border-radius: 4px;
+    background-color: #FCB8B0;
+    color: black
+}
+
+input[type="checkbox"]:checked {
+    background-color: #BCFBBA;
+}
+
+input[type="checkbox"]:before, input[type="checkbox"]:checked:before {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    height: 16px !important;
+    width: 16px !important;
+    line-height: 16px;
+    text-align: center;
+    font-weight: bold;
+    content: '✘';
+}
+
+input[type="checkbox"]:checked:before {
+    content: '✔';
+}
+
+input[type="checkbox"]:hover:before {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+li {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-left: 8px;
+    padding-left: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+li.task-list-item {
+    list-style-type: none;
+    margin-left: -20px;
+}
+
+li.task-list-item label {
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+
+li.task-list-item input {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+}
+
+ul li:nth-child(even) {
+    background-color: #06181b;
+}
+ol li:nth-child(even) {
+    background-color: #06181b;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    color: #b4d9fb;
+    margin-top: 18px;
+    text-rendering: geometricPrecision;
+    font-family: "scpro";
+    font-size: 18px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    text-transform: capitalize;
+}
+
+h1 {
+    color: #54B2BC;
+    color: rgba(255, 212, 121, 1);
+    font-weight: normal;
+    margin-top: 32px;
+    font-size: 26px;
+    margin-bottom: 12px;
+
+}
+
+h2 {
+
+    color: #ffd479;
+    color: rgba(255, 212, 121, 0.8);
+
+    margin-top: 24px;
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-size: 20px;
+
+    color: rgba(129, 206, 203, 1);
+    margin-top: 20px;
+}
+
+h4 {
+    color: rgba(129, 206, 203, 0.8);
+}
+
+h5 {
+    color: rgba(129, 206, 203, 0.7);
+}
+
+h6 {
+    color: rgba(129, 206, 203, 0.6);
+}
+
+ul, ol {
+    padding-left: 30px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+hr {
+    margin: 32px 12px;
+    border: 0;
+    border-bottom: 1px solid #B4C5C5;
+}
+
+blockquote {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-style: normal;
+}
+
+blockquote p {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+    padding-left: 8px;
+    border-left: 3px solid #54B2BC;
+}
+
+blockquote p a {
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+code, pre {
+    font-family: "scpro" !important;
+    color: #8EB1D0;
+    display: block;
+    padding: 12px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    border: 1px solid #3C3C3E;
+    background-color: #051012;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+* {
+    -webkit-print-color-adjust: exact;
+}
+
+@media screen and (min-width: 914px) {
+    body {
+        width: 1145px;
+        margin: 10px auto;
+    }
+}
+
+@media print {
+    body, code, pre code, h1, h2, h3, h4, h5, h6 {
+        color: black;
+        background: white;
+    }
+
+    table, pre {
+        page-break-inside: avoid;
+    }
+}
+
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    background-color: #051012;
+    color: #116CD6 white-space : pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+pre code {
+    background-color: #051012;
+    color: #81ddaf;
+    padding: 0;
+    border: none;
+margin-top: 0px !important;
+
+margin-bottom: 0px !important;
+}
+
+pre:not([class]) {
+    border: none;
+    padding: 0px !important;
+    color: #F2F0CD;
+
+}
+
+p {
+    white-space: pre-line;
+}
+
+
+div.sourceCode {
+    overflow-x: auto
+}
+
+table.sourceCode, td.lineNumbers, td.sourceCode, tr.sourceCode {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    border: none
+}
+
+table.sourceCode {
+    width: 100%;
+    line-height: 100%
+}
+
+td.lineNumbers {
+    text-align: right;
+    padding-right: 4px;
+    padding-left: 4px;
+    color: #aaa;
+    border-right: 1px solid #aaa
+}
+
+td.sourceCode {
+    padding-left: 5px
+}
+
+.codehilite code, .codehilite pre {
+    color: #fdce93;
+    background-color: #3f3f3f
+}
+
+code > span.kw {
+    color: #BCFBBA;
+    font-weight: 700
+}
+
+code > span.dt {
+    color: #e90
+}
+
+code > span.dv {
+    color: #8AF9F0
+}
+
+code > span.bn, code > span.fl {
+    color: #40a070
+}
+
+code > span.st {
+    color: #FBFBAB
+}
+
+code > span.ch {
+    color: #93DD9F
+}
+
+code > span.co {
+    color: #929292
+}
+
+code > span.ot {
+    color: #76AEF4
+}
+
+code > span.al {
+    color: #e90
+}
+
+code > span.fu {
+    color: #00B1B1
+}
+
+code > span.er {
+    color: #FB9BEA
+}
+img[src='Error.src']{
+    display: none;
+}
+
+</style>
+</head>
+<body>
+<h2 id="chapter-4-self-self-knowledge">Chapter 4: self: Self-Knowledge</h2>
+<h2 id="self-knowledge"><a href="../category/self/self-knowledge/index.html">Self-Knowledge</a></h2>
+<h1 id="a-self-compassion-exercise">A Self-Compassion Exercise</h1>
+<p>When we fail and mess up in our lives (perhaps a project at work goes wrong or a relationship ends), our moods are at risk of heading towards two extremes: self-pity on the one hand, where it is exclusively everyone else’s fault and we bathe in a sense of our innocence and purity. And on the other, self-flagellation, where we blame only ourselves, tear ourselves apart and constantly replay evidence of our waywardness and sheer stupidity.</p>
+<p><span style="font-weight: 400;">Self-flagellation is – for many of us – the greater risk. To survive in the high-pressured conditions of modernity, we have little option but to grow up to be highly adept at self-criticism, at swiftly picking up on our errors and taking stock of our short-comings. We learn to take responsibility and to be open to feedback. But so good are we at this that we’re in danger of falling prey to an excessive version of self-criticism: a form of self-flagellation which teaches us nothing new and inspires only depression and underperformance. We have taken self-criticism too far when it no longer has any effect on our level of achievement, when it simply saps our morale and our will to get out of bed.</span></p>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/09/466817135_812705e91f_z.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/09/466817135_812705e91f_z.jpg?resize=635%2C476" alt="466817135_812705e91f_z" /></a></p>
+<p><span style="font-weight: 400;">It’s at this point that we need to carve out some time to sample an emotional state of which many of us are profoundly suspicious: self-compassion. We’re suspicious because we are nervously over-familiar with the risks associated with self-pity. We are frightened creatures always looking out for signs that we have grown soft. Most of us will have given up on the last traces of self-pity somewhere in late adolescence, but the condition remains vivid. We are aware that, by being kind to ourselves, we may over-indulge our undeserving characters, miss valuable insights and ruin our potential.</span></p>
+<p><span style="font-weight: 400;">Because depression and self-disgust are serious enemies too, we need to re-learn the value of calculated moments of self-compassion; we need to appreciate the role of self-care in a good, ambitious and fruitful life.</span></p>
+<p><a href="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/09/1814098643_9ac4011e5a_z.jpg"><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/09/1814098643_9ac4011e5a_z.jpg?resize=635%2C424" alt="1814098643_9ac4011e5a_z" /></a></p>
+<p><span style="font-weight: 400;">To this end, we should perform a Self-Compassion Exercise, a structured Meditation (lasting 15 minutes or so) where we turn over a sequence of thoughts in our minds that correct the worst self-accusations of our sadder moments. For a time, until we are stronger, we vow to adopt an entirely kindly perspective on our setbacks. We have failed, but the conclusion does not have to be that we are idiots. The following ideas can be rehearsed:</span></p>
+<p><strong>1. The task was very hard</strong></p>
+<p><span style="font-weight: 400;">We’re so in love with success, we fail to notice the scale of the challenges we routinely set ourselves. There is nothing remotely normal about what we are trying to achieve.</span></p>
+<p><strong>2. We weren’t properly equipped by our histories</strong></p>
+<p><span style="font-weight: 400;">We need to consider our biographies in their entireties; not just this or that setback, but the course of our lives as a whole. There were things which happened to us at the hands of others which can help to explain our current failures. We were not responsible for everything. We are in part victims of things beyond our control. We are not in complete command of who we are, and shouldn’t – therefore – be held to account for everything.</span></p>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/09/16777983089_f0353ce88b_z.jpg"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/09/16777983089_f0353ce88b_z.jpg?resize=635%2C424" alt="16777983089_f0353ce88b_z" /></a></p>
+<p><strong>3. Failure is not unique</strong></p>
+<p><span style="font-weight: 400;">The nature of the task means there is always a high possibility of failure. Failure is rarely spoken about. The media talks mostly of successes (or the spectacular blow-ups), but statistically, what has happened to us was always going to be more likely. ‘Better men fared thus before you,’ said Matthew Arnold, people who are even more talented than you didn’t succeed. It isn’t just that you are a fool: it was a mountain to climb.</span></p>
+<p><strong>4. Luck is real</strong></p>
+<p><span style="font-weight: 400;">Tough, self-critical people don’t allow themselves the indulgence of believing in luck. They take responsibility for everything. They think winners make their own luck. They don’t. Luck is a genuine feature of existence. We are robbing ourselves of genuine and fair consolation by believing that we are entirely in control – and therefore entirely to blame when we crash. We are not losers in a game that was fair. We are unfortunates in an often highly random unlucky universe.</span></p>
+<p><a href="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/09/15827903959_b3976cba53_z.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/09/15827903959_b3976cba53_z.jpg?resize=635%2C424" alt="15827903959_b3976cba53_z" /></a></p>
+<p><strong>5. Your whole worth is not dependent on external things</strong></p>
+<p><span style="font-weight: 400;">Your essential lovability does not have to be at stake in this issue. You are not only your achievements. Status and material success is one bit of you, but there are lots of other parts too. Those who loved you in childhood knew this and, in their best moments, helped you to feel it. Adopt a maternal relationship with yourself: rehearse the internalised voices of all those who have been kind to you, bathe in an intrinsic absolute love independent of achievement. Imagine a maternal figure. Let yourself listen to voices you haven’t given time for in years. Perhaps it isn’t unconditional love, it’s just that there are other conditions for love, which you happen to pass quite well. You are kind, interesting, witty, sensitive, bold, imaginative… Modern society has over-emphasised certain conditions for love, pegging them too neatly to a narrow range of victories. You should be allowed to exist and tolerate yourself without these badges.</span></p>
+<p><strong>6. There is a way out of this that you can’t quite see now</strong></p>
+<p><span style="font-weight: 400;">You are exhausted, and panicked. You can’t see how you could move on from this. That’s not the truth, it’s merely how it feels when self-criticism has destroyed every bit of confidence. You need time without pressure. You need to sleep and nurture yourself. We have grown too good at giving the case to the prosecution. Shut out the voice of Duty and Anger.</span></p>
+<p><a href="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/09/233842170_4bf3079c3d_z.jpg"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/09/233842170_4bf3079c3d_z.jpg?resize=635%2C649" alt="233842170_4bf3079c3d_z" /></a></p>
+<p><span style="font-weight: 400;">Self-compassion is different from saying you are innocent. It’s trying to be pretty gentle and understanding about why you failed. You’ve been a fool, but you deserve to exist with dignity and to be understood and forgiven. It’s a fundamental right for us all.</span></p>
+<title>thebookoflife</title>
+
+
+</body>
+</html>

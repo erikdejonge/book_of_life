@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Computer Modern";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/computermodern/Sans/cmunss.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "scpro";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/sourcecodepro/SourceCodePro-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+    text-rendering: geometricPrecision;
+    font-family: "Dyslexie";
+    /*font-family:  "scpro Light";*/
+    font-family:  "Computer Modern";
+    font-size: 18px;
+    line-height: 150%;
+    color: rgba(242, 240, 205, 0.8);
+
+    background-color: #000;
+    background-color: #02090B;
+    margin: 10px 13px 10px 13px;
+    padding-bottom: 64px;
+}
+
+html * {
+    color-profile: sRGB;
+}
+
+strong {
+    font-weight: normal;
+    color: #ffd479;
+    color: rgba(100, 182, 138, 1);
+}
+
+em {
+
+    font-weight: normal;
+    font-style: normal;
+    color: #ffd479;
+    color: #64B68A;
+}
+
+table {
+    min-width: 1150px !important;
+    width: 100% !important;
+    margin: 10px 0 15px 0;
+    border-collapse: collapse;
+}
+
+table tr:nth-child(2n) {
+    background-color: #06181b;
+}
+
+td, th {
+    border: 1px solid #3C3C3E;
+    padding: 3px 10px;
+}
+
+th {
+    padding: 5px 10px;
+    color: #B3D8FD;
+    background-color: #06181b;
+}
+
+a {
+    color: #B4D9FB;
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+a:hover {
+    color: #2668D4;
+    text-decoration: none;
+}
+
+a img {
+    border: 2px solid;
+}
+
+p {
+    margin-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+img {
+    background-color: #7F7F7F;
+    max-width: 1600px;
+}
+
+ul, ol {
+    padding: 16px 0 8px 10px;
+    margin: 16px 0 8px 10px;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none; /* Hides the default checkbox style */
+    height: 15px !important;
+    width: 15px !important;
+    top: -4px !important;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: .15s;
+    border-radius: 4px;
+    background-color: #FCB8B0;
+    color: black
+}
+
+input[type="checkbox"]:checked {
+    background-color: #BCFBBA;
+}
+
+input[type="checkbox"]:before, input[type="checkbox"]:checked:before {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    height: 16px !important;
+    width: 16px !important;
+    line-height: 16px;
+    text-align: center;
+    font-weight: bold;
+    content: '✘';
+}
+
+input[type="checkbox"]:checked:before {
+    content: '✔';
+}
+
+input[type="checkbox"]:hover:before {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+li {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-left: 8px;
+    padding-left: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+li.task-list-item {
+    list-style-type: none;
+    margin-left: -20px;
+}
+
+li.task-list-item label {
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+
+li.task-list-item input {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+}
+
+ul li:nth-child(even) {
+    background-color: #06181b;
+}
+ol li:nth-child(even) {
+    background-color: #06181b;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    color: #b4d9fb;
+    margin-top: 18px;
+    text-rendering: geometricPrecision;
+    font-family: "scpro";
+    font-size: 18px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    text-transform: capitalize;
+}
+
+h1 {
+    color: #54B2BC;
+    color: rgba(255, 212, 121, 1);
+    font-weight: normal;
+    margin-top: 32px;
+    font-size: 26px;
+    margin-bottom: 12px;
+
+}
+
+h2 {
+
+    color: #ffd479;
+    color: rgba(255, 212, 121, 0.8);
+
+    margin-top: 24px;
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-size: 20px;
+
+    color: rgba(129, 206, 203, 1);
+    margin-top: 20px;
+}
+
+h4 {
+    color: rgba(129, 206, 203, 0.8);
+}
+
+h5 {
+    color: rgba(129, 206, 203, 0.7);
+}
+
+h6 {
+    color: rgba(129, 206, 203, 0.6);
+}
+
+ul, ol {
+    padding-left: 30px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+hr {
+    margin: 32px 12px;
+    border: 0;
+    border-bottom: 1px solid #B4C5C5;
+}
+
+blockquote {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-style: normal;
+}
+
+blockquote p {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+    padding-left: 8px;
+    border-left: 3px solid #54B2BC;
+}
+
+blockquote p a {
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+code, pre {
+    font-family: "scpro" !important;
+    color: #8EB1D0;
+    display: block;
+    padding: 12px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    border: 1px solid #3C3C3E;
+    background-color: #051012;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+* {
+    -webkit-print-color-adjust: exact;
+}
+
+@media screen and (min-width: 914px) {
+    body {
+        width: 1145px;
+        margin: 10px auto;
+    }
+}
+
+@media print {
+    body, code, pre code, h1, h2, h3, h4, h5, h6 {
+        color: black;
+        background: white;
+    }
+
+    table, pre {
+        page-break-inside: avoid;
+    }
+}
+
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    background-color: #051012;
+    color: #116CD6 white-space : pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+pre code {
+    background-color: #051012;
+    color: #81ddaf;
+    padding: 0;
+    border: none;
+margin-top: 0px !important;
+
+margin-bottom: 0px !important;
+}
+
+pre:not([class]) {
+    border: none;
+    padding: 0px !important;
+    color: #F2F0CD;
+
+}
+
+p {
+    white-space: pre-line;
+}
+
+
+div.sourceCode {
+    overflow-x: auto
+}
+
+table.sourceCode, td.lineNumbers, td.sourceCode, tr.sourceCode {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    border: none
+}
+
+table.sourceCode {
+    width: 100%;
+    line-height: 100%
+}
+
+td.lineNumbers {
+    text-align: right;
+    padding-right: 4px;
+    padding-left: 4px;
+    color: #aaa;
+    border-right: 1px solid #aaa
+}
+
+td.sourceCode {
+    padding-left: 5px
+}
+
+.codehilite code, .codehilite pre {
+    color: #fdce93;
+    background-color: #3f3f3f
+}
+
+code > span.kw {
+    color: #BCFBBA;
+    font-weight: 700
+}
+
+code > span.dt {
+    color: #e90
+}
+
+code > span.dv {
+    color: #8AF9F0
+}
+
+code > span.bn, code > span.fl {
+    color: #40a070
+}
+
+code > span.st {
+    color: #FBFBAB
+}
+
+code > span.ch {
+    color: #93DD9F
+}
+
+code > span.co {
+    color: #929292
+}
+
+code > span.ot {
+    color: #76AEF4
+}
+
+code > span.al {
+    color: #e90
+}
+
+code > span.fu {
+    color: #00B1B1
+}
+
+code > span.er {
+    color: #FB9BEA
+}
+img[src='Error.src']{
+    display: none;
+}
+
+</style>
+</head>
+<body>
+<h2 id="chapter-3-relationships-conflicts">Chapter 3: relationships: Conflicts</h2>
+<h2 id="conflicts"><a href="../category/relationships/conflicts/index.html">Conflicts</a></h2>
+<h1 id="a-lovers-guide-to-sulking">A Lover’s Guide to Sulking</h1>
+<p><a href="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/couplerestaurant.jpg"><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/couplerestaurant.jpg?resize=635%2C378" alt="200011614-001" /></a></p>
+<p><span class="s1">They have a habit of ruining embarrassingly long stretches of our lives. They will by nature seem absurd to others for they are triggered by what are, ostensibly, very small things: the sink left a certain way, a remark about when to cross the road, an almost imperceptibly off-hand response to an apparently passing comment... And yet their consequences will be extreme. Sulks might start without warning on a Monday and not be quite done by Thursday, they can be kept going in the middle of weddings and family celebrations, they can survive the presence of small children and office colleagues, they hound anniversaries and birthdays, they are particularly prone to erupt in idyllic locations which one has spent a fortune paying for (they gestate at the nice hotels of the world like bacteria at warm polluted water sources). But despite the amount of time they take up in our lives, remarkably little seems ever to have been written about them, for once they are over, it is hard even to recall that they happened, so demeaning are they to our sense of reason and dignity. The philosophy of sulking is a book still waiting to be written.</span></p>
+<p><span class="s1">At heart, sulking appears to combine intense anger with an intense desire not to communicate what one is angry about. One both desperately needs to be understood and yet is utterly committed to not explaining oneself plainly. Having to explain oneself is indeed the central problem: if our partner requires an explanation, then this is proof they are not worthy of having anything explained to them. Which brings one to the odd privilege of being the recipient of a sulk: one only gets into a sulk with people whom one feels <em>should</em> understand, that is, people one respects. It is one of the stranger gifts of love.</span></p>
+<p><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/charlesdi.jpg" alt="Various" /></p>
+<p><span class="s1">So we sulk with people who should know that you dont want to talk about your day; that you were upset by the phone call and that you dont really like that painting or the new layout of the patio without any of this ever having to be spelt out to you as if you were just one of the others. People who may have been highly articulate all day with colleagues at the office or with small children or relatives will, over a tiny matter, suddenly become obstinate and furiously uncommunicative with a partner, because these characters, of all people, should just know. A sulk is a sign of deep hope. One would never bother to storm out of a room, bang the door and call someone a shit and then stay silent the rest of the evening in an upstairs room unless one loved a person really very much indeed.</span></p>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/shelley21.jpg"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/shelley21.jpg?resize=635%2C433" alt="shelley2" /></a></p>
+<p><em><span class="s1">Romantic poets like Shelley are in large part responsible for the epidemic of sulks that stalks the modern world, for it was they who popularised the romantic doctrine that true lovers can see deep into each others soul without language. Love is therefore, in this account, the end of all loneliness. In true love, the other person understands without you needing to explain; its greatest proof is that two people dont have to speak and yet understand one another nevertheless (hence the privileged role of silent contemplation of anothers eyes). Sulking pays homage to a beautiful, and yet in practice catastrophic, romantic ideal of love: wordless understanding.</span></em></p>
+<p><span class="s1">People didnt sulk much before 1800 because they didnt have high expectations of being understood deeply, and intuitively, by others. It was people like Shelley who incited sulking, because they promoted the idea that relationships are based on special insights into one anothers characters achieved <em>without conversation</em>.</span></p>
+<p><span class="s1">At some level, the structure of the sulk reveals a debt to earliest childhood. In the womb, we never had to explain what we needed. Food and comfort simply came. If we had the privilege of being well parented, some of that idyll may have continued in our first years. We didnt have to make our every need known: someone guessed for us. They saw through our tears, our inarticulacy, our confusions: they found the explanations when we didnt have the ability to verbalise. That was the greatest kindness. It was an effort of love. Then came the struggle to learn to speak, driven in part by the failure of others to understand us well enough. Language is born from disappointment. Eloquence is a sign of how misunderstood we have felt in danger of being, which is why it is an asset that one may be highly unwilling to call upon in love. The most articulate person may simply not want to explain themselves in the confines of a relationship; it seems like a betrayal of that romantic dream of being understood without needing to utter a word.</span></p>
+<p><span class="s1">Sulkers are hence the worst of teachers. There is a lesson to impart combined with an utter unwillingness to spell it out patiently to an audience. This tells us something about successful teaching: it helps not to care too much whether or not the audience winds up understanding. A little bit of indifference is a genuine asset for a teacher. Yet because we care so much in love that we are understood (our life is in the persons hands), we simply cannot react calmly to a minor instance of being misread. Something that would be forgivable in 99.9% of humanity becomes grounds to slam doors and leave rooms in fury. Behind the sulk, there is panic: we may be wasting our lives with someone deeply unsuited to interpreting us.</span></p>
+<p><span class="s1">The cure is, as so often, a dose of pessimism. Time always helps because it brings with it evidence of how many other people there are who understand us even less than our lovers: global misunderstanding takes the pressure of its particularly painful local instances. In a more helpful culture than our own, we would be reminded that our partners may be very nice and at the same time very likely to misunderstand, without evil intent, a good number of our moods. Even at their best, they will be mistaken in their interpretations of a raft of our central needs.</span></p>
+<p><span class="s1">To calm us down in the midst of a sulk, we should be reminded that it is not really a sign of love for every aspect of our souls to be grasped without us needing to say anything. It is no insult to us to be called upon to develop our eloquence. When our lovers fail to understand, it isnt an immediate sign that they are heartless. It may merely be that, out of a romantic prejudice, we have grown a little too committed to not teaching them about who we are.</span></p>
+<p><span class="s1">In an ideal world, we would more readily recognise (when we can manage a compassionate mood) the comic aspect of sulking even when we are the special target of the sulkers fury and rage. We would see the touching paradox. The sulker may be six foot one and employed by a major law firm, but they are in fact saying: Deep inside, I remain an infant and right now, I need you to be my parent. I need you to guess what is truly ailing me, as people did when I was a baby, when my ideas of love were formed.</span></p>
+<p><span class="s1">The sulk can be overcome when this insane, touching ambition reveals its comedic dimension. We are then in a position to laugh, not because we dont care, but because we understand how crazy both our lover and the species to which they belong happen to be. We havent been cursed with an especially mad example of a person. Even though our partner has accused us of some truly revolting things and is behaving with advanced viciousness, we do them the greatest possible favour when we look at their tantrum as we would that of a one-year-old.</span></p>
+<p><span class="s1">We are so alive to the notion of being patronised when considered as younger than we are; we forget that this is also, at times, the greatest privilege. We look beyond the sulkers callous words and the slammed door. We grasp the real suffering beneath the horrible exterior, we see that our adversary is hurt not mean, and are struck once more by how oddly human nature is arranged. But because we understand, we are no longer frightened or angry in turn. The furious, hopeful, deluded absurdity of our partners trouble makes us gently smile. We get ready to knock at the door and gently ask if they might let us in for a word.</span></p>
+<title>thebookoflife</title>
+
+
+</body>
+</html>

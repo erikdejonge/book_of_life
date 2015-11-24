@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Computer Modern";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/computermodern/Sans/cmunss.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "scpro";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/sourcecodepro/SourceCodePro-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+    text-rendering: geometricPrecision;
+    font-family: "Dyslexie";
+    /*font-family:  "scpro Light";*/
+    font-family:  "Computer Modern";
+    font-size: 18px;
+    line-height: 150%;
+    color: rgba(242, 240, 205, 0.8);
+
+    background-color: #000;
+    background-color: #02090B;
+    margin: 10px 13px 10px 13px;
+    padding-bottom: 64px;
+}
+
+html * {
+    color-profile: sRGB;
+}
+
+strong {
+    font-weight: normal;
+    color: #ffd479;
+    color: rgba(100, 182, 138, 1);
+}
+
+em {
+
+    font-weight: normal;
+    font-style: normal;
+    color: #ffd479;
+    color: #64B68A;
+}
+
+table {
+    min-width: 1150px !important;
+    width: 100% !important;
+    margin: 10px 0 15px 0;
+    border-collapse: collapse;
+}
+
+table tr:nth-child(2n) {
+    background-color: #06181b;
+}
+
+td, th {
+    border: 1px solid #3C3C3E;
+    padding: 3px 10px;
+}
+
+th {
+    padding: 5px 10px;
+    color: #B3D8FD;
+    background-color: #06181b;
+}
+
+a {
+    color: #B4D9FB;
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+a:hover {
+    color: #2668D4;
+    text-decoration: none;
+}
+
+a img {
+    border: 2px solid;
+}
+
+p {
+    margin-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+img {
+    background-color: #7F7F7F;
+    max-width: 1600px;
+}
+
+ul, ol {
+    padding: 16px 0 8px 10px;
+    margin: 16px 0 8px 10px;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none; /* Hides the default checkbox style */
+    height: 15px !important;
+    width: 15px !important;
+    top: -4px !important;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: .15s;
+    border-radius: 4px;
+    background-color: #FCB8B0;
+    color: black
+}
+
+input[type="checkbox"]:checked {
+    background-color: #BCFBBA;
+}
+
+input[type="checkbox"]:before, input[type="checkbox"]:checked:before {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    height: 16px !important;
+    width: 16px !important;
+    line-height: 16px;
+    text-align: center;
+    font-weight: bold;
+    content: '✘';
+}
+
+input[type="checkbox"]:checked:before {
+    content: '✔';
+}
+
+input[type="checkbox"]:hover:before {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+li {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-left: 8px;
+    padding-left: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+li.task-list-item {
+    list-style-type: none;
+    margin-left: -20px;
+}
+
+li.task-list-item label {
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+
+li.task-list-item input {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+}
+
+ul li:nth-child(even) {
+    background-color: #06181b;
+}
+ol li:nth-child(even) {
+    background-color: #06181b;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    color: #b4d9fb;
+    margin-top: 18px;
+    text-rendering: geometricPrecision;
+    font-family: "scpro";
+    font-size: 18px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    text-transform: capitalize;
+}
+
+h1 {
+    color: #54B2BC;
+    color: rgba(255, 212, 121, 1);
+    font-weight: normal;
+    margin-top: 32px;
+    font-size: 26px;
+    margin-bottom: 12px;
+
+}
+
+h2 {
+
+    color: #ffd479;
+    color: rgba(255, 212, 121, 0.8);
+
+    margin-top: 24px;
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-size: 20px;
+
+    color: rgba(129, 206, 203, 1);
+    margin-top: 20px;
+}
+
+h4 {
+    color: rgba(129, 206, 203, 0.8);
+}
+
+h5 {
+    color: rgba(129, 206, 203, 0.7);
+}
+
+h6 {
+    color: rgba(129, 206, 203, 0.6);
+}
+
+ul, ol {
+    padding-left: 30px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+hr {
+    margin: 32px 12px;
+    border: 0;
+    border-bottom: 1px solid #B4C5C5;
+}
+
+blockquote {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-style: normal;
+}
+
+blockquote p {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+    padding-left: 8px;
+    border-left: 3px solid #54B2BC;
+}
+
+blockquote p a {
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+code, pre {
+    font-family: "scpro" !important;
+    color: #8EB1D0;
+    display: block;
+    padding: 12px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    border: 1px solid #3C3C3E;
+    background-color: #051012;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+* {
+    -webkit-print-color-adjust: exact;
+}
+
+@media screen and (min-width: 914px) {
+    body {
+        width: 1145px;
+        margin: 10px auto;
+    }
+}
+
+@media print {
+    body, code, pre code, h1, h2, h3, h4, h5, h6 {
+        color: black;
+        background: white;
+    }
+
+    table, pre {
+        page-break-inside: avoid;
+    }
+}
+
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    background-color: #051012;
+    color: #116CD6 white-space : pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+pre code {
+    background-color: #051012;
+    color: #81ddaf;
+    padding: 0;
+    border: none;
+margin-top: 0px !important;
+
+margin-bottom: 0px !important;
+}
+
+pre:not([class]) {
+    border: none;
+    padding: 0px !important;
+    color: #F2F0CD;
+
+}
+
+p {
+    white-space: pre-line;
+}
+
+
+div.sourceCode {
+    overflow-x: auto
+}
+
+table.sourceCode, td.lineNumbers, td.sourceCode, tr.sourceCode {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    border: none
+}
+
+table.sourceCode {
+    width: 100%;
+    line-height: 100%
+}
+
+td.lineNumbers {
+    text-align: right;
+    padding-right: 4px;
+    padding-left: 4px;
+    color: #aaa;
+    border-right: 1px solid #aaa
+}
+
+td.sourceCode {
+    padding-left: 5px
+}
+
+.codehilite code, .codehilite pre {
+    color: #fdce93;
+    background-color: #3f3f3f
+}
+
+code > span.kw {
+    color: #BCFBBA;
+    font-weight: 700
+}
+
+code > span.dt {
+    color: #e90
+}
+
+code > span.dv {
+    color: #8AF9F0
+}
+
+code > span.bn, code > span.fl {
+    color: #40a070
+}
+
+code > span.st {
+    color: #FBFBAB
+}
+
+code > span.ch {
+    color: #93DD9F
+}
+
+code > span.co {
+    color: #929292
+}
+
+code > span.ot {
+    color: #76AEF4
+}
+
+code > span.al {
+    color: #e90
+}
+
+code > span.fu {
+    color: #00B1B1
+}
+
+code > span.er {
+    color: #FB9BEA
+}
+img[src='Error.src']{
+    display: none;
+}
+
+</style>
+</head>
+<body>
+<h2 id="chapter-2-work-pleasures-of-work">Chapter 2: work: Pleasures of Work</h2>
+<h2 id="pleasures-of-work"><a href="../category/work/pleasures-of-work/index.html">Pleasures of Work</a></h2>
+<h1 id="on-the-pleasures-of-work">On the Pleasures of Work</h1>
+<p>You might think this bit would be easy, but one of the hardest things about our working lives is knowing what we ideally want to do with them. Its simple enough to sense what is boring and soul-destroying, but identifying what would satisfy us is a greater challenge. Its a good deal less straightforward than asking oneself what one wants to eat or drink, sadly because finding ones way to good work relies (along with many other things) on having a firm grasp of our eventual preferred destination.</p>
+<p><span class="s1">Indications of what jobs might appeal to us tend to come in garbled and indirect forms, for example, in those moments of curiosity and envy we sometimes feel when we hear what someone is up to; for example, when we learn that a friend of a friend has started up a project to take Australian high school students to climb Mount Kilimanjaro; or that someone you were at university with has become a chair designer; or when at a party someone tells you about how neuroscience is changing advertising; or theres a magazine feature on a guy who bought a chain of budget hotels, repackaged them and sold them on, pocketing a fortune in the process...</span></p>
+<p><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/105699467.jpg" alt="Wall Street Economic Crisis" /></p>
+<h6 id="getty">Getty</h6>
+<p><span class="s1">At these sort of moments, from deep within us, we may occasionally register confused signals of interest, akin to the beep a metal detector might let off while passing over an area of waste ground. There is something here, but it can be devilishly tricky to unearth what precisely it might be. Were given little encouragement to stop and properly interpret our feelings. The urgent task should be to disentangle the underlying identity of a job from the example of the specific person who first aroused our interest in it. If we can see its nature clearly we are then able to look more actively for something else a bit like it in the world around us.</span></p>
+<p><span class="s1">It might sound self-indulgent to talk of enjoying work when work of any kind is so hard to find, but fantasising about what we ideally want does not have to mean expecting it will be easy to secure it. Ideals are destinations. However, if we get to know an ideal, we can start to figure out more carefully what it might take to head in that direction or what a decent enough alternative might be.</span></p>
+<p><span class="s1">A priority is therefore to get a better sense of what pleasures are theoretically available among a range of occupations and to build up a skill at listening closely to what jobs set off those small beeps of interest that hint at a connection with our deepest selves.</span></p>
+<p><strong><span class="s1">The pleasures of work</span></strong></p>
+<p><strong><span class="s1">1. Ordering</span></strong></p>
+<p><span class="s1">The world is a chaotic place: fractured, incoherent, noisy, random. A central pleasure in a number of jobs is therefore that of being able to bring order to some aspect of life: of creating in a demarcated space a realm of superior logic, coherence or meaning. It is the pleasure, in the grandest and simplest of ways, of tidying things up.</span></p>
+<p><span class="s1">A great many jobs, and not necessarily the obvious ones, are united by this search for order: doing the laundry, drawing up spreadsheets, arranging a buffet, completing a planning schedule for a logistics company...</span></p>
+<p><span class="s1">Take the work of a car designer, who finds pleasure in setting every dial in harmony with every other, of creating a fit between the fuel gauge and the rev counter, the air conditioning and the heater buttons, of arranging brushed steel control knobs that press with satisfying clicks and indicator sticks that swipe up and down with unusual assurance a cabin environment that in its studied solidity is palpably different from the way life usually is.</span></p>
+<p><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/156729725.jpg" alt="Philadelphia Style Magazine Cover Event Hosted By Chris Matthews" /></p>
+<h6 id="getty-1">Getty</h6>
+<p><span class="s1">Their outputs might be different, but at the level of the pleasure involved, it is perhaps only a small step between what the engineers at Audi are doing and what would have been Andrea Palladios satisfactions when designing the Villa La Rotonda near Venice. In both cases, the appeal lies in the chance to create an ordered island within a muddled sea.</span></p>
+<p><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/640px-Villa_Rotonda_side.jpg" alt="640px-Villa_Rotonda_side" /></p>
+<p><span class="s1">But the pleasures of order arent restricted to objects of high art. They are present when raking leaves in a garden or laying a table.</span></p>
+<p><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/6a00e54ed9ed5388330133f57bc127970b-800wi.jpg" alt="6a00e54ed9ed5388330133f57bc127970b-800wi" /></p>
+<p><span class="s1">The pleasures of order would also be present for anyone working on Japans high-speed trains. Here too, aboard gleaming carriages, one would have access to a more coherent, logical realm than private life allows for. As humans, we typically feel chaotic inside, confused and irritable, but the trains to which the railway workers devote their working lives suffer from none of these flaws.</span></p>
+<p><span class="s1">At its high points, work can permit us to create or maintain something that is better than we normally are. The architect, the car designer, the waiter, the train engineer, whatever their differences in status and salaries, draw on a common satisfaction in their ability to create or manage small utopias in an otherwise chaotic, irrational and compromised world.</span></p>
+<p><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/170517383.jpg" alt="Tokyo" /></p>
+<h6 id="getty-2">Getty</h6>
+<p><strong><span class="s1">2. Understanding</span></strong></p>
+<p><span class="s1">Then there is the pleasure of understanding. It is present in the working life of a plumber who must pin down what precisely is ailing the heating system within a myriad of pipes behind the kitchen panels.</span></p>
+<p><a href="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/5407087789_835b5883a8_b.jpg"><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/5407087789_835b5883a8_b.jpg?resize=635%2C512" alt="5407087789_835b5883a8_b" /></a></p>
+<p><span class="s1">It is the pleasure at the root of science, which seeks elegant principles that explain and control the apparent disorder of nature.</span></p>
+<p><span class="s1">It is the pleasure of the writer, trying to put words to emotions, pinning down rare elusive butterflies of feeling, defining in language what the reader may have felt but never grasped so precisely before.</span></p>
+<p><span class="s1">Understanding lends its possessor a thrilling sense of power over the randomness of experience. Through understanding, we acquire one of the keys, however small, to the laws of the universe and our anxiety and fear decrease accordingly.</span></p>
+<p><strong><span class="s1">3. Money-making</span></strong></p>
+<p><span class="s1">It isnt just about greed. Its about being rewarded in the most concrete way, financially, for grasping an aspect of life ahead of your peers.</span></p>
+<p><span class="s1">People had been walking past that old jam factory for years. But you were the one who realised what could be done: you could see what others couldnt. You predicted that the area would change its character because you understood demographic and social change; you knew you could get people to buy apartments because you understood the role of marketing that youd studied in the car industry. You, the entrepreneur, triumphed over those who were less intelligent about human nature. You can find and unlock value and the proof is the most tangible in the world, it isnt just acclaim or the pat on the back of colleagues: it is the sum in your bank account.</span></p>
+<p><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/Derelict_Factory_-_Alperton_-_geograph.org_.uk_-_311079.jpg" alt="Derelict_Factory_-_Alperton_-_geograph.org_.uk_-_311079" /></p>
+<h6 id="derelict-factory-alperton">Derelict Factory, Alperton</h6>
+<p><span class="s1">Its the same pleasure that moves the second hand book dealer at the market, the eBay reseller or the stockpickers in their studies at home. What others thought was junk, or couldnt even see as valuable, you understood correctly.</span></p>
+<p><span class="s1">So those motivated to make money arent doing it just out of greed (though that might come into it of course). They may just be addicted to the intense satisfaction that a successful money-generating scheme can give off: the satisfaction delivered via profit of knowing that one has grasped some part of the world better than other people.</span></p>
+<p><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/167647400.jpg" alt="Marche Aux Puces - Saint-Ouen is home to the Paris flea" /></p>
+<h6 id="getty-3">Getty</h6>
+<p><strong><span class="s1">4. Serving</span></strong></p>
+<p><span class="s1">The words serving and servant have extremely negative connotations. They sound feudal, an insult to our independence and pride. And yet to serve another human being offers some of the most intense pleasures available in the working world.</span></p>
+<p><span class="s1">A customer has just come in to your cafe; its breakfast time; they look a bit frazzled. Its not a mystery what they need. Youre not trying to invent a new kind of coffee or a special way of cooking eggs. But its a delight to be able to bring these well-honed solutions to this person in just the right way. You are busy, but your smile is genuine. And you know that they are grateful a breezy hello and crisp slice of toast really do help turn a tricky day into something bearable.</span></p>
+<p><a href="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/6113290785_f0bb76de6e_z.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/6113290785_f0bb76de6e_z.jpg?resize=635%2C623" alt="6113290785_f0bb76de6e_z" /></a></p>
+<h6 id="flickrnathan-rupert">Flickr/Nathan Rupert</h6>
+<p><span class="s1">To serve well requires a practical application of the power of empathy. One has to start with oneself: What do I enjoy? What delights my eyes, ears and palate?</span></p>
+<p><span class="s1">Pleasing others is a sign that weve got it right, that weve correctly read ourselves and human nature more broadly. Weve turned insight into a moment of joy or solace, which in turn lends us a sense of affirmation and triumph over the forces of unhappiness.</span></p>
+<p><span class="s1">Imagine its your job to design a new amenity kit for the business class of an airline. Youve decided to add a shoehorn. And youve selected a leather case, rather than a soft fabric. Its your taste thats at work. You are sensitive to your own preferences and your hunch is that others will, given the chance, share it. You tune into your instincts and trust them. With leather, it has to be a particular colour and the stitching must be visible. Youre also keen on mints. At the end of a flight, thats what you really like, especially as you dont like using those little basins in the toilets. You didnt wait for customers to tell you exactly what they wanted: you understood yourself and guessed what would please them. And now the results are in, and the satisfaction scores are off the scale.</span></p>
+<p><a href="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/6376817609_5bc03dbc8c_z.jpg"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/6376817609_5bc03dbc8c_z.jpg?resize=635%2C423" alt="6376817609_5bc03dbc8c_z" /></a></p>
+<h6 id="flickrluke-lai">Flickr/Luke Lai</h6>
+<p><span class="s1">To serve gives us a thrilling feeling of power in relation to the needs and vulnerabilities of others. They are looking to renew themselves with a haircut, to repair their faulty computer, to find something to soothe their ailing dog... and we can be the ones to deliver the solutions.</span></p>
+<p><span class="s1">Through certain kinds of work, we have the chance to contribute in some way to the great task of turning sadness and dissatisfaction into joy.</span></p>
+<p><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/73635023-1.jpg" alt="Worried Pet Owners React To Massive Pet Food Recall" /></p>
+<h6 id="getty-4">Getty</h6>
+<p><strong><span class="s1">5. Collaborating</span></strong></p>
+<p><span class="s1">Its 7.30 pm on a Friday night. In lots of other jobs, people would have packed it in ages ago. But you and eight colleagues are still hard at work. And youre getting to know them in a way you never could around a kitchen table because you have a shared purpose at last. Youre working together on a presentation for Monday and it feels a bit like it did when you were eleven and you and some friends worked for hours on a tree house in the garden.</span></p>
+<p><span class="s1">Work lends us the pleasure of being part of a team. The challenge brings out everyones best sides: someone comes up with a suggestion youd never have thought of, a colleague compensates for one of your weaknesses, another looks to you for encouragement and guidance that confirms your experience and authority.</span></p>
+<p><span class="s1">Collectively, a disparate group of people become more impressive than they each could be on their own thanks to the gift of work.</span></p>
+<p><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/8369644728_8538b40b10_z.jpg" alt="8369644728_8538b40b10_z" /></p>
+<h6 id="flickrmatheson-learning-commons">Flickr/Matheson Learning Commons</h6>
+<p><span class="s1">Reminding ourselves of the possible pleasures of work helps to correct the misleading view that the only difficulty around employment is the part about getting hired. Theres a prior, equally big challenge of knowing what the ideal position for us would actually be.</span></p>
+<p><span class="s1">The pleasures of work are extensions of things we normally first started to like in embryonic form when we were children. In our hurry to please authority figures or impress according to the status structure of the world, we often forget to ask ourselves what truly pleases us. Job categories (lawyer, IT specialist etc.) tell us what a person does, but they dont sufficiently clearly latch on to the pleasure thats subjectively involved in the task. We need another kind of categorisation which would help us to plot our pleasures: with it, we might say I am motivated by Serving or Its Understanding that gets me going...</span></p>
+<p><span class="s1">Coming to know ourselves better, remembering where the true sources of excitement and interest lie for us seems an indispensable step in the long path towards that eventual, infinitely tricky goal: the discovery of satisfying work.</span></p>
+<p><span class="s1"> </span></p>
+<title>thebookoflife</title>
+
+
+</body>
+</html>

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Computer Modern";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/computermodern/Sans/cmunss.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "scpro";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/sourcecodepro/SourceCodePro-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+    text-rendering: geometricPrecision;
+    font-family: "Dyslexie";
+    /*font-family:  "scpro Light";*/
+    font-family:  "Computer Modern";
+    font-size: 18px;
+    line-height: 150%;
+    color: rgba(242, 240, 205, 0.8);
+
+    background-color: #000;
+    background-color: #02090B;
+    margin: 10px 13px 10px 13px;
+    padding-bottom: 64px;
+}
+
+html * {
+    color-profile: sRGB;
+}
+
+strong {
+    font-weight: normal;
+    color: #ffd479;
+    color: rgba(100, 182, 138, 1);
+}
+
+em {
+
+    font-weight: normal;
+    font-style: normal;
+    color: #ffd479;
+    color: #64B68A;
+}
+
+table {
+    min-width: 1150px !important;
+    width: 100% !important;
+    margin: 10px 0 15px 0;
+    border-collapse: collapse;
+}
+
+table tr:nth-child(2n) {
+    background-color: #06181b;
+}
+
+td, th {
+    border: 1px solid #3C3C3E;
+    padding: 3px 10px;
+}
+
+th {
+    padding: 5px 10px;
+    color: #B3D8FD;
+    background-color: #06181b;
+}
+
+a {
+    color: #B4D9FB;
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+a:hover {
+    color: #2668D4;
+    text-decoration: none;
+}
+
+a img {
+    border: 2px solid;
+}
+
+p {
+    margin-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+img {
+    background-color: #7F7F7F;
+    max-width: 1600px;
+}
+
+ul, ol {
+    padding: 16px 0 8px 10px;
+    margin: 16px 0 8px 10px;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none; /* Hides the default checkbox style */
+    height: 15px !important;
+    width: 15px !important;
+    top: -4px !important;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: .15s;
+    border-radius: 4px;
+    background-color: #FCB8B0;
+    color: black
+}
+
+input[type="checkbox"]:checked {
+    background-color: #BCFBBA;
+}
+
+input[type="checkbox"]:before, input[type="checkbox"]:checked:before {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    height: 16px !important;
+    width: 16px !important;
+    line-height: 16px;
+    text-align: center;
+    font-weight: bold;
+    content: '✘';
+}
+
+input[type="checkbox"]:checked:before {
+    content: '✔';
+}
+
+input[type="checkbox"]:hover:before {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+li {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-left: 8px;
+    padding-left: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+li.task-list-item {
+    list-style-type: none;
+    margin-left: -20px;
+}
+
+li.task-list-item label {
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+
+li.task-list-item input {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+}
+
+ul li:nth-child(even) {
+    background-color: #06181b;
+}
+ol li:nth-child(even) {
+    background-color: #06181b;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    color: #b4d9fb;
+    margin-top: 18px;
+    text-rendering: geometricPrecision;
+    font-family: "scpro";
+    font-size: 18px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    text-transform: capitalize;
+}
+
+h1 {
+    color: #54B2BC;
+    color: rgba(255, 212, 121, 1);
+    font-weight: normal;
+    margin-top: 32px;
+    font-size: 26px;
+    margin-bottom: 12px;
+
+}
+
+h2 {
+
+    color: #ffd479;
+    color: rgba(255, 212, 121, 0.8);
+
+    margin-top: 24px;
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-size: 20px;
+
+    color: rgba(129, 206, 203, 1);
+    margin-top: 20px;
+}
+
+h4 {
+    color: rgba(129, 206, 203, 0.8);
+}
+
+h5 {
+    color: rgba(129, 206, 203, 0.7);
+}
+
+h6 {
+    color: rgba(129, 206, 203, 0.6);
+}
+
+ul, ol {
+    padding-left: 30px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+hr {
+    margin: 32px 12px;
+    border: 0;
+    border-bottom: 1px solid #B4C5C5;
+}
+
+blockquote {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-style: normal;
+}
+
+blockquote p {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+    padding-left: 8px;
+    border-left: 3px solid #54B2BC;
+}
+
+blockquote p a {
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+code, pre {
+    font-family: "scpro" !important;
+    color: #8EB1D0;
+    display: block;
+    padding: 12px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    border: 1px solid #3C3C3E;
+    background-color: #051012;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+* {
+    -webkit-print-color-adjust: exact;
+}
+
+@media screen and (min-width: 914px) {
+    body {
+        width: 1145px;
+        margin: 10px auto;
+    }
+}
+
+@media print {
+    body, code, pre code, h1, h2, h3, h4, h5, h6 {
+        color: black;
+        background: white;
+    }
+
+    table, pre {
+        page-break-inside: avoid;
+    }
+}
+
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    background-color: #051012;
+    color: #116CD6 white-space : pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+pre code {
+    background-color: #051012;
+    color: #81ddaf;
+    padding: 0;
+    border: none;
+margin-top: 0px !important;
+
+margin-bottom: 0px !important;
+}
+
+pre:not([class]) {
+    border: none;
+    padding: 0px !important;
+    color: #F2F0CD;
+
+}
+
+p {
+    white-space: pre-line;
+}
+
+
+div.sourceCode {
+    overflow-x: auto
+}
+
+table.sourceCode, td.lineNumbers, td.sourceCode, tr.sourceCode {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    border: none
+}
+
+table.sourceCode {
+    width: 100%;
+    line-height: 100%
+}
+
+td.lineNumbers {
+    text-align: right;
+    padding-right: 4px;
+    padding-left: 4px;
+    color: #aaa;
+    border-right: 1px solid #aaa
+}
+
+td.sourceCode {
+    padding-left: 5px
+}
+
+.codehilite code, .codehilite pre {
+    color: #fdce93;
+    background-color: #3f3f3f
+}
+
+code > span.kw {
+    color: #BCFBBA;
+    font-weight: 700
+}
+
+code > span.dt {
+    color: #e90
+}
+
+code > span.dv {
+    color: #8AF9F0
+}
+
+code > span.bn, code > span.fl {
+    color: #40a070
+}
+
+code > span.st {
+    color: #FBFBAB
+}
+
+code > span.ch {
+    color: #93DD9F
+}
+
+code > span.co {
+    color: #929292
+}
+
+code > span.ot {
+    color: #76AEF4
+}
+
+code > span.al {
+    color: #e90
+}
+
+code > span.fu {
+    color: #00B1B1
+}
+
+code > span.er {
+    color: #FB9BEA
+}
+img[src='Error.src']{
+    display: none;
+}
+
+</style>
+</head>
+<body>
+<h2 id="chapter-6-curriculum-artarchitecture">Chapter 6: curriculum: Art/Architecture</h2>
+<h2 id="artarchitecture"><a href="../category/curriculum/artarchitecture/index.html">Art/Architecture</a></h2>
+<h1 id="coco-chanel">Coco Chanel</h1>
+<p>The world of fashion can seem very silly.</p>
+<p><a href="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/image032.jpg"><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/image032.jpg?resize=635%2C351" alt="image03" /></a></p>
+<p><span class="s1">It can come across as intensifying vanity and encouraging snobbery; it distributes prestige in unhelpful ways. </span></p>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/image04.jpg"><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/image04.jpg?resize=419%2C424" alt="image04" /></a></p>
+<p><span class="s1">This skittish, narcissistic side of fashion is unfortunate, for at its best, fashion circles round important territory. Clothes convey ideas about what is admirable or exciting, they influence mood and help define identity. Fashion is potentially a very serious part of life – but it has largely been abandoned to pretension, eccentricity and foolishness. </span></p>
+<p><span class="s1">The person who did the most to realise the positive potential of fashion – and direct it to its true task – was the French designer Coco Chanel. She was born on 19 August 1883 in Saumur in the Loire valley. Her mother died when she was a child; she grew up poor and isolated. She was educated by charitable nuns. She was called Gabriel until her early twenties, when she was trying to make it as a cabaret performer and changed her name to the more distinctive ‘Coco’. </span></p>
+<p><span class="s1">She started out as a designer of hats, made a lot of influential friends and had several liaisons with British and Russian dukes – perhaps in compensation for her early very fragile social status. </span></p>
+<p><a href="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/image072.jpg"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/image072.jpg?resize=511%2C519" alt="image07" /></a></p>
+<p><span class="s1">Although we don’t often give the fact a great deal of attention, clothes are instruments of communication. We are very much open to being influenced by what a person wears. </span>Before Chanel, stylish clothes were complicated and very expensive. They were designed to stress the delicate, passive characteristics of their wearers.</p>
+<p><a href="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/image051.jpg"><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/image051.jpg?resize=518%2C490" alt="image05" /></a></p>
+<p><span class="s1">These garments put forward an image of delicacy and refinement. The wearer was presented as poetic, perhaps a little dreamy and sensitive. They looked like they wouldn’t have much of an appetite for dinner. This wasn’t meant to be an actual accurate portrait of any particular person. The clothes signalled an aspiration. The Victorian woman might be insecure, have a raucous laugh and be keen on eating meringues; yet the clothes provided an idealised portrait of the desired direction of travel: a picture of what this person would ideally like to be like. </span></p>
+<p><span class="s1">What Coco Chanel did was invent a new and better destination. In 1926 she introduced a very simple garment: the little black dress. </span></p>
+<p><a href="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/Coco-Chanel.png"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/Coco-Chanel.png?resize=635%2C560" alt="Coco-Chanel" /></a></p>
+<p><span class="s1">It spoke of a different vision of existence: a different ideal. The dress spoke of being energetic and focused; the wearer would be sharp-witted, engaged in how the world works; they might have spent the day running a business or working at the finance ministry – or writing an experimental novel. </span></p>
+<p><span class="s1">She was also making this ideal much more widely accessible. The dress was a fraction of the price of its more splendid rivals. It was designed to be long-lasting. Not just in sheer physical durability but in the psychological sense of not feeling dated. So the dress you bought in 1926 would do just as well in 1927 or 1937. In fact, it was intended to last for years and years – which radically changed the economics of being chic.</span></p>
+<p><img src="http://i1.wp.com/www.chhs.colostate.edu/News/Images/Large/4ha4rmsq11tuad2pmeousum5.Avenir%20Little%20Black%20Dress.jpg?resize=300%2C468" alt="" /></p>
+<p><span class="s1">Another side of Coco’s proposal was to limit options. The dress only came in black – so you didn’t have to put your mind to considering and deciding. She was making the idea of being stylish simpler and easier. The little black dress was designed to make it easy and inexpensive to look elegant. </span></p>
+<p><span class="s1">The little black dress was conceived as the clothing equivalent of the Model-T Ford (which – not by chance – also came only in black). The Model-T had revolutionised the automobile industry by bringing cars, for the first time, within the budget of many more people. Instead of being a luxury for the few, personal transport began to become widespread – and, eventually, normal. Coco shared a similar noble ambition: to make her vision of elegance simple, timeless and – most importantly – widespread.</span></p>
+<p><img src="https://complimentcloset.files.wordpress.com/2011/04/chanel-lbd.jpg" alt="" /></p>
+<p>Most people see themselves as very individualistic. Because we’ve given up hope that the crowd could be impressive, toeing the line or just conforming to the convention are, understandably, viewed as negatives.</p>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/image021.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/image021.jpg?resize=635%2C406" alt="image02" /></a></p>
+<p><span class="s1">But we might want re-evaluate the idea of looking like everyone else. There isn’t anything structurally wrong with the notion of a uniform, so long as the uniform is a good one. Chanel was searching – as Vogue put it in a perceptive article from 1926 – for ‘the uniform for the woman of taste’.</span></p>
+<p><img src="http://i2.wp.com/www.theonlinerocket.com/wp-content/uploads/2014/02/TS-SHOPPING-3-MCT.jpg?resize=444%2C592" alt="" /></p>
+<h5 id="finding-a-good-uniform-might-be-more-important-than-emphasizing-uniqueness.">Finding a good uniform might be more important than emphasizing uniqueness.</h5>
+<p><span class="s1">The uniform of the Chanel dress – or something less costly inspired by it – stresses a range of admirable virtues:</span> the idea that you can be efficient, organised, serious and in control – without becoming puritanical or dour.  Such clothes stress the long-term, they hint that we should care about things which last, and not chop and change our enthusiasms at every turn. They argue that elegance is a key concern in a crowded and busy world: it means efficiency without loss of grace.</p>
+<p><span class="s1">Over her long and very successful career, many of Coco Chanel’s efforts were devoted to developing a distinctive brand. She didn’t just stick with clothes. She also designed jewellery and handbags. And – most importantly from a commercial point of view – her Chanel No.5 scent. </span></p>
+<p><span class="s1">The Catholic Church had long used scents to promote religious devotion. </span></p>
+<p><a href="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/image08-1.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/image08-1.jpg?resize=635%2C476" alt="image08-1" /></a></p>
+<h5 id="they-had-good-uniforms-as-well.">They had good uniforms as well.</h5>
+<p><span class="s1">They recognised that scents influence mood. The smell of burning incense could encourage the congregation to concentrate, to feel that something special was occurring. </span></p>
+<p><span class="s1">Coco wanted her scent to summon up associations of a particular kind of person – confident, strong, attractive and independent.</span></p>
+<p><a href="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/image111.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/image111.jpg?resize=635%2C553" alt="image11" /></a></p>
+<h5 id="a-good-identity-in-a-bottle."><span class="s1">A good identity, in a bottle.</span></h5>
+<p><span class="s1">The aim wasn’t simply to expand her business empire. It was to take a good experience from one part of life, where it might already be familiar, and apply it more widely. Coco loved beaches and bathing costumes, she liked the clothes people wore when playing sports. She wasn’t at all unusual in that. The kind of move she made always seems obvious in retrospect – but never was at the time. She took the pleasure of the beach very seriously and sought to extract the general, reusable essence from a local, particular kind of happiness.</span></p>
+<p><a href="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/image09.jpg"><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/image09.jpg?resize=635%2C529" alt="image09" /></a></p>
+<h5 id="coco-a-desire-to-institutionalise-certain-feelings-around-summer-confidence-and-androgynous-sailors-clothes-."><span class="s1">Coco: a desire to institutionalise certain feelings around summer, confidence and androgynous sailors’ clothes .</span></h5>
+<p><span class="s1">Chanel was far from admirable in all respects. </span></p>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/640px-Coco_Chanel_1920.jpg"><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/640px-Coco_Chanel_1920.jpg?resize=635%2C462" alt="640px-Coco_Chanel,_1920" /></a></p>
+<p><span class="s1">During the second World War, when Paris was occupied by the Third Reich, she lived in the Ritz and spent a lot of time around senior Nazis. She was more than friendly and eventually worked as an agent, though exposure of her conduct did not occur until much later. Like many artists, her work was better than she was herself. She died in Paris, aged 87, in 1971. </span></p>
+<p>In the Utopia, there would still be fashion, but it would differ from what we are currently most familiar with. It would take up Chanel’s attitude to classic style.</p>
+<p><span class="s1"> A classic isn’t just something that is famous or distinctive from a past era. It’s something that continues to be relevant and useful outside of the specific time it was first made. The true task of fashion isn’t to chop and change every year. Clothes are not emblems of vanity or clutter (as our fears sometimes suggest); they have a potential to be aids and prompts, friends, in our quest to become more mature, focused, sane and balanced versions of ourselves.</span></p>
+<p><span class="s1">In the end, Chanel didn’t do all that could be done with her brand. But she’s inspiring in how she teased out some of what can be most serious about clothes. In the ideal world, a clothing company would – with the help of in-house philosophers – define what really matters most in life and then set out make clothes that constantly support and amplify these ethical and moral commitments. Nice clothes would be honoured for what they really are: embodiments of good ideas.</span></p>
+<p><img src="http://i1.wp.com/marieclaire.media.ipcdigital.co.uk/11116/000069d98/1b6e_orh100000w440/keira-knightley-50-shades-of-grey-garticle-2.jpg?resize=359%2C538" alt="" /></p>
+<title>thebookoflife</title>
+
+
+</body>
+</html>

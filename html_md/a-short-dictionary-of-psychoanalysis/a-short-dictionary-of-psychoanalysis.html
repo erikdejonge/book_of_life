@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Computer Modern";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/computermodern/Sans/cmunss.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "scpro";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/sourcecodepro/SourceCodePro-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+    text-rendering: geometricPrecision;
+    font-family: "Dyslexie";
+    /*font-family:  "scpro Light";*/
+    font-family:  "Computer Modern";
+    font-size: 18px;
+    line-height: 150%;
+    color: rgba(242, 240, 205, 0.8);
+
+    background-color: #000;
+    background-color: #02090B;
+    margin: 10px 13px 10px 13px;
+    padding-bottom: 64px;
+}
+
+html * {
+    color-profile: sRGB;
+}
+
+strong {
+    font-weight: normal;
+    color: #ffd479;
+    color: rgba(100, 182, 138, 1);
+}
+
+em {
+
+    font-weight: normal;
+    font-style: normal;
+    color: #ffd479;
+    color: #64B68A;
+}
+
+table {
+    min-width: 1150px !important;
+    width: 100% !important;
+    margin: 10px 0 15px 0;
+    border-collapse: collapse;
+}
+
+table tr:nth-child(2n) {
+    background-color: #06181b;
+}
+
+td, th {
+    border: 1px solid #3C3C3E;
+    padding: 3px 10px;
+}
+
+th {
+    padding: 5px 10px;
+    color: #B3D8FD;
+    background-color: #06181b;
+}
+
+a {
+    color: #B4D9FB;
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+a:hover {
+    color: #2668D4;
+    text-decoration: none;
+}
+
+a img {
+    border: 2px solid;
+}
+
+p {
+    margin-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+img {
+    background-color: #7F7F7F;
+    max-width: 1600px;
+}
+
+ul, ol {
+    padding: 16px 0 8px 10px;
+    margin: 16px 0 8px 10px;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none; /* Hides the default checkbox style */
+    height: 15px !important;
+    width: 15px !important;
+    top: -4px !important;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: .15s;
+    border-radius: 4px;
+    background-color: #FCB8B0;
+    color: black
+}
+
+input[type="checkbox"]:checked {
+    background-color: #BCFBBA;
+}
+
+input[type="checkbox"]:before, input[type="checkbox"]:checked:before {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    height: 16px !important;
+    width: 16px !important;
+    line-height: 16px;
+    text-align: center;
+    font-weight: bold;
+    content: '✘';
+}
+
+input[type="checkbox"]:checked:before {
+    content: '✔';
+}
+
+input[type="checkbox"]:hover:before {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+li {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-left: 8px;
+    padding-left: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+li.task-list-item {
+    list-style-type: none;
+    margin-left: -20px;
+}
+
+li.task-list-item label {
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+
+li.task-list-item input {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+}
+
+ul li:nth-child(even) {
+    background-color: #06181b;
+}
+ol li:nth-child(even) {
+    background-color: #06181b;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    color: #b4d9fb;
+    margin-top: 18px;
+    text-rendering: geometricPrecision;
+    font-family: "scpro";
+    font-size: 18px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    text-transform: capitalize;
+}
+
+h1 {
+    color: #54B2BC;
+    color: rgba(255, 212, 121, 1);
+    font-weight: normal;
+    margin-top: 32px;
+    font-size: 26px;
+    margin-bottom: 12px;
+
+}
+
+h2 {
+
+    color: #ffd479;
+    color: rgba(255, 212, 121, 0.8);
+
+    margin-top: 24px;
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-size: 20px;
+
+    color: rgba(129, 206, 203, 1);
+    margin-top: 20px;
+}
+
+h4 {
+    color: rgba(129, 206, 203, 0.8);
+}
+
+h5 {
+    color: rgba(129, 206, 203, 0.7);
+}
+
+h6 {
+    color: rgba(129, 206, 203, 0.6);
+}
+
+ul, ol {
+    padding-left: 30px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+hr {
+    margin: 32px 12px;
+    border: 0;
+    border-bottom: 1px solid #B4C5C5;
+}
+
+blockquote {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-style: normal;
+}
+
+blockquote p {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+    padding-left: 8px;
+    border-left: 3px solid #54B2BC;
+}
+
+blockquote p a {
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+code, pre {
+    font-family: "scpro" !important;
+    color: #8EB1D0;
+    display: block;
+    padding: 12px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    border: 1px solid #3C3C3E;
+    background-color: #051012;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+* {
+    -webkit-print-color-adjust: exact;
+}
+
+@media screen and (min-width: 914px) {
+    body {
+        width: 1145px;
+        margin: 10px auto;
+    }
+}
+
+@media print {
+    body, code, pre code, h1, h2, h3, h4, h5, h6 {
+        color: black;
+        background: white;
+    }
+
+    table, pre {
+        page-break-inside: avoid;
+    }
+}
+
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    background-color: #051012;
+    color: #116CD6 white-space : pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+pre code {
+    background-color: #051012;
+    color: #81ddaf;
+    padding: 0;
+    border: none;
+margin-top: 0px !important;
+
+margin-bottom: 0px !important;
+}
+
+pre:not([class]) {
+    border: none;
+    padding: 0px !important;
+    color: #F2F0CD;
+
+}
+
+p {
+    white-space: pre-line;
+}
+
+
+div.sourceCode {
+    overflow-x: auto
+}
+
+table.sourceCode, td.lineNumbers, td.sourceCode, tr.sourceCode {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    border: none
+}
+
+table.sourceCode {
+    width: 100%;
+    line-height: 100%
+}
+
+td.lineNumbers {
+    text-align: right;
+    padding-right: 4px;
+    padding-left: 4px;
+    color: #aaa;
+    border-right: 1px solid #aaa
+}
+
+td.sourceCode {
+    padding-left: 5px
+}
+
+.codehilite code, .codehilite pre {
+    color: #fdce93;
+    background-color: #3f3f3f
+}
+
+code > span.kw {
+    color: #BCFBBA;
+    font-weight: 700
+}
+
+code > span.dt {
+    color: #e90
+}
+
+code > span.dv {
+    color: #8AF9F0
+}
+
+code > span.bn, code > span.fl {
+    color: #40a070
+}
+
+code > span.st {
+    color: #FBFBAB
+}
+
+code > span.ch {
+    color: #93DD9F
+}
+
+code > span.co {
+    color: #929292
+}
+
+code > span.ot {
+    color: #76AEF4
+}
+
+code > span.al {
+    color: #e90
+}
+
+code > span.fu {
+    color: #00B1B1
+}
+
+code > span.er {
+    color: #FB9BEA
+}
+img[src='Error.src']{
+    display: none;
+}
+
+</style>
+</head>
+<body>
+<h2 id="chapter-4-self-self-knowledge">Chapter 4: self: Self-Knowledge</h2>
+<h2 id="self-knowledge"><a href="../category/self/self-knowledge/index.html">Self-Knowledge</a></h2>
+<h1 id="a-short-dictionary-of-psychoanalysis">A Short Dictionary of Psychoanalysis</h1>
+<p><span class="s1">All subjects have their specialised vocabularies; a set of words that initially sound unusual, even a touch frightening, but that can also prove oddly beautiful and beguiling.</span></p>
+<p><span class="s1">To their enemies, key words are mere jargon, but jargon has its advantages: it allows us swiftly to get a firm hold of ideas that might otherwise have been confusing and cumbersome. They also provide touching evidence of the existence of a group of people who have come together to agree on the meaning of some dauntingly fiddly things.</span></p>
+<p><span class="s1">Psychoanalysis has been very fruitful at generating a vocabulary. The subject provides a way of being interested in and helpful about intimate suffering. It suggests that self-knowledge is the only real route to making life less disappointing, frightening and confusing. Psychoanalysis admits that the causes of our loneliness and pain are not obvious and can sound strange. It is still common to be thought ill or mad for visiting an analyst. This is sad because analysis is ultimately interested in people getting better. Through analysis, we can lessen the grip of obsessions; we can reduce unproductive anxiety, and ultimately we can become a little more ready to love and cooperate. Psychoanalysis may prove to have been one of the twentieth century’s greatest inventions.</span></p>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/3ac1c38bc66361c4782a18049ba884fa.jpg"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/3ac1c38bc66361c4782a18049ba884fa.jpg?resize=635%2C318" alt="3ac1c38bc66361c4782a18049ba884fa" /></a></p>
+<p><strong>Defence Mechanism</strong></p>
+<p>A DEFENCE MECHANISM is a way to save ourselves from mental anguish, by interpreting our own behaviour and that of other people in a way that affirms our self-love. We deny responsibility: <em>‘It’s not my fault’</em>. We blame others: <em>‘You have been mean</em>’. Or we tell ourselves consoling lies: <em>‘I couldn’t help it’</em>. But if the cause of such behaviour is self-protection, then it cannot be changed by argument and stern warnings. For we defend ourselves precisely when we feel in danger. Increasing the level of threat isn’t going to hasten the solution. We learn to be more reasonable, more accepting of responsibility and more accurate about our weaknesses in times of security. The goal of analysis is to make us less ‘defended’. We put our weapons down, and have the courage to let ourselves get hurt.</p>
+<p><span class="s1"><strong>Pleasure Principle</strong></span></p>
+<p><span class="s1"> THE PLEASURE PRINCIPLE is the idea that we are fundamentally geared to seek pleasure. However, the pursuit of immediate gratification is often at odds with other important concerns, such as the well-being of others or our own longer-term flourishing. The term asks us to reflect on all the ways in which we sacrifice psychological growth for the sake of momentary satisfaction. For example, it is more gratifying – or at least less painful – to be irritable than to be hurt, or to be lazy rather than bored. So, in order to live well we sometimes have to go to war with our instincts. Being a mature adult means waging a selective campaign against the pleasure principle.</span></p>
+<p><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/bench.jpeg" alt="A couple lingers on a park bench" /></p>
+<p><strong>Gratitude </strong></p>
+<p>It’s very hard to say thank you. In the psychoanalytic vocabulary, gratitude is the capacity to admit the merits of another person, and to recognise the good they have done you. This can be scary: it is hard to accept the scale of the debt we owe others (especially, sometimes, our parents). Gratitude is a skill we have to learn and practice. If we feel we deserve everything, we do not feel gratitude. That’s what small children are like; it doesn’t (hopefully) occur to them to think that others are making an effort on their behalf. But part of becoming an adult is realising that we have been the recipient of imperfect but still substantial affection from other people. We need to start to believe in the kindness of others and to acknowledge how often they have cut us slack.</p>
+<p><span class="s1"><strong>Transitional Object</strong></span></p>
+<p><span class="s1"> The psychoanalyst Donald Winnicott defined the term ‘transitional object’ to describe certain items, especially teddy bears and blankets, that children use between the ages of three and nine as away of getting used to living among others. In a child’s eyes, a transitional object in some ways has a life of its own, like another person, but at the same time it is a part of oneself. The object has to be cared for, yet it exists even when one isn’t paying attention to it. It is described as ‘transitional’ because it provides one stage of a way to forming relationships with equal, independent people. Very profound things are happening around teddies (as we always suspected). Favourite books and works of art can play an analogous role in adult life, Winnicott said.</span></p>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/5708760061_15445422e8_z.jpg"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/5708760061_15445422e8_z.jpg?resize=635%2C390" alt="5708760061_15445422e8_z" /></a></p>
+<p><span class="s1"><strong>Projection</strong></span></p>
+<p><span class="s1"> PROJECTION occurs when what you think is going on in another person is really coming from you. At a party you may imagine that others are wholly at ease, are not anxious at all and have no interest in you. Really, you are projecting your own worry into the minds of others. This can go a step further. You can also relocate difficult emotions on to others. An aggressive person can feel as if they are always the victim. This is because they have projected their own rage onto other people. Exploring the ways one repositions parts of oneself onto others is fascinating. The task is then to reclaim those parts – and observe others as they are, independent of you.</span></p>
+<p><span class="s1"><strong>Sublimation</strong></span></p>
+<p><span class="s1"> SUBLIMATION is the process whereby we convert unacceptable desires into acceptable conduct. For Freud, sex is the key thing we have to sublimate. You can’t have sex with everyone you would like, unfortunately; but the erotic impulse can – if we handle it right – become flirtation, charm, persuasiveness or a brilliant sales technique. It can even become a book or a painting that others will love. The natural desire to have everyone do exactly what you want, all of the time, can through sublimation be turned into a drive to create a perfect object. Sublimation names a process that is precious to us and gives us hope. It suggests that frustration is not the end of the story. But for that to happen, our disappointment in one direction must be met by inspiration in another.</span></p>
+<p><span class="s1"><strong>To help stick these words in your mind, consider <a href="http://www.theschooloflife.com/shop/keywordpencilsetpsychoanalytic/">this set of pencils</a> from The School of Life:</strong></span></p>
+<p><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/psychoanalytic_pencil_set_grey_1-635x419-1.jpg" alt="psychoanalytic_pencil_set_grey_1-635x419-1" /></p>
+<title>thebookoflife</title>
+
+
+</body>
+</html>

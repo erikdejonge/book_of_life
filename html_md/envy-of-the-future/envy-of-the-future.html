@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Computer Modern";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/computermodern/Sans/cmunss.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "scpro";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/sourcecodepro/SourceCodePro-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+    text-rendering: geometricPrecision;
+    font-family: "Dyslexie";
+    /*font-family:  "scpro Light";*/
+    font-family:  "Computer Modern";
+    font-size: 18px;
+    line-height: 150%;
+    color: rgba(242, 240, 205, 0.8);
+
+    background-color: #000;
+    background-color: #02090B;
+    margin: 10px 13px 10px 13px;
+    padding-bottom: 64px;
+}
+
+html * {
+    color-profile: sRGB;
+}
+
+strong {
+    font-weight: normal;
+    color: #ffd479;
+    color: rgba(100, 182, 138, 1);
+}
+
+em {
+
+    font-weight: normal;
+    font-style: normal;
+    color: #ffd479;
+    color: #64B68A;
+}
+
+table {
+    min-width: 1150px !important;
+    width: 100% !important;
+    margin: 10px 0 15px 0;
+    border-collapse: collapse;
+}
+
+table tr:nth-child(2n) {
+    background-color: #06181b;
+}
+
+td, th {
+    border: 1px solid #3C3C3E;
+    padding: 3px 10px;
+}
+
+th {
+    padding: 5px 10px;
+    color: #B3D8FD;
+    background-color: #06181b;
+}
+
+a {
+    color: #B4D9FB;
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+a:hover {
+    color: #2668D4;
+    text-decoration: none;
+}
+
+a img {
+    border: 2px solid;
+}
+
+p {
+    margin-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+img {
+    background-color: #7F7F7F;
+    max-width: 1600px;
+}
+
+ul, ol {
+    padding: 16px 0 8px 10px;
+    margin: 16px 0 8px 10px;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none; /* Hides the default checkbox style */
+    height: 15px !important;
+    width: 15px !important;
+    top: -4px !important;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: .15s;
+    border-radius: 4px;
+    background-color: #FCB8B0;
+    color: black
+}
+
+input[type="checkbox"]:checked {
+    background-color: #BCFBBA;
+}
+
+input[type="checkbox"]:before, input[type="checkbox"]:checked:before {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    height: 16px !important;
+    width: 16px !important;
+    line-height: 16px;
+    text-align: center;
+    font-weight: bold;
+    content: '✘';
+}
+
+input[type="checkbox"]:checked:before {
+    content: '✔';
+}
+
+input[type="checkbox"]:hover:before {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+li {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-left: 8px;
+    padding-left: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+li.task-list-item {
+    list-style-type: none;
+    margin-left: -20px;
+}
+
+li.task-list-item label {
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+
+li.task-list-item input {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+}
+
+ul li:nth-child(even) {
+    background-color: #06181b;
+}
+ol li:nth-child(even) {
+    background-color: #06181b;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    color: #b4d9fb;
+    margin-top: 18px;
+    text-rendering: geometricPrecision;
+    font-family: "scpro";
+    font-size: 18px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    text-transform: capitalize;
+}
+
+h1 {
+    color: #54B2BC;
+    color: rgba(255, 212, 121, 1);
+    font-weight: normal;
+    margin-top: 32px;
+    font-size: 26px;
+    margin-bottom: 12px;
+
+}
+
+h2 {
+
+    color: #ffd479;
+    color: rgba(255, 212, 121, 0.8);
+
+    margin-top: 24px;
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-size: 20px;
+
+    color: rgba(129, 206, 203, 1);
+    margin-top: 20px;
+}
+
+h4 {
+    color: rgba(129, 206, 203, 0.8);
+}
+
+h5 {
+    color: rgba(129, 206, 203, 0.7);
+}
+
+h6 {
+    color: rgba(129, 206, 203, 0.6);
+}
+
+ul, ol {
+    padding-left: 30px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+hr {
+    margin: 32px 12px;
+    border: 0;
+    border-bottom: 1px solid #B4C5C5;
+}
+
+blockquote {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-style: normal;
+}
+
+blockquote p {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+    padding-left: 8px;
+    border-left: 3px solid #54B2BC;
+}
+
+blockquote p a {
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+code, pre {
+    font-family: "scpro" !important;
+    color: #8EB1D0;
+    display: block;
+    padding: 12px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    border: 1px solid #3C3C3E;
+    background-color: #051012;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+* {
+    -webkit-print-color-adjust: exact;
+}
+
+@media screen and (min-width: 914px) {
+    body {
+        width: 1145px;
+        margin: 10px auto;
+    }
+}
+
+@media print {
+    body, code, pre code, h1, h2, h3, h4, h5, h6 {
+        color: black;
+        background: white;
+    }
+
+    table, pre {
+        page-break-inside: avoid;
+    }
+}
+
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    background-color: #051012;
+    color: #116CD6 white-space : pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+pre code {
+    background-color: #051012;
+    color: #81ddaf;
+    padding: 0;
+    border: none;
+margin-top: 0px !important;
+
+margin-bottom: 0px !important;
+}
+
+pre:not([class]) {
+    border: none;
+    padding: 0px !important;
+    color: #F2F0CD;
+
+}
+
+p {
+    white-space: pre-line;
+}
+
+
+div.sourceCode {
+    overflow-x: auto
+}
+
+table.sourceCode, td.lineNumbers, td.sourceCode, tr.sourceCode {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    border: none
+}
+
+table.sourceCode {
+    width: 100%;
+    line-height: 100%
+}
+
+td.lineNumbers {
+    text-align: right;
+    padding-right: 4px;
+    padding-left: 4px;
+    color: #aaa;
+    border-right: 1px solid #aaa
+}
+
+td.sourceCode {
+    padding-left: 5px
+}
+
+.codehilite code, .codehilite pre {
+    color: #fdce93;
+    background-color: #3f3f3f
+}
+
+code > span.kw {
+    color: #BCFBBA;
+    font-weight: 700
+}
+
+code > span.dt {
+    color: #e90
+}
+
+code > span.dv {
+    color: #8AF9F0
+}
+
+code > span.bn, code > span.fl {
+    color: #40a070
+}
+
+code > span.st {
+    color: #FBFBAB
+}
+
+code > span.ch {
+    color: #93DD9F
+}
+
+code > span.co {
+    color: #929292
+}
+
+code > span.ot {
+    color: #76AEF4
+}
+
+code > span.al {
+    color: #e90
+}
+
+code > span.fu {
+    color: #00B1B1
+}
+
+code > span.er {
+    color: #FB9BEA
+}
+img[src='Error.src']{
+    display: none;
+}
+
+</style>
+</head>
+<body>
+<h2 id="chapter-1-capitalism-utopia">Chapter 1: capitalism: Utopia</h2>
+<h2 id="utopia"><a href="../category/capitalism/utopia/index.html">Utopia</a></h2>
+<h1 id="envy-of-a-utopian-future">Envy of a Utopian Future</h1>
+<p>It can be strangely appealing to be very down about the future of humanity. When we think of the future, apocalyptic scenarios come so naturally: flooded cities, energy crises, civil wars. We’re afraid of being naive. After all, we were promised jetpacks and won’t be so easily taken in again.</p>
+<p>****<a href="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/article-0-032E0941000005DC-109_468x532.jpg"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/article-0-032E0941000005DC-109_468x532.jpg?resize=468%2C532" alt="article-0-032E0941000005DC-109_468x532" /></a><br />
+****</p>
+<p>We like to tell ourselves we’re too intelligent to be excited by the future. But there’s another possible explanation. We’re oddly a bit resentful: it can be painful to imagine all the things we’re going to miss out on.</p>
+<p>Imagine going back in time to 14th-century Europe and confronting people with the solutions which – a few centuries later – became readily available.</p>
+<p>One might meet a woman whose six-year-old daughter has just died of scarlet fever. She’d be hysterical with grief. One would then explain that in 744 years time, there would be (on the very spot where she was standing) a chemist where – for £2.50 –  she could have got the antibiotics that would have saved her beloved child.</p>
+<p>****<a href="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/Ptolemy_map_15th_century.jpg"><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/Ptolemy_map_15th_century.jpg?resize=635%2C486" alt="Ptolemy_map_15th_century" /></a>****</p>
+<p>Or imagine describing Heathrow Airport and the Boeing Dreamliner to a man who had starved, suffered seasickness and been taken prisoner on a three-year-round pilgrimage from Berkshire to Jerusalem.</p>
+<p>Or telling a guy with toothache about the anesthetics which he wouldn’t be able to get for another 623 years.</p>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/Medieval_dentistry.jpg"><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/Medieval_dentistry.jpg?resize=635%2C495" alt="Medieval_dentistry" /></a></p>
+<p>Or confronting Jamshīd al-Kāshī – a 15th-century mathematician who spent years of his life doing vastly complicated calculations to work out the ratio between the diameter and circumference of a circle – with the fact that his sums would one day be do-able with a small plastic box picked up next to the express checkout at the supermarket.</p>
+<p>We could imagine such people coming to deeply resent news about the future. Instead of seeming inevitable, our miseries can come to appear like cruel, temporary accidents. We stand to realise that in the broad span of history, people don’t have to suffer many of the things we’re going through – we just happen to be condemned to them because we’ve been born at the wrong time.</p>
+<p>A visitor from the future will no doubt pity us as much as we pity our medieval ancestors. They’ll feel so sorry that we had to have an unhappy marriage – 27 seven years of anguish, shame and frustration for both parties – which would so easily have been solved in a few minutes by having a minor adjustment made to the Ventral tegmental area of the midbrain of one of the parties.</p>
+<p>They’ll feel appalled that we had to die of pancreatic cancer. Or work so hard in a more or less meaningless jobs when, at last, robots are truly doing everything and there’s a guaranteed income for everyone on the planet equivalent to what a Swiss dentist earns today.</p>
+<p>We’re often negative about the future to defend ourselves against recognition of how absurd much of our suffering will seem from the position of 300 years from now. We are faced with the cruel thought that solutions to some truly horrible problems of today might be just over the horizon. But unfortunately, still too late for us.</p>
+<p>****<a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/800px-JEAN_LOUIS_THÉODORE_GÉRICAULT_-_La_Balsa_de_la_Medusa_Museo_del_Louvre_1818-19.jpg"><embed src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/800px-JEAN_LOUIS_THÉODORE_GÉRICAULT_-_La_Balsa_de_la_Medusa_Museo_del_Louvre_1818-19.jpg?resize=635%2C433" /></a>****</p>
+<p>The 19th-century French painter Gericault focused on the agonies of this kind of missing out in his monumental depiction <em>The Raft of the Medusa</em>.</p>
+<p>The sailors of the shipwrecked vessel <em>Medusa</em> had drifted for two weeks. In the painting, Gericault shows us the moment when the survivors who are still clinging to the raft finally catch sight of the ship that will rescue them – the tiny sail can just be seen on the horizon. But for many the rescue was too late: they died just before the ship could reach them. A few days, or even hours, sooner and they would have been spared the most horrible agonies.</p>
+<p>We too are like the survivors on the raft. The rescue ship will come – but too late. We should feel a reasonable and appropriate pity for ourselves. We deserve compassion because – even if they are comparatively comfortable – our lives are still actually very hard when considered in the light of the future. We can identify a new kind of comparative poverty that we are suffering from: when a person is poor not in relation to what others around them have now, but poor in relation to what people will have at some point in a dimly imaginable more advanced and more intelligent future.</p>
+<title>thebookoflife</title>
+
+
+</body>
+</html>

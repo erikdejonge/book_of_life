@@ -1,0 +1,28 @@
+
+## Chapter 1: capitalism: Consumption
+
+## [Consumption](../category/capitalism/consumption/index.html)
+
+# Business and the Ladder of Needs
+
+Business is focused on addressing a multitude of human needs; for everything from Jelly Babies to cardiac surgery to nuclear technology to hand soap dispensers.
+
+<span style="font-weight: 400;">Because human needs are so wide ranging, and span such a multitude of different appetites and desires, it can be useful to divide these needs into three broad categories – and then even arrange them up a distinctive sort of ladder:</span>
+
+****[![image00](http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/11/image00.jpg?resize=635%2C618)](http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/11/image00.jpg)****
+
+<span style="font-weight: 400;">This way of cutting up our needs signals the different parts of the mind and body that a given business may be appealing to – and allows one to segment organisations in the commercial landscape according to what needs they service.</span>
+
+<span style="font-weight: 400;">The ladder also lets us observe how the needs that businesses tackle have changed over time. From the dawn of humanity until around 1750 in Western Europe, the servicing of </span>**Core Needs**<span style="font-weight: 400;"> constituted the dominant share of all business activity. The limited technological resources of societies meant that the end of work was – by and large – just about keeping people alive in a very minimal sense: survival was the priority of business.</span>
+
+[![640px-Philibert-Louis\_Debucourt\_-\_Promenade\_de\_la\_galerie\_du\_Palais-Royal](http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/11/640px-Philibert-Louis_Debucourt_-_Promenade_de_la_galerie_du_Palais-Royal.jpg?resize=635%2C453)](http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/11/640px-Philibert-Louis_Debucourt_-_Promenade_de_la_galerie_du_Palais-Royal.jpg)
+
+<span style="font-weight: 400;">But from 1750 onwards, we see businesses starting to address the next stage up the ladder. On an ever increasing scale, they began to focus on what we are calling </span>**Comfort Needs**<span style="font-weight: 400;">: this is the age when, for the first time in Britain, department stores opened and offered customers a range of linens, fashionable clothes and furnishings. Newspapers began to be read on a wide scale; there was a growth in publishing – and an expansion in inns and coffee houses. Commerce became angled towards the satisfaction of the tastes of a growing middle class.</span>
+
+<span style="font-weight: 400;">That leaves the final and most ambitious category: </span>**Flourishing Needs**<span style="font-weight: 400;">. It is only very recently that these have appeared on the commercial horizon. The needs have of course been around since pre-history, but they hadn’t until very recently been thought of as something that commerce could get involved with, commodify, sell and draw profit from. It was left up to other forces – religion and the arts predominantly – to cater for them, either outside of the mainstream economy or on a very artisanal, sporadic basis. Then, in the 1960s, beginning in Madison Avenue in New York, advertising began to recognise and think of these needs. The advertising industry didn’t quite deliver on the needs, but it knew what they were, for it appealed to them with systematic rigour when selling </span>**Comfort**<span style="font-weight: 400;"> and </span>**Core Needs**<span style="font-weight: 400;">. It is in this era that it began to be typical to sell cars with allusions to love – and to encourage people to buy drinks with subtle references to a sense of sexiness and belonging.</span>
+
+[![517232932\_9a294cb6bc\_z](http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/11/517232932_9a294cb6bc_z.jpg?resize=485%2C640)](http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/11/517232932_9a294cb6bc_z.jpg)
+
+<span style="font-weight: 400;">The big prediction for the coming century is that enormous opportunities will open up for businesses that can skilfully address our </span>**Flourishing** **Needs**<span style="font-weight: 400;">. Technology, the wealth of nations and the shift in public taste will make this very likely. A great many of the multi-billion dollar companies of the future will be those focused on the fulfilment of flourishing needs: our need for self-knowledge around love, our desire for a satisfying social life, or our need for resilience. Bits of the tech sector are already nibbling at the borderline between Comfort and Flourishing needs, a trend aided by the forthcoming development of Artificial Emotional Intelligence. This, rather than the economies of developing nations, are what constitute the truly ‘emerging markets’ of the future.</span>
+
+**Core** <span style="font-weight: 400;">and </span>**Comfort Needs**<span style="font-weight: 400;"> will, of course, continue to play a huge role in the economy; but for the first time in history, it is </span>**Flourishing Needs**<span style="font-weight: 400;"> that will begin to provide major opportunities for the organisational genius, commodifying power and muscle of business. Some of the most profitable businesses of the future will be those that understand the trickier, more elusive needs of our hearts and souls that have hitherto eluded the grasp of commerce. We will be the richer for it, in every sense.</span>

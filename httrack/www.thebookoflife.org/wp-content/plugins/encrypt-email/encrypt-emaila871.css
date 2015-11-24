@@ -1,0 +1,16 @@
+.logged-in .encrypted-email::after {
+  /* Display */
+  content: "\f160";
+  display: inline-block;
+
+  /* Positioning */
+  position: relative;
+  margin-left: 3px;
+  top: -3px;
+  
+  /* Theme */
+  color: hsl(100, 50%, 50%);
+  font-family: "dashicons";
+  font-size: 10px;
+  text-decoration: none;
+}

@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Computer Modern";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/computermodern/Sans/cmunss.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "scpro";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/sourcecodepro/SourceCodePro-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+    text-rendering: geometricPrecision;
+    font-family: "Dyslexie";
+    /*font-family:  "scpro Light";*/
+    font-family:  "Computer Modern";
+    font-size: 18px;
+    line-height: 150%;
+    color: rgba(242, 240, 205, 0.8);
+
+    background-color: #000;
+    background-color: #02090B;
+    margin: 10px 13px 10px 13px;
+    padding-bottom: 64px;
+}
+
+html * {
+    color-profile: sRGB;
+}
+
+strong {
+    font-weight: normal;
+    color: #ffd479;
+    color: rgba(100, 182, 138, 1);
+}
+
+em {
+
+    font-weight: normal;
+    font-style: normal;
+    color: #ffd479;
+    color: #64B68A;
+}
+
+table {
+    min-width: 1150px !important;
+    width: 100% !important;
+    margin: 10px 0 15px 0;
+    border-collapse: collapse;
+}
+
+table tr:nth-child(2n) {
+    background-color: #06181b;
+}
+
+td, th {
+    border: 1px solid #3C3C3E;
+    padding: 3px 10px;
+}
+
+th {
+    padding: 5px 10px;
+    color: #B3D8FD;
+    background-color: #06181b;
+}
+
+a {
+    color: #B4D9FB;
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+a:hover {
+    color: #2668D4;
+    text-decoration: none;
+}
+
+a img {
+    border: 2px solid;
+}
+
+p {
+    margin-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+img {
+    background-color: #7F7F7F;
+    max-width: 1600px;
+}
+
+ul, ol {
+    padding: 16px 0 8px 10px;
+    margin: 16px 0 8px 10px;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none; /* Hides the default checkbox style */
+    height: 15px !important;
+    width: 15px !important;
+    top: -4px !important;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: .15s;
+    border-radius: 4px;
+    background-color: #FCB8B0;
+    color: black
+}
+
+input[type="checkbox"]:checked {
+    background-color: #BCFBBA;
+}
+
+input[type="checkbox"]:before, input[type="checkbox"]:checked:before {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    height: 16px !important;
+    width: 16px !important;
+    line-height: 16px;
+    text-align: center;
+    font-weight: bold;
+    content: '✘';
+}
+
+input[type="checkbox"]:checked:before {
+    content: '✔';
+}
+
+input[type="checkbox"]:hover:before {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+li {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-left: 8px;
+    padding-left: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+li.task-list-item {
+    list-style-type: none;
+    margin-left: -20px;
+}
+
+li.task-list-item label {
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+
+li.task-list-item input {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+}
+
+ul li:nth-child(even) {
+    background-color: #06181b;
+}
+ol li:nth-child(even) {
+    background-color: #06181b;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    color: #b4d9fb;
+    margin-top: 18px;
+    text-rendering: geometricPrecision;
+    font-family: "scpro";
+    font-size: 18px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    text-transform: capitalize;
+}
+
+h1 {
+    color: #54B2BC;
+    color: rgba(255, 212, 121, 1);
+    font-weight: normal;
+    margin-top: 32px;
+    font-size: 26px;
+    margin-bottom: 12px;
+
+}
+
+h2 {
+
+    color: #ffd479;
+    color: rgba(255, 212, 121, 0.8);
+
+    margin-top: 24px;
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-size: 20px;
+
+    color: rgba(129, 206, 203, 1);
+    margin-top: 20px;
+}
+
+h4 {
+    color: rgba(129, 206, 203, 0.8);
+}
+
+h5 {
+    color: rgba(129, 206, 203, 0.7);
+}
+
+h6 {
+    color: rgba(129, 206, 203, 0.6);
+}
+
+ul, ol {
+    padding-left: 30px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+hr {
+    margin: 32px 12px;
+    border: 0;
+    border-bottom: 1px solid #B4C5C5;
+}
+
+blockquote {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-style: normal;
+}
+
+blockquote p {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+    padding-left: 8px;
+    border-left: 3px solid #54B2BC;
+}
+
+blockquote p a {
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+code, pre {
+    font-family: "scpro" !important;
+    color: #8EB1D0;
+    display: block;
+    padding: 12px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    border: 1px solid #3C3C3E;
+    background-color: #051012;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+* {
+    -webkit-print-color-adjust: exact;
+}
+
+@media screen and (min-width: 914px) {
+    body {
+        width: 1145px;
+        margin: 10px auto;
+    }
+}
+
+@media print {
+    body, code, pre code, h1, h2, h3, h4, h5, h6 {
+        color: black;
+        background: white;
+    }
+
+    table, pre {
+        page-break-inside: avoid;
+    }
+}
+
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    background-color: #051012;
+    color: #116CD6 white-space : pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+pre code {
+    background-color: #051012;
+    color: #81ddaf;
+    padding: 0;
+    border: none;
+margin-top: 0px !important;
+
+margin-bottom: 0px !important;
+}
+
+pre:not([class]) {
+    border: none;
+    padding: 0px !important;
+    color: #F2F0CD;
+
+}
+
+p {
+    white-space: pre-line;
+}
+
+
+div.sourceCode {
+    overflow-x: auto
+}
+
+table.sourceCode, td.lineNumbers, td.sourceCode, tr.sourceCode {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    border: none
+}
+
+table.sourceCode {
+    width: 100%;
+    line-height: 100%
+}
+
+td.lineNumbers {
+    text-align: right;
+    padding-right: 4px;
+    padding-left: 4px;
+    color: #aaa;
+    border-right: 1px solid #aaa
+}
+
+td.sourceCode {
+    padding-left: 5px
+}
+
+.codehilite code, .codehilite pre {
+    color: #fdce93;
+    background-color: #3f3f3f
+}
+
+code > span.kw {
+    color: #BCFBBA;
+    font-weight: 700
+}
+
+code > span.dt {
+    color: #e90
+}
+
+code > span.dv {
+    color: #8AF9F0
+}
+
+code > span.bn, code > span.fl {
+    color: #40a070
+}
+
+code > span.st {
+    color: #FBFBAB
+}
+
+code > span.ch {
+    color: #93DD9F
+}
+
+code > span.co {
+    color: #929292
+}
+
+code > span.ot {
+    color: #76AEF4
+}
+
+code > span.al {
+    color: #e90
+}
+
+code > span.fu {
+    color: #00B1B1
+}
+
+code > span.er {
+    color: #FB9BEA
+}
+img[src='Error.src']{
+    display: none;
+}
+
+</style>
+</head>
+<body>
+<h2 id="chapter-6-curriculum-artarchitecture">Chapter 6: curriculum: Art/Architecture</h2>
+<h2 id="artarchitecture"><a href="../category/curriculum/artarchitecture/index.html">Art/Architecture</a></h2>
+<h1 id="andrea-palladio">Andrea Palladio</h1>
+<p>In Europe and the US, the average person spends 84% of their life indoors: that is, inside architecture. Much of the rest of the time we are around buildings, even if we’re not paying them a great deal of attention. Despite this massive exposure, on the whole we’re not – as a culture – very ambitious about what buildings look like. We tend to assume that mostly the buildings we live around won’t be anything special and that there’s nothing to be done about this. We’ve come to imagine that great buildings are the unique and very expensive creations of genius-architects. You might travel to see great architecture on holiday perhaps but it’s hardly to be expected as standard at home. Vicenza, 25 miles inland from Venice, is one of the leading sites of global architectural tourism and for one reason: many of the works of Andrea Palladio are located in and around that town.</p>
+<p><span class="s1">Andrea Palladio was born at the end of November in 1508 in Padua. He was an apprentice stone mason and later a stone carver. His real name was Andrea di Pietro della Gondola (i.e. Andrew, son of Peter the Gondolier). And it was only when he was around thirty years of age that he got involved in designing buildings himself – and his first important patron suggested a stylish name change, to <em>Palladio</em>.</span></p>
+<p><span class="s1">[It’s not intuitively obvious how to say his name. A safe bet is to start with ‘pa’ (as in dad); then ‘lad’ as in ‘a bit of a lad’; and finish up with with a brisk ‘ay-oh’: pa-lad-ayoh.]</span></p>
+<p><span class="s1">Over the next forty years of his working life, Palladio designed forty or so villas, a couple of town houses and a handful of churches. Not a huge list, given the amount of building that was going on at the time. For most of his career he had a mix of professional successes and setbacks; though during his sixties he finally emerged as the top architect<span class="Apple-converted-space">  </span>in Venice – about the richest and most powerful city in the world at that time. He was a devoted father, but his two elder sons – who worked alongside him – died young. Palladio himself died in the summer of 1580. He was 71. </span></p>
+<p><a href="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/Palladio_filtered.jpg"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/Palladio_filtered.jpg?resize=635%2C561" alt="Palladio_filtered" /></a></p>
+<p><span class="s1">Palladio himself held views on architecture almost entirely opposite to those which are current today. His attitude can be summarised by two central ideas. First, architecture has a clear purpose, which is to help us be better people. And, second, there are rules for good building. Great architecture (he was convinced) is more of a craft than an art: it isn’t necessarily expensive and it is for everyday life, for farms, barns and offices, not only for the occasional glamorous project.</span></p>
+<p><strong><span class="s1">One: The Purpose of Architecture </span></strong></p>
+<p><span class="s1">We tend not to ask this question, it can easily sound naive or pretentious. Either you are supposed to know already or someone is about to launch into a complicated disquisition. </span></p>
+<p><span class="s1">Palladio held that architecture has an important purpose – above and beyond the provision of floors, walls and ceilings. He thought that we should build in order to encourage good states of mind in ourselves and others. In particular, he thought architecture could help us with three psychological virtues: calm, harmony and dignity.</span></p>
+<p><a href="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/Villa-Foscari-La-Malcontenta-by-Andrea-Palladio-piano-nobile.jpg"><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/Villa-Foscari-La-Malcontenta-by-Andrea-Palladio-piano-nobile.jpg?resize=635%2C606" alt="Villa-Foscari-La-Malcontenta-by-Andrea-Palladio-piano-nobile" /></a></p>
+<h5 id="encouragement-for-our-better-nature"><span class="s1">Encouragement for our better nature</span></h5>
+<p><em><span class="s1">Calm</span></em></p>
+<p><a href="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/SA0309266e_1_x.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/SA0309266e_1_x.jpg?resize=635%2C476" alt="SA0309266e_1_x" /></a></p>
+<p><span class="s1">He reduces what’s going on; all the elements in a room are centred, balanced, symmetrical. He only uses simple geometrical shapes. Generally, the walls are plain and neutral. There’s not meant to be much furniture. The serenity of the space is designed to calm us down; they are not trying to surprise or excite us. They invite us to focus and concentrate, to be less distracted.</span></p>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/Larotonda2009.jpeg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/Larotonda2009.jpeg?resize=635%2C476" alt="Larotonda2009" /></a></p>
+<h5 id="encouragement-to-be-serene"><span class="s1">Encouragement to be serene</span></h5>
+<p><em><span class="s1">Harmony</span></em></p>
+<p><span class="s1">Palladio was obsessed with making sure that every element of a building fitted perfectly with every other.</span></p>
+<p><a href="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/Chiesa_del_Santissimo_Redentore_Venice_Italy.jpg"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/Chiesa_del_Santissimo_Redentore_Venice_Italy.jpg?resize=635%2C650" alt="Chiesa_del_Santissimo_Redentore,_Venice,_Italy" /></a></p>
+<p><span class="s1"> ‘A fine building ought to appear as an entire and perfect body, wherein every member agrees with its fellow, and each so well with the whole, that it may seem absolutely necessary.’</span></p>
+<p><span class="s1">The design of a window is related to that of a door; every opening is aligned with every other; every room is a clear, simple shape; the doors always line up.</span></p>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/0be94dd77632489b9898b58c97e9a4761.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/0be94dd77632489b9898b58c97e9a4761.jpg?resize=635%2C464" alt="0be94dd77632489b9898b58c97e9a476" /></a></p>
+<h5 id="one-door-leads-to-another-villa-barbaro"><span class="s1">One door leads to another – Villa Barbaro</span></h5>
+<p><span class="s1">Powerfully coherent buildings are moving because they counter the natural tendency of life for things to get muddled, confused and compromised. They work against our anxiety that many of our concerns won’t line up neatly: that work and home life, sex and love, desire and duty will all be continually fighting one another. The building creates an environment in which we are provided with a limited – but real – sense of everything important coming elegantly together.</span></p>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/Villa_Badoer-Barchessa-Scale_Laterali.jpg"><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/Villa_Badoer-Barchessa-Scale_Laterali.jpg?resize=635%2C390" alt="Villa_Badoer-Barchessa-Scale_Laterali" /></a></p>
+<h5 id="a-portion-of-the-world-in-which-elements-work-harmoniously-together"><span class="s1">A portion of the world in which elements work harmoniously together</span></h5>
+<p><em><span class="s1">Dignity</span></em></p>
+<p><span class="s1">One of the ambitions of Palladio’s architecture was to give greater dignity to parts of life that had been, unfairly, regarded as unworthy. And which, in his eyes, lacked the prestige they properly deserved. </span></p>
+<p><span class="s1">At the Villa Barbaro – a farmhouse in the countryside about forty miles north of Venice –<span class="Apple-converted-space"> </span>the barns and stables and grain stores are just as grand as the owner’s not especially large house. Rather than being hidden away or set at a distance, these working buildings are presented as honourable and important.</span></p>
+<p><a href="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/palladio__villa_barbaro_maser.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/palladio__villa_barbaro_maser.jpg?resize=635%2C256" alt="palladio__villa_barbaro_maser" /></a></p>
+<h5 id="villa-barbaro-the-workers-lived-in-the-elegant-wings"><span class="s1">Villa Barbaro – the workers lived in the elegant wings</span></h5>
+<p><span class="s1">He wasn’t disguising the utilitarian reality of the farm, rather he was demonstrating its genuine (though generally underappreciated) dignity. </span></p>
+<p><span class="s1">In directing architecture towards these psychological states, Palladio wasn’t flattering us. He wasn’t pretending that his buildings were reflecting what we’re normally like. He knew perfectly well that people tend to be (then as now) irate and agitated; that dignity is a mask that slips; that we get despondent. He wasn’t trying to give expression to ordinary human nature. In keeping with the long classical tradition, he believed that buildings should try to compensate for our weaknesses: encouraging us to be more collected, poised and measured than we manage to be day to day. We need serene, harmonious and confident buildings precisely because we’re not reliably like that. Ideally, architecture embodies our better selves. The ideal building is like the ideal person. </span></p>
+<p><span class="s1">Palladio is classically pessimistic about our ability to hold onto ideas; the mind is leaky: we very easily lose contact with our own better nature; we’re very likely to forget, under pressure, what is important to us. The task of architecture is to provides us with the environment that<span class="Apple-converted-space"> </span>continuously reminds about – and encourages us to become – who we really want to be. </span></p>
+<p><strong><span class="s1">Two: Rules</span></strong></p>
+<p><span class="s1">Of course, we accept that there are lots of useful rules – for airline safety, accounting practices or card games. But we’re generally suspicious of the idea that rules might be important around anything deemed cultural, intimate or creative: the idea that there might be beneficial rules of conversation, art, relationships or indeed of architecture. We tend to see rules as secondary, lacking originality. Like Aristotle, Palladio took the view that many creative undertakings (like writing tragedies, having conversations or cultivating friendships) should be understood as skills or crafts. They are learnable. According to a classical outlook, good outcomes in such areas are not simply to do with luck or chance. And rules ideally capture what it is we need to do in order to do them well. </span></p>
+<p><span class="s1">In 1570, Palladio published his <em>Four Books on Architecture</em>.</span></p>
+<p><a href="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/Palladio_Titel_1642.jpg"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/Palladio_Titel_1642.jpg?resize=635%2C520" alt="Palladio_Titel_1642" /></a></p>
+<p><span class="s1">It’s an early, and very distinguished, example of the ‘how to’ genre. It gives instruction on how to build. There’s a practical guide to digging foundations and how to judge the quality of cement and the various reliable ways of constructing walls and laying floors. </span></p>
+<p><span class="s1">He also develops rules of proportion, based on simple mathematical ratios. The ancient Greek philosopher Pythagoras had famously discovered that two taught strings, one half the length of the other, sound harmonious when vibrated at the same time. The pleasing quality of the sound, he discovered, was governed by a simple mathematical principle. Palladio and others developed a visual equivalent of this. </span></p>
+<p><a href="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/z644210.jpg"><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/z644210.jpg?resize=635%2C664" alt="z644210" /></a></p>
+<p><span class="s1">The fancy surrounds are not the crucial thing. Without them, the window opening will still look lovely, because it is the proportions and not the decoration that make it harmonious. This meant that an equally beautiful building could be produced more cheaply (always one of Palladio’s chief concerns). Because the same proportions are beautiful irrespective of whether the building is made of marble, brick, concrete or wood. </span></p>
+<p><span class="s1">And he went on to provide a wide range of simple rules for making buildings attractive: they should be symmetrical; there should be three, five or seven openings on a side – not an even number; rooms should have a simple geometrical shape, the length should be three-fifths of the width and the height three-fifths of the width. </span></p>
+<p><a href="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/tumblr_inline_n68yybJHKY1serk8o.gif"><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/tumblr_inline_n68yybJHKY1serk8o.gif?resize=635%2C575" alt="tumblr_inline_n68yybJHKY1serk8o" /></a></p>
+<p><span class="s1">Palladio saw himself as a craftsman. He was simply following a set of rules, which others could follow too. He was working against the idea that architecture requires special genius. The ideal of a pattern book is that visually elegant buildings can be put up as standard, as happened (to a significant extent under the influence of Palladio) in London and in many cities in the 18th century. </span></p>
+<p><a href="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/3250846903_74e45349be_z.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/04/3250846903_74e45349be_z.jpg?resize=635%2C476" alt="3250846903_74e45349be_z" /></a></p>
+<p><span class="s1">A central concern of <em>the Four Books</em> is to educate the potential client or the consumer of architecture. Often, we’re not very sure why we like or dislike buildings. We might have quite positive or negative reactions and say something is great or rather horrible. But if pressed for an explanation, we often find ourselves struggling. We find it difficult to say what it is about about one building that makes it attractive and what makes another unappealing. We’re tempted to say that it’s a purely personal matter, that taste in architecture is purely subjective. It’s a well-intended sentiment. But it’s also unfortunate. It plays into the hands of developers who have no concerns whatever for beauty – who are safe in the knowledge that they will never be taken to task for what they do. </span></p>
+<p><strong><span class="s1">Conclusion</span></strong></p>
+<p>Palladio’s ideas have resonated down the ages. But it isn’t when buildings have columns or make nods to ancient temples that they are necessarily at their most authentically ‘Palladian’. Buildings are Palladian when they are devoted to calm, harmony and dignity on the basis of rules which can (and should be) widely re-used. It’s then they display the same underlying ambition of which Palladio is a central exponent and advocate: that it should be normal for buildings to present us with a seductive portrait of our calmest and most dignified selves.</p>
+<h5 id="some-great-modern-palladian-buildings">Some great modern ‘Palladian’ buildings:</h5>
+<p><img src="http://i0.wp.com/fc00.deviantart.net/fs71/f/2010/270/9/e/villa_savoye_by_tfrost1-d2zm7ym.jpg?resize=658%2C391" alt="" /></p>
+<h5 id="le-corbusier-the-villa-savoye."><span class="s1">Le Corbusier, The Villa Savoye.</span></h5>
+<p><img src="http://i1.wp.com/ad009cdnb.archdaily.net/wp-content/uploads/2013/07/51dc6a43e8e44e66bd00002f_interior-of-louis-kahn-s-1971-korman-house-to-be-redesigned_photo.jpg?resize=659%2C494" alt="" /></p>
+<h5 id="louis-kahn-korman-house">Louis Kahn, Korman House</h5>
+<p><img src="http://i0.wp.com/www.e-architect.co.uk/images/jpgs/london/leaf_house_r121110_hb3.jpg?resize=652%2C828" alt="" /></p>
+<h5 id="james-gorst-leaf-house"> James Gorst, Leaf House</h5>
+<title>thebookoflife</title>
+
+
+</body>
+</html>

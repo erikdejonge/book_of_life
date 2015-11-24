@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Computer Modern";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/computermodern/Sans/cmunss.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "scpro";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/sourcecodepro/SourceCodePro-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+    text-rendering: geometricPrecision;
+    font-family: "Dyslexie";
+    /*font-family:  "scpro Light";*/
+    font-family:  "Computer Modern";
+    font-size: 18px;
+    line-height: 150%;
+    color: rgba(242, 240, 205, 0.8);
+
+    background-color: #000;
+    background-color: #02090B;
+    margin: 10px 13px 10px 13px;
+    padding-bottom: 64px;
+}
+
+html * {
+    color-profile: sRGB;
+}
+
+strong {
+    font-weight: normal;
+    color: #ffd479;
+    color: rgba(100, 182, 138, 1);
+}
+
+em {
+
+    font-weight: normal;
+    font-style: normal;
+    color: #ffd479;
+    color: #64B68A;
+}
+
+table {
+    min-width: 1150px !important;
+    width: 100% !important;
+    margin: 10px 0 15px 0;
+    border-collapse: collapse;
+}
+
+table tr:nth-child(2n) {
+    background-color: #06181b;
+}
+
+td, th {
+    border: 1px solid #3C3C3E;
+    padding: 3px 10px;
+}
+
+th {
+    padding: 5px 10px;
+    color: #B3D8FD;
+    background-color: #06181b;
+}
+
+a {
+    color: #B4D9FB;
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+a:hover {
+    color: #2668D4;
+    text-decoration: none;
+}
+
+a img {
+    border: 2px solid;
+}
+
+p {
+    margin-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+img {
+    background-color: #7F7F7F;
+    max-width: 1600px;
+}
+
+ul, ol {
+    padding: 16px 0 8px 10px;
+    margin: 16px 0 8px 10px;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none; /* Hides the default checkbox style */
+    height: 15px !important;
+    width: 15px !important;
+    top: -4px !important;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: .15s;
+    border-radius: 4px;
+    background-color: #FCB8B0;
+    color: black
+}
+
+input[type="checkbox"]:checked {
+    background-color: #BCFBBA;
+}
+
+input[type="checkbox"]:before, input[type="checkbox"]:checked:before {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    height: 16px !important;
+    width: 16px !important;
+    line-height: 16px;
+    text-align: center;
+    font-weight: bold;
+    content: '✘';
+}
+
+input[type="checkbox"]:checked:before {
+    content: '✔';
+}
+
+input[type="checkbox"]:hover:before {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+li {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-left: 8px;
+    padding-left: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+li.task-list-item {
+    list-style-type: none;
+    margin-left: -20px;
+}
+
+li.task-list-item label {
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+
+li.task-list-item input {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+}
+
+ul li:nth-child(even) {
+    background-color: #06181b;
+}
+ol li:nth-child(even) {
+    background-color: #06181b;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    color: #b4d9fb;
+    margin-top: 18px;
+    text-rendering: geometricPrecision;
+    font-family: "scpro";
+    font-size: 18px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    text-transform: capitalize;
+}
+
+h1 {
+    color: #54B2BC;
+    color: rgba(255, 212, 121, 1);
+    font-weight: normal;
+    margin-top: 32px;
+    font-size: 26px;
+    margin-bottom: 12px;
+
+}
+
+h2 {
+
+    color: #ffd479;
+    color: rgba(255, 212, 121, 0.8);
+
+    margin-top: 24px;
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-size: 20px;
+
+    color: rgba(129, 206, 203, 1);
+    margin-top: 20px;
+}
+
+h4 {
+    color: rgba(129, 206, 203, 0.8);
+}
+
+h5 {
+    color: rgba(129, 206, 203, 0.7);
+}
+
+h6 {
+    color: rgba(129, 206, 203, 0.6);
+}
+
+ul, ol {
+    padding-left: 30px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+hr {
+    margin: 32px 12px;
+    border: 0;
+    border-bottom: 1px solid #B4C5C5;
+}
+
+blockquote {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-style: normal;
+}
+
+blockquote p {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+    padding-left: 8px;
+    border-left: 3px solid #54B2BC;
+}
+
+blockquote p a {
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+code, pre {
+    font-family: "scpro" !important;
+    color: #8EB1D0;
+    display: block;
+    padding: 12px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    border: 1px solid #3C3C3E;
+    background-color: #051012;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+* {
+    -webkit-print-color-adjust: exact;
+}
+
+@media screen and (min-width: 914px) {
+    body {
+        width: 1145px;
+        margin: 10px auto;
+    }
+}
+
+@media print {
+    body, code, pre code, h1, h2, h3, h4, h5, h6 {
+        color: black;
+        background: white;
+    }
+
+    table, pre {
+        page-break-inside: avoid;
+    }
+}
+
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    background-color: #051012;
+    color: #116CD6 white-space : pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+pre code {
+    background-color: #051012;
+    color: #81ddaf;
+    padding: 0;
+    border: none;
+margin-top: 0px !important;
+
+margin-bottom: 0px !important;
+}
+
+pre:not([class]) {
+    border: none;
+    padding: 0px !important;
+    color: #F2F0CD;
+
+}
+
+p {
+    white-space: pre-line;
+}
+
+
+div.sourceCode {
+    overflow-x: auto
+}
+
+table.sourceCode, td.lineNumbers, td.sourceCode, tr.sourceCode {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    border: none
+}
+
+table.sourceCode {
+    width: 100%;
+    line-height: 100%
+}
+
+td.lineNumbers {
+    text-align: right;
+    padding-right: 4px;
+    padding-left: 4px;
+    color: #aaa;
+    border-right: 1px solid #aaa
+}
+
+td.sourceCode {
+    padding-left: 5px
+}
+
+.codehilite code, .codehilite pre {
+    color: #fdce93;
+    background-color: #3f3f3f
+}
+
+code > span.kw {
+    color: #BCFBBA;
+    font-weight: 700
+}
+
+code > span.dt {
+    color: #e90
+}
+
+code > span.dv {
+    color: #8AF9F0
+}
+
+code > span.bn, code > span.fl {
+    color: #40a070
+}
+
+code > span.st {
+    color: #FBFBAB
+}
+
+code > span.ch {
+    color: #93DD9F
+}
+
+code > span.co {
+    color: #929292
+}
+
+code > span.ot {
+    color: #76AEF4
+}
+
+code > span.al {
+    color: #e90
+}
+
+code > span.fu {
+    color: #00B1B1
+}
+
+code > span.er {
+    color: #FB9BEA
+}
+img[src='Error.src']{
+    display: none;
+}
+
+</style>
+</head>
+<body>
+<h2 id="chapter-1-capitalism-good-capitalism">Chapter 1: capitalism: Good Capitalism</h2>
+<h2 id="good-capitalism"><a href="../category/capitalism/good-capitalism/index.html">Good Capitalism</a></h2>
+<h1 id="artists-and-supermarket-tycoons">Artists and Supermarket Tycoons</h1>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/10/csm_ShanghArt_Supermarket.jpeg_96927adb53.jpg"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/10/csm_ShanghArt_Supermarket.jpeg_96927adb53.jpg?resize=635%2C424" alt="csm_ShanghArt_Supermarket.jpeg_96927adb53" /></a></p>
+<h5 id="xu-zhens-supermarket">Xu Zhen’s Supermarket</h5>
+<p>The Shanghai-based artist Xu Zhen is one of the most celebrated Chinese artists of our age. He operates in a variety of media, including video, sculpture and fine art. His work displays a deep interest in business; he appears alternately charmed and horrified by commercial life. In recent years, he has become especially fascinated by supermarkets. He’s interested, in part, by how lovely they can be.**** ****</p>
+<p><a href="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/10/image05.png"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/10/image05.png?resize=496%2C334" alt="image05" /></a></p>
+<p><span style="font-weight: 400;">Xu Zhen loves the alluring packaging, the feel of lifting something off a shelf and seeing multiple versions of it waiting just behind and the exquisite precision with which items are displayed. He particularly likes the claim that supermarkets can provide us with everything we could possibly need; the claim of comprehensiveness.</span></p>
+<p><span style="font-weight: 400;">At the same time, Xu Zhen feels there’s something really quite wrong with real supermarkets – and commercial life in general. The actual products they sell often aren’t the things we genuinely need. The backstories of the things on sale is often exploitative, everything has been carefully calculated to get us to spend more than we mean to. There’s cynicism throughout the system.</span>**** ****</p>
+<p><span style="font-weight: 400;">So, in response, the Chinese artist mocks the supermarket repeatedly. In his work, the products on the shelves look real, you’re invited to pick them up, but then you find out they are empty, as physically empty as Xu Zhen feels they are spiritually empty. His checkouts are similarly deceptive. They seem genuine: but you get a receipt and it turns out to be a fake; you’ve bought ‘nothing’ of value.</span>**** ****</p>
+<p><span style="font-weight: 400;">The supermarket installation takes us on a journey: at first it is getting us to share the artist’s excitement around supermarkets and then it’s puncturing the illusion: it’s all a big, deliberate let down: the products look tempting but they are full of nonsense and don’t really nourish us.</span></p>
+<p><span style="font-weight: 400;">It’s highly significant that Xu Zhen’s critique of supermarkets is ironic. We tend to get ironic around things that we feel disappointed by but don’t feel we’ll ever be able to change. It’s a manoeuvre of disappointment stoically handled. </span></p>
+<p><a href="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/10/image07.png"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/10/image07.png?resize=635%2C476" alt="image07" /></a></p>
+<p><span style="font-weight: 400;">A lot of art is ironic in its critiques of capitalism; we’ve come to expect this. It playfully hints at what is wrong but has no real clue what to do in response. A kind of hollow sad laughter seems the only fitting response. Criticism melts into irony.</span></p>
+<p><a href="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/10/XuZhen2.jpg"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/10/XuZhen2.jpg?resize=500%2C333" alt="XuZhen2" /></a></p>
+<p><span style="font-weight: 400;">Xu Zhen is trapped in the paradigm of what an artist does. A </span><em><span style="font-weight: 400;">real </span></em><span style="font-weight: 400;">artist, we have come to suppose – and the current ideology of the art world insists – couldn’t be enthusiastic about improving a supermarket. He or she could only mock from the sidelines. We’ve nowadays fortunately loosened definitions of what a ‘real’ man or woman is meant to do, but there are still strict social taboos hemming in the idea of what an artist is allowed to get up to: they can be as experimental and surprising as they like … unless they want to run a supermarket or an airline or an energy corporation – at which point they cross a decisive boundary, fall from grace, lose their special status as artists and become the supposed polar opposites: mere business people.</span></p>
+<p><span style="font-weight: 400;">We’d like to take Xu Zhen seriously, perhaps more seriously than he takes himself. Beneath the irony, Xu Zhen has the ambition to discover what an ideal supermarket might be like, how it might be a successful business and how capitalism could be reformed. Somewhere within his project, he carries a hope: that a corporation like a supermarket could be brought into line with the best values of art: psychological and spiritual importance, kindness and wisdom.</span></p>
+<p><span style="font-weight: 400;">***</span></p>
+<p>Thousands of miles away from Shanghai, in the flatlands of East Anglia in the northeastern tip of Southern England, just outside of Norwich, lies a hugely impressive modern building completed in 1978 by the architect Norman Foster. The Sainsbury Centre for the Visual Arts is filled with some of the greatest works of contemporary art: here we find masterpieces by Henry Moore, Giacometti and Francis Bacon.</p>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/10/ealnwonlsqkbk3xw2sdj.jpg"><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/10/ealnwonlsqkbk3xw2sdj.jpg?resize=635%2C476" alt="ealnwonlsqkbk3xw2sdj" /></a></p>
+<p><a href="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/10/museum-of-the-year-2014-nominations-sainsbury-centre-for-visual-arts-world-arts-news_web_image.jpg"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/10/museum-of-the-year-2014-nominations-sainsbury-centre-for-visual-arts-world-arts-news_web_image.jpg?resize=635%2C423" alt="museum-of-the year-2014-nominations-sainsbury-centre-for-visual-arts-world-arts-news_web_image" /></a></p>
+<p><span style="font-weight: 400;">The collection is made possible thanks to the enormous wealth of the Sainsbury family, which owns and runs Britain’s second largest supermarket chain that bears its name. Discounted shoulders of lamb, white bread and special 3 for 2 offers on tangerines have led to exquisite display cases containing Giacometti’s elongated, haunting figures.</span></p>
+<p><span style="font-weight: 400;">The gallery seems guided by values that are light years from any actual supermarket. It is feeding your soul, the curators are deeply ambitious about the emotional and educational benefit of the experience: they want you to come out slightly improved. A visit is a special occasion (though they hope you’ll come often).</span></p>
+<p><span style="font-weight: 400;">From a very different direction, the Sainsbury family arrive at a strikingly similar conclusion to Xu Zhen. Art and supermarkets are essentially opposed. And like Xu Zhen, the Sainsbury’s are caught in an identity trap, though a very different one: that of the philanthropist. The philanthropist is imagined as someone who makes a lot of money in the brutish world of commerce and then makes a clean break. They devote their wealth to projects that are studiedly non-commercial. The philanthropist fears that if they ever took an art-loving attitude to their businesses they would suffer economic collapse. Instead of making big things happen in the real world, they would become mere artists who make little interesting things that live only in the sheltered, subsidised world of the gallery.</span></p>
+<p><span style="font-weight: 400;">It’s a strangely tantalising situation. The artist finds something loveable and much that’s wrong around supermarkets, but can’t imagine running one and bring the ideals of art into action in that arena. The supermarket owners love art, but can’t imagine bringing their art-loving side into focus in their business.  They are both like pioneers, at the edges of unexplored territory. There is a huge idea they are both circling round. The goal is a synthesis of business and art: a supermarket that was truly guided by the ideals of art, capitalism that is compatible with higher values.</span>**** ****</p>
+<p><span style="font-weight: 400;">A supermarket governed by the values of art would not be selling art. It would be a genuine supermarket continuing to sell all the things we use everyday; it would still be focused on the idea that you can go round with a huge trolley and stock up on pretty much everything you require for the coming week. But it would be paying attention to the things that the arts have traditionally valued highly: sincerity, a focus on higher (as well as lower) needs, sympathy for the weak and the poor, a focus on quality and authenticity. The arts have a deeply impressive record of getting people to like things which, initially, didn’t seem at all attractive at first. At their best, they normalise and glamorise what is good. Supermarkets have a great (but currently misused) ability to make these moves. They have normalised lychees and glamorised cold-pressed olive oil. They could do the same for the idea of a just price: items which are slightly more expensive than their rivals because they have been produced under better conditions for all concerned. Or the idea of quality over quantity: one buys a smaller but better portion of cheese, a smaller but better chicken, fewer but better cherries…</span></p>
+<p><span style="font-weight: 400;">At the moment, stacking shelves in a supermarket is one of the less sought after jobs: </span></p>
+<p><a href="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/10/pic_international_large_3.jpg"><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/10/pic_international_large_3.jpg?resize=374%2C210" alt="pic_international_large_3" /></a></p>
+<p><span style="font-weight: 400;">By contrast, many people are keen to work in art and in galleries. Some will work for almost nothing, but they are willing because they are proud of their involvement: at parties they feel excited to say that they are working at a gallery even if mainly they are sweeping the store room, keeping the mailing list up to date or perching on a ladder.  </span></p>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/10/a3b145748.jpg"><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/10/a3b145748.jpg?resize=635%2C481" alt="a3b145748" /></a></p>
+<p><span style="font-weight: 400;">These feel like opposite ends of the spectrum. But all that divides them is the idea of what the work means: we think of apples and soup cans as banal and art as special. The true irony is that works of art are often themselves homages to humble things. Cézanne thought apples were deeply wonderful, which was why he painted them. We get closer to Cézanne not so much by looking at the painting, but by looking at what he looked at – real apples on a simple table – with his appreciative eye. A Warhol soup can isn’t saying soup cans are pitiful but art is wonderful. Its meaning is really the reverse. Art is doing its job when it gets us to love the dignity of ordinary life – and business is succeeding when it provides the conditions for humane and purpose-driven work. A supermarket run under the values of art would be a glamorous, prestigious place to work: people would feel a quiet surge of pride when they mentioned they worked there.</span></p>
+<p><strong>Conclusion</strong></p>
+<p><span style="font-weight: 400;">Up to now, we have collectively learned to admire the values of the arts (which can be summed up as a devotion to truth, beauty and goodness, expressed via material things) in the special arena of galleries. But their more important application is in the general, daily fabric of our lives – the area that’s currently dominated by an often depleted vision of commerce. It’s a tragic polarisation: we encounter the values we need, but only in a rarefied setting while we regard these values as alien to the circumstances where we most need to meet them.</span></p>
+<p><span style="font-weight: 400;">We want to simultaneously raise the ambition of artists: to make their ideals powerful in our lives – and of business: to serve us better. The two ambitions are ultimately very closely related.</span>**** ****</p>
+<p><span style="font-weight: 400;">The supermarket is one example in the wider class of commercial projects that should, ideally, be run according to the values of art, which could include: financial services, property development or home insurance. These corporations could use the ambitions and ideas that at the moment circle around art to better serve the needs of their customers.</span>**** ****</p>
+<p><span style="font-weight: 400;">In part, what we need to do is get artists out of an ironic mode and equip them with the right skills. We need artists who are good at dealing with employment contracts and balance sheets; who are excited by organisational flow charts and are undaunted by shareholder meetings. At the same time, we need to raise the ambitions of business people, stop them spending their surplus on art, and instead encourage them to invest (for surplus wealth buys you time to make good ideas stick) in making their core activities themselves more in line with the spirit of art. We should be seeking to make money via the values of art, rather making it in disregard for those values, and then funding a museum. That is the challenge for the future.</span></p>
+<title>thebookoflife</title>
+
+
+</body>
+</html>

@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Computer Modern";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/computermodern/Sans/cmunss.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "scpro";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/sourcecodepro/SourceCodePro-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+    text-rendering: geometricPrecision;
+    font-family: "Dyslexie";
+    /*font-family:  "scpro Light";*/
+    font-family:  "Computer Modern";
+    font-size: 18px;
+    line-height: 150%;
+    color: rgba(242, 240, 205, 0.8);
+
+    background-color: #000;
+    background-color: #02090B;
+    margin: 10px 13px 10px 13px;
+    padding-bottom: 64px;
+}
+
+html * {
+    color-profile: sRGB;
+}
+
+strong {
+    font-weight: normal;
+    color: #ffd479;
+    color: rgba(100, 182, 138, 1);
+}
+
+em {
+
+    font-weight: normal;
+    font-style: normal;
+    color: #ffd479;
+    color: #64B68A;
+}
+
+table {
+    min-width: 1150px !important;
+    width: 100% !important;
+    margin: 10px 0 15px 0;
+    border-collapse: collapse;
+}
+
+table tr:nth-child(2n) {
+    background-color: #06181b;
+}
+
+td, th {
+    border: 1px solid #3C3C3E;
+    padding: 3px 10px;
+}
+
+th {
+    padding: 5px 10px;
+    color: #B3D8FD;
+    background-color: #06181b;
+}
+
+a {
+    color: #B4D9FB;
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+a:hover {
+    color: #2668D4;
+    text-decoration: none;
+}
+
+a img {
+    border: 2px solid;
+}
+
+p {
+    margin-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+img {
+    background-color: #7F7F7F;
+    max-width: 1600px;
+}
+
+ul, ol {
+    padding: 16px 0 8px 10px;
+    margin: 16px 0 8px 10px;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none; /* Hides the default checkbox style */
+    height: 15px !important;
+    width: 15px !important;
+    top: -4px !important;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: .15s;
+    border-radius: 4px;
+    background-color: #FCB8B0;
+    color: black
+}
+
+input[type="checkbox"]:checked {
+    background-color: #BCFBBA;
+}
+
+input[type="checkbox"]:before, input[type="checkbox"]:checked:before {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    height: 16px !important;
+    width: 16px !important;
+    line-height: 16px;
+    text-align: center;
+    font-weight: bold;
+    content: '✘';
+}
+
+input[type="checkbox"]:checked:before {
+    content: '✔';
+}
+
+input[type="checkbox"]:hover:before {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+li {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-left: 8px;
+    padding-left: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+li.task-list-item {
+    list-style-type: none;
+    margin-left: -20px;
+}
+
+li.task-list-item label {
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+
+li.task-list-item input {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+}
+
+ul li:nth-child(even) {
+    background-color: #06181b;
+}
+ol li:nth-child(even) {
+    background-color: #06181b;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    color: #b4d9fb;
+    margin-top: 18px;
+    text-rendering: geometricPrecision;
+    font-family: "scpro";
+    font-size: 18px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    text-transform: capitalize;
+}
+
+h1 {
+    color: #54B2BC;
+    color: rgba(255, 212, 121, 1);
+    font-weight: normal;
+    margin-top: 32px;
+    font-size: 26px;
+    margin-bottom: 12px;
+
+}
+
+h2 {
+
+    color: #ffd479;
+    color: rgba(255, 212, 121, 0.8);
+
+    margin-top: 24px;
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-size: 20px;
+
+    color: rgba(129, 206, 203, 1);
+    margin-top: 20px;
+}
+
+h4 {
+    color: rgba(129, 206, 203, 0.8);
+}
+
+h5 {
+    color: rgba(129, 206, 203, 0.7);
+}
+
+h6 {
+    color: rgba(129, 206, 203, 0.6);
+}
+
+ul, ol {
+    padding-left: 30px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+hr {
+    margin: 32px 12px;
+    border: 0;
+    border-bottom: 1px solid #B4C5C5;
+}
+
+blockquote {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-style: normal;
+}
+
+blockquote p {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+    padding-left: 8px;
+    border-left: 3px solid #54B2BC;
+}
+
+blockquote p a {
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+code, pre {
+    font-family: "scpro" !important;
+    color: #8EB1D0;
+    display: block;
+    padding: 12px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    border: 1px solid #3C3C3E;
+    background-color: #051012;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+* {
+    -webkit-print-color-adjust: exact;
+}
+
+@media screen and (min-width: 914px) {
+    body {
+        width: 1145px;
+        margin: 10px auto;
+    }
+}
+
+@media print {
+    body, code, pre code, h1, h2, h3, h4, h5, h6 {
+        color: black;
+        background: white;
+    }
+
+    table, pre {
+        page-break-inside: avoid;
+    }
+}
+
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    background-color: #051012;
+    color: #116CD6 white-space : pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+pre code {
+    background-color: #051012;
+    color: #81ddaf;
+    padding: 0;
+    border: none;
+margin-top: 0px !important;
+
+margin-bottom: 0px !important;
+}
+
+pre:not([class]) {
+    border: none;
+    padding: 0px !important;
+    color: #F2F0CD;
+
+}
+
+p {
+    white-space: pre-line;
+}
+
+
+div.sourceCode {
+    overflow-x: auto
+}
+
+table.sourceCode, td.lineNumbers, td.sourceCode, tr.sourceCode {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    border: none
+}
+
+table.sourceCode {
+    width: 100%;
+    line-height: 100%
+}
+
+td.lineNumbers {
+    text-align: right;
+    padding-right: 4px;
+    padding-left: 4px;
+    color: #aaa;
+    border-right: 1px solid #aaa
+}
+
+td.sourceCode {
+    padding-left: 5px
+}
+
+.codehilite code, .codehilite pre {
+    color: #fdce93;
+    background-color: #3f3f3f
+}
+
+code > span.kw {
+    color: #BCFBBA;
+    font-weight: 700
+}
+
+code > span.dt {
+    color: #e90
+}
+
+code > span.dv {
+    color: #8AF9F0
+}
+
+code > span.bn, code > span.fl {
+    color: #40a070
+}
+
+code > span.st {
+    color: #FBFBAB
+}
+
+code > span.ch {
+    color: #93DD9F
+}
+
+code > span.co {
+    color: #929292
+}
+
+code > span.ot {
+    color: #76AEF4
+}
+
+code > span.al {
+    color: #e90
+}
+
+code > span.fu {
+    color: #00B1B1
+}
+
+code > span.er {
+    color: #FB9BEA
+}
+img[src='Error.src']{
+    display: none;
+}
+
+</style>
+</head>
+<body>
+<h2 id="chapter-6-curriculum-artarchitecture">Chapter 6: curriculum: Art/Architecture</h2>
+<h2 id="artarchitecture"><a href="../category/curriculum/artarchitecture/index.html">Art/Architecture</a></h2>
+<h1 id="edward-hopper">Edward Hopper</h1>
+<p>Edward Hopper is a painter of gloomy-looking paintings which don’t make us feel gloomy. Instead, they help us to recognise and accept the loneliness that so often lies at the heart of sadness.</p>
+<p>In his <em>Automat</em>, a woman sits alone drinking a cup of coffee. It is late and, to judge by her hat and coat, cold outside. The room seems large, brightly lit and empty. The decor is functional, and the woman looks self-conscious and slightly afraid. Perhaps she’s unused to sitting alone in a public place. Something appears to have gone wrong. She invites the viewer to imagine stories about her – of betrayal or loss. She may be trying not to let her hand shake as she moves the coffee cup to her lips. It may be eleven at night in February in a large dark North American city.</p>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/PM-130314-hopperA.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/PM-130314-hopperA.jpg?resize=635%2C496" alt="PM-130314-hopperA" /></a></p>
+<p><em>Automat, </em>1927</p>
+<p><span class="s1"><em>Automat</em> is a picture of sadness – and yet it is not a sad picture. There can be something enticing, even charming, about anonymous diners. The lack of domesticity, the bright lights and anonymous furniture offer a relief from what can be the false comforts of home. It may be easier to give way to sadness here than in a cosy living room with wallpaper and framed photos. Home often appears to have betrayed Hopper’s characters; something has happened there that forces them out into the night and onto the road. The twenty-four-hour diner, the train station waiting room or motel are sanctuaries for those who have, for sound reasons, failed to find a place in the ordinary world of relationships and community.</span></p>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/PM-130314-hopperB.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/PM-130314-hopperB.jpg?resize=635%2C508" alt="PM-130314-hopperB" /></a></p>
+<p><em>A place for a special kind of anonymity</em></p>
+<p><a href="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/1024px-Nighthawks_by_Edward_Hopper_1942.jpg"><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/1024px-Nighthawks_by_Edward_Hopper_1942.jpg?resize=635%2C347" alt="1024px-Nighthawks_by_Edward_Hopper_1942" /></a></p>
+<p><em>Nighthawks</em>, 1942</p>
+<p>Hopper’s ability to portray solitude grew from his own familiarity with it. He was born in 1882 in a shipbuilding town, Upper Nyack, New York, and had a comfortable, middle-class childhood as the son of merchant. Yet inside, Hopper often felt awkward, a bit like an outsider. An early self-portrait shows him gazing almost distrustfully at the viewer.</p>
+<p><a href="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/Self_portrait_by_edward_hopper.jpg"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/Self_portrait_by_edward_hopper.jpg?resize=635%2C746" alt="Self_portrait_by_edward_hopper" /></a></p>
+<p><em>Self-Portrait,</em> 1906</p>
+<p>Hopper longed to be an artist, but his parents insisted he train in commercial art to stay afloat financially. He hated it, and to escape, he took several trips to Paris under the pretence of studying French art. But. in truth, he didn’t feel a connection to the art salons. He absorbed some of the Impressionists but forgot Picasso’s name. He preferred to be outdoors, watching the children playing in Luxembourg Gardens, listening to concerts in the Tuileries, and travelling up and down the Seine by boat.</p>
+<p><a href="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/not_detected_235603.jpgLarge.jpg"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/not_detected_235603.jpgLarge.jpg?resize=635%2C520" alt="not_detected_235603.jpg!Large" /></a></p>
+<p><em>Le Pont Royal, 1909</em></p>
+<p>In 1913, when he was thirty-one, Hopper settled in Greenwich Village in New York City, where he remained for the rest of his life. There he discovered how crowded and yet isolated city life could be. The populations of American cities were skyrocketing, yet they were inhabited by passing strangers alienated from one another. Hopper would ride the L-train and look down at the “dark glimpses of office interiors that were so fleeting as to leave fresh and vivid impressions on my mind.” In each room, a separate drama was unfolding, an unnoticed, oblivious island in a sea of people.</p>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/office-at-night.jpg"><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/office-at-night.jpg?resize=635%2C492" alt="office-at-night" /></a></p>
+<p><em>Office at Night, 1940</em></p>
+<p>Although Hopper painted in New York for over a decade, his works didn’t sell very well. He regularly struggled to find inspiration. Then, in his early forties, he met a beautiful, social painter named Josephine. Edward and Josephine took excursions to paint by the sea; they went to the movies and the theatre. Eventually, they married. Hopper was no longer so alone.</p>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/summer-evening.jpgLarge.jpg"><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/summer-evening.jpgLarge.jpg?resize=635%2C450" alt="summer-evening.jpg!Large" /></a></p>
+<p><em>Summer Evening, 1947</em></p>
+<p>But of course – as most of us discover in our relationships – Hopper’s marriage didn’t permanently end his feelings of isolation and woe. He was still lonely at times. He and his wife couldn’t quite figure out their sex life. She often seemed to prefer the company of her cat.</p>
+<p>Hopper discovered that – even when others love us very much – some essential part of us is always alone.</p>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/hopper1959excursion-into-philosophy.jpg"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/hopper1959excursion-into-philosophy.jpg?resize=635%2C478" alt="Hopper, Excursion into Philosophy 1959" /></a></p>
+<p><em>Excursion into Philosophy</em>, 1959</p>
+<p>It is this recognition that makes his paintings so compelling. And indeed, it is by addressing loneliness that art can be most therapeutic: consoling us and reassuring us that estrangement and sorrow are normal, that we are neither very strange nor very shameful for experiencing them. Sad and lonely art allows us as viewers to witness an echo of our own griefs and disappointments, and thereby to feel less personally persecuted and beset by them.</p>
+<p><a href="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/PM-130314-hopperC.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/PM-130314-hopperC.jpg?resize=635%2C437" alt="PM-130314-hopperC" /></a></p>
+<p><em>Western Motel, 1957</em></p>
+<p>Hopper’s art helps us notice the landscape of loneliness in our own lives. A side effect of coming into contact with any great artist is that we start to notice things in the world that the painter would have been receptive to. Nowadays, we’ve become sensitised to what one might call the Hopperesque, a quality found not only in the North American places Hopper himself visited, but anywhere in the developed world where there are motels and service stations, roadside diners and airports, bus stations and all-night supermarkets.</p>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/PM-130314-hopperD.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/PM-130314-hopperD.jpg?resize=635%2C422" alt="PM-130314-hopperD" /></a></p>
+<p><em>There are so many motels like this one</em></p>
+<p>Service stations readily evoke Hopper’s famous <em>Gas</em>, painted thirteen years afte<em>r Automat</em>. In this painting, we see a petrol station on its own in the impending darkness. The isolation is made poignant and enticing. The darkness that spreads like a fog from the right of the canvas contrasts with the security of the station. Against the backdrop of night and the wild woods, in this last outpost of humanity, a sense of kinship seems easier to develop than in city daylight.</p>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/PM-130314-hopperE.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/PM-130314-hopperE.jpg?resize=635%2C437" alt="PM-130314-hopperE" /></a></p>
+<p><em>Gas,</em> 1940</p>
+<p><span class="s1">Hopper loved the introspective mood that often comes with travelling. He liked painting the atmosphere inside half-empty train carriages making their way across a landscape, when we can stand outside our normal selves and look at our lives in a way we don’t in more settled circumstances. We have all known the atmosphere in Hopper’s <em>Compartment C, Car 293</em> – though we perhaps never recognise it as well as when Hopper holds a mirror up to it.</span></p>
+<p><a href="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/PM-130314-hopperF11.jpg"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/PM-130314-hopperF11.jpg?resize=635%2C557" alt="PM-130314-hopperF1" /></a></p>
+<p><span class="s1"><em>Compartment C, Car 293 1938</em></span></p>
+<p><span class="s1">After Hopper’s marriage, his professional life suddenly began to improve as well. It was the era of the Great Depression, and yet his paintings began to sell. Critics raved, museums bought his paintings and he won awards. But despite his success, he remained deeply introverted. Instead of escaping solitude, he embraced it. For decades he turned down awards, rejected speaking opportunities, and lived simply out of the public eye. He died in 1967, yet his art continues to help us see the loneliness in our own lives from a wiser and more mature perspective. </span></p>
+<p><span class="s1">Oscar Wilde once remarked that there had been no fog in London before Whistler had painted it. There was of course lots of fog, it was just that little bit harder to notice its qualities without the example of Whistler to direct our gaze. What Wilde said of Whistler, we may well say of Hopper: that there were far fewer interesting, strangely haunting and consolingly beautiful service stations, train carriages, motels and diners visible in the world before Edward Hopper began to paint.</span></p>
+<title>thebookoflife</title>
+
+
+</body>
+</html>

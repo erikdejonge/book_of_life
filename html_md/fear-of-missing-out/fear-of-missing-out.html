@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Computer Modern";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/computermodern/Sans/cmunss.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "scpro";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/sourcecodepro/SourceCodePro-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+    text-rendering: geometricPrecision;
+    font-family: "Dyslexie";
+    /*font-family:  "scpro Light";*/
+    font-family:  "Computer Modern";
+    font-size: 18px;
+    line-height: 150%;
+    color: rgba(242, 240, 205, 0.8);
+
+    background-color: #000;
+    background-color: #02090B;
+    margin: 10px 13px 10px 13px;
+    padding-bottom: 64px;
+}
+
+html * {
+    color-profile: sRGB;
+}
+
+strong {
+    font-weight: normal;
+    color: #ffd479;
+    color: rgba(100, 182, 138, 1);
+}
+
+em {
+
+    font-weight: normal;
+    font-style: normal;
+    color: #ffd479;
+    color: #64B68A;
+}
+
+table {
+    min-width: 1150px !important;
+    width: 100% !important;
+    margin: 10px 0 15px 0;
+    border-collapse: collapse;
+}
+
+table tr:nth-child(2n) {
+    background-color: #06181b;
+}
+
+td, th {
+    border: 1px solid #3C3C3E;
+    padding: 3px 10px;
+}
+
+th {
+    padding: 5px 10px;
+    color: #B3D8FD;
+    background-color: #06181b;
+}
+
+a {
+    color: #B4D9FB;
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+a:hover {
+    color: #2668D4;
+    text-decoration: none;
+}
+
+a img {
+    border: 2px solid;
+}
+
+p {
+    margin-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+img {
+    background-color: #7F7F7F;
+    max-width: 1600px;
+}
+
+ul, ol {
+    padding: 16px 0 8px 10px;
+    margin: 16px 0 8px 10px;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none; /* Hides the default checkbox style */
+    height: 15px !important;
+    width: 15px !important;
+    top: -4px !important;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: .15s;
+    border-radius: 4px;
+    background-color: #FCB8B0;
+    color: black
+}
+
+input[type="checkbox"]:checked {
+    background-color: #BCFBBA;
+}
+
+input[type="checkbox"]:before, input[type="checkbox"]:checked:before {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    height: 16px !important;
+    width: 16px !important;
+    line-height: 16px;
+    text-align: center;
+    font-weight: bold;
+    content: '✘';
+}
+
+input[type="checkbox"]:checked:before {
+    content: '✔';
+}
+
+input[type="checkbox"]:hover:before {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+li {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-left: 8px;
+    padding-left: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+li.task-list-item {
+    list-style-type: none;
+    margin-left: -20px;
+}
+
+li.task-list-item label {
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+
+li.task-list-item input {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+}
+
+ul li:nth-child(even) {
+    background-color: #06181b;
+}
+ol li:nth-child(even) {
+    background-color: #06181b;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    color: #b4d9fb;
+    margin-top: 18px;
+    text-rendering: geometricPrecision;
+    font-family: "scpro";
+    font-size: 18px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    text-transform: capitalize;
+}
+
+h1 {
+    color: #54B2BC;
+    color: rgba(255, 212, 121, 1);
+    font-weight: normal;
+    margin-top: 32px;
+    font-size: 26px;
+    margin-bottom: 12px;
+
+}
+
+h2 {
+
+    color: #ffd479;
+    color: rgba(255, 212, 121, 0.8);
+
+    margin-top: 24px;
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-size: 20px;
+
+    color: rgba(129, 206, 203, 1);
+    margin-top: 20px;
+}
+
+h4 {
+    color: rgba(129, 206, 203, 0.8);
+}
+
+h5 {
+    color: rgba(129, 206, 203, 0.7);
+}
+
+h6 {
+    color: rgba(129, 206, 203, 0.6);
+}
+
+ul, ol {
+    padding-left: 30px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+hr {
+    margin: 32px 12px;
+    border: 0;
+    border-bottom: 1px solid #B4C5C5;
+}
+
+blockquote {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-style: normal;
+}
+
+blockquote p {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+    padding-left: 8px;
+    border-left: 3px solid #54B2BC;
+}
+
+blockquote p a {
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+code, pre {
+    font-family: "scpro" !important;
+    color: #8EB1D0;
+    display: block;
+    padding: 12px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    border: 1px solid #3C3C3E;
+    background-color: #051012;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+* {
+    -webkit-print-color-adjust: exact;
+}
+
+@media screen and (min-width: 914px) {
+    body {
+        width: 1145px;
+        margin: 10px auto;
+    }
+}
+
+@media print {
+    body, code, pre code, h1, h2, h3, h4, h5, h6 {
+        color: black;
+        background: white;
+    }
+
+    table, pre {
+        page-break-inside: avoid;
+    }
+}
+
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    background-color: #051012;
+    color: #116CD6 white-space : pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+pre code {
+    background-color: #051012;
+    color: #81ddaf;
+    padding: 0;
+    border: none;
+margin-top: 0px !important;
+
+margin-bottom: 0px !important;
+}
+
+pre:not([class]) {
+    border: none;
+    padding: 0px !important;
+    color: #F2F0CD;
+
+}
+
+p {
+    white-space: pre-line;
+}
+
+
+div.sourceCode {
+    overflow-x: auto
+}
+
+table.sourceCode, td.lineNumbers, td.sourceCode, tr.sourceCode {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    border: none
+}
+
+table.sourceCode {
+    width: 100%;
+    line-height: 100%
+}
+
+td.lineNumbers {
+    text-align: right;
+    padding-right: 4px;
+    padding-left: 4px;
+    color: #aaa;
+    border-right: 1px solid #aaa
+}
+
+td.sourceCode {
+    padding-left: 5px
+}
+
+.codehilite code, .codehilite pre {
+    color: #fdce93;
+    background-color: #3f3f3f
+}
+
+code > span.kw {
+    color: #BCFBBA;
+    font-weight: 700
+}
+
+code > span.dt {
+    color: #e90
+}
+
+code > span.dv {
+    color: #8AF9F0
+}
+
+code > span.bn, code > span.fl {
+    color: #40a070
+}
+
+code > span.st {
+    color: #FBFBAB
+}
+
+code > span.ch {
+    color: #93DD9F
+}
+
+code > span.co {
+    color: #929292
+}
+
+code > span.ot {
+    color: #76AEF4
+}
+
+code > span.al {
+    color: #e90
+}
+
+code > span.fu {
+    color: #00B1B1
+}
+
+code > span.er {
+    color: #FB9BEA
+}
+img[src='Error.src']{
+    display: none;
+}
+
+</style>
+</head>
+<body>
+<h2 id="chapter-4-self-mood">Chapter 4: self: Mood</h2>
+<h2 id="mood"><a href="../category/self/mood/index.html">Mood</a></h2>
+<h1 id="fomo-fear-of-missing-out">FOMO: Fear Of Missing Out</h1>
+<p>We’re continually being bombarded with suggestions about what we might do (go jet skiing, study in Colorado, visit the Maldives or see the Pyramids). We’re always hearing of the amazing things friends have done or are going to do: ‘there was this great bar we all went to …’; ‘she’s getting married in a little country church, then we’re having a picnic…’; ‘the sun was glinting on Sydney Harbour…’ There are endless hints of the allure of life in other places: an article about family-friendly restaurants in Brooklyn, a crime novel set in Trieste, the departure board at the airport with its list of places only a plane trip away: Moscow, Bangkok, Addis Ababa… The modern world makes sure we know at all times just how much we’re missing. It is a culture in which intense and painful doses of FOMO (Fear Of Missing Out) are almost inevitable.</p>
+<p><a href="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/03/14629023047_fa4cf0220e_z.jpg"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/03/14629023047_fa4cf0220e_z.jpg?resize=635%2C357" alt="14629023047_fa4cf0220e_z" /></a></p>
+<p>There are, fundamentally, two ways in which the brute facts of missing out can be viewed: one can take a Romantic or a Classical approach.</p>
+<p>To the Romantic temperament, missing out causes immense agony. Somewhere else, noble and interesting and attractive people are living exactly the life that should be yours. You’d be so happy, if only you could be over there, at that party, with those people or working in that agency off Washington Square or holidaying in that shack in Jutland. Sometimes it makes you want to burst into tears.</p>
+<p>The Romantic believes in the idea of a defined centre where the most exciting things are happening. At one time it was New York, for a few years it was Berlin; then London. Now, it’s probably San Francisco and in five years it may be Auckland – or perhaps Rio.</p>
+<p><a href="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/03/3233070.jpg"><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/03/3233070.jpg?resize=635%2C493" alt="El Morocco New Year" /></a></p>
+<p>For the Romantic, humanity is divided into a large group of the mediocre – and a tribe of the elect: artists, entrepreneurs, the edgy part of the fashion world and the people doing creative things with tech. As a Romantic, it can be exhausting inside your soul. Your mother sometimes drives you nuts: her life is utterly dull. How can she accept it? Why isn’t she itching to move to the Bay area? She’s always suggesting you take a job in Birmingham or inviting you on walking holidays in the Lake District. Sometimes you are quite rude to her. You avoid certain people like the plague: the shy friend from school who struggles with their weight; the flatmate who’s a telecoms engineer and wants to go into local politics. Being around individuals who are so unglamorous and lacking in ambition can feel pretty fatal.</p>
+<p>For their part, classically-minded people acknowledge that there are of course some genuinely marvellous things going on in the world, but they doubt that the obvious signs of glamour are a good guide to finding them. The best novel in the world, they like to think, is probably not currently winning prizes or storming up the bestseller lists. It may be being written at this moment by an arthritic woman living in the otherwise unremarkable Latvian town of Liepāja.</p>
+<p>Classical people are intensely aware that good qualities coexist with some extremely ordinary ones. Everything is rather jumbled up. Lamentable taste in jumpers is compatible with extraordinary insight. Academic qualifications can give no indication of true intelligence. Famous people can be dull. Obscure ones can be remarkable. At a perfect launch party, drinking sandalwood cocktails at the coolest bar in the world, you could feel sad and anxious. You might have the deepest conversations of you life with your aunt – even though she likes watching snooker on television and has stopped dying her hair.</p>
+<p><a href="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/03/484149705.jpg"><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/03/484149705.jpg?resize=635%2C454" alt="Elderly Care" /></a></p>
+<p>The classical temperament also fears missing out but has a rather different list of things they are afraid of not enjoying: getting to truly know one’s parents, learning to cope well with being alone; appreciating the consoling power of trees and clouds; discovering what their favourite pieces of music really mean to them, chatting to a seven year old child… As these wise souls know, one can indeed miss out on such extremely important things if one is always rushing a little too intently to find excitement elsewhere, heading off in haste to that stylish bar with the see-through elevator packed with some of the city’s top creatives.</p>
+<title>thebookoflife</title>
+
+
+</body>
+</html>

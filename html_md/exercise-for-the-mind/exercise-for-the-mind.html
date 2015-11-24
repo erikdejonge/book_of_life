@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Computer Modern";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/computermodern/Sans/cmunss.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "scpro";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/sourcecodepro/SourceCodePro-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+    text-rendering: geometricPrecision;
+    font-family: "Dyslexie";
+    /*font-family:  "scpro Light";*/
+    font-family:  "Computer Modern";
+    font-size: 18px;
+    line-height: 150%;
+    color: rgba(242, 240, 205, 0.8);
+
+    background-color: #000;
+    background-color: #02090B;
+    margin: 10px 13px 10px 13px;
+    padding-bottom: 64px;
+}
+
+html * {
+    color-profile: sRGB;
+}
+
+strong {
+    font-weight: normal;
+    color: #ffd479;
+    color: rgba(100, 182, 138, 1);
+}
+
+em {
+
+    font-weight: normal;
+    font-style: normal;
+    color: #ffd479;
+    color: #64B68A;
+}
+
+table {
+    min-width: 1150px !important;
+    width: 100% !important;
+    margin: 10px 0 15px 0;
+    border-collapse: collapse;
+}
+
+table tr:nth-child(2n) {
+    background-color: #06181b;
+}
+
+td, th {
+    border: 1px solid #3C3C3E;
+    padding: 3px 10px;
+}
+
+th {
+    padding: 5px 10px;
+    color: #B3D8FD;
+    background-color: #06181b;
+}
+
+a {
+    color: #B4D9FB;
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+a:hover {
+    color: #2668D4;
+    text-decoration: none;
+}
+
+a img {
+    border: 2px solid;
+}
+
+p {
+    margin-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+img {
+    background-color: #7F7F7F;
+    max-width: 1600px;
+}
+
+ul, ol {
+    padding: 16px 0 8px 10px;
+    margin: 16px 0 8px 10px;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none; /* Hides the default checkbox style */
+    height: 15px !important;
+    width: 15px !important;
+    top: -4px !important;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: .15s;
+    border-radius: 4px;
+    background-color: #FCB8B0;
+    color: black
+}
+
+input[type="checkbox"]:checked {
+    background-color: #BCFBBA;
+}
+
+input[type="checkbox"]:before, input[type="checkbox"]:checked:before {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    height: 16px !important;
+    width: 16px !important;
+    line-height: 16px;
+    text-align: center;
+    font-weight: bold;
+    content: '✘';
+}
+
+input[type="checkbox"]:checked:before {
+    content: '✔';
+}
+
+input[type="checkbox"]:hover:before {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+li {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-left: 8px;
+    padding-left: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+li.task-list-item {
+    list-style-type: none;
+    margin-left: -20px;
+}
+
+li.task-list-item label {
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+
+li.task-list-item input {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+}
+
+ul li:nth-child(even) {
+    background-color: #06181b;
+}
+ol li:nth-child(even) {
+    background-color: #06181b;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    color: #b4d9fb;
+    margin-top: 18px;
+    text-rendering: geometricPrecision;
+    font-family: "scpro";
+    font-size: 18px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    text-transform: capitalize;
+}
+
+h1 {
+    color: #54B2BC;
+    color: rgba(255, 212, 121, 1);
+    font-weight: normal;
+    margin-top: 32px;
+    font-size: 26px;
+    margin-bottom: 12px;
+
+}
+
+h2 {
+
+    color: #ffd479;
+    color: rgba(255, 212, 121, 0.8);
+
+    margin-top: 24px;
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-size: 20px;
+
+    color: rgba(129, 206, 203, 1);
+    margin-top: 20px;
+}
+
+h4 {
+    color: rgba(129, 206, 203, 0.8);
+}
+
+h5 {
+    color: rgba(129, 206, 203, 0.7);
+}
+
+h6 {
+    color: rgba(129, 206, 203, 0.6);
+}
+
+ul, ol {
+    padding-left: 30px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+hr {
+    margin: 32px 12px;
+    border: 0;
+    border-bottom: 1px solid #B4C5C5;
+}
+
+blockquote {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-style: normal;
+}
+
+blockquote p {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+    padding-left: 8px;
+    border-left: 3px solid #54B2BC;
+}
+
+blockquote p a {
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+code, pre {
+    font-family: "scpro" !important;
+    color: #8EB1D0;
+    display: block;
+    padding: 12px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    border: 1px solid #3C3C3E;
+    background-color: #051012;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+* {
+    -webkit-print-color-adjust: exact;
+}
+
+@media screen and (min-width: 914px) {
+    body {
+        width: 1145px;
+        margin: 10px auto;
+    }
+}
+
+@media print {
+    body, code, pre code, h1, h2, h3, h4, h5, h6 {
+        color: black;
+        background: white;
+    }
+
+    table, pre {
+        page-break-inside: avoid;
+    }
+}
+
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    background-color: #051012;
+    color: #116CD6 white-space : pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+pre code {
+    background-color: #051012;
+    color: #81ddaf;
+    padding: 0;
+    border: none;
+margin-top: 0px !important;
+
+margin-bottom: 0px !important;
+}
+
+pre:not([class]) {
+    border: none;
+    padding: 0px !important;
+    color: #F2F0CD;
+
+}
+
+p {
+    white-space: pre-line;
+}
+
+
+div.sourceCode {
+    overflow-x: auto
+}
+
+table.sourceCode, td.lineNumbers, td.sourceCode, tr.sourceCode {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    border: none
+}
+
+table.sourceCode {
+    width: 100%;
+    line-height: 100%
+}
+
+td.lineNumbers {
+    text-align: right;
+    padding-right: 4px;
+    padding-left: 4px;
+    color: #aaa;
+    border-right: 1px solid #aaa
+}
+
+td.sourceCode {
+    padding-left: 5px
+}
+
+.codehilite code, .codehilite pre {
+    color: #fdce93;
+    background-color: #3f3f3f
+}
+
+code > span.kw {
+    color: #BCFBBA;
+    font-weight: 700
+}
+
+code > span.dt {
+    color: #e90
+}
+
+code > span.dv {
+    color: #8AF9F0
+}
+
+code > span.bn, code > span.fl {
+    color: #40a070
+}
+
+code > span.st {
+    color: #FBFBAB
+}
+
+code > span.ch {
+    color: #93DD9F
+}
+
+code > span.co {
+    color: #929292
+}
+
+code > span.ot {
+    color: #76AEF4
+}
+
+code > span.al {
+    color: #e90
+}
+
+code > span.fu {
+    color: #00B1B1
+}
+
+code > span.er {
+    color: #FB9BEA
+}
+img[src='Error.src']{
+    display: none;
+}
+
+</style>
+</head>
+<body>
+<h2 id="chapter-4-self-self-knowledge">Chapter 4: self: Self-Knowledge</h2>
+<h2 id="self-knowledge"><a href="../category/self/self-knowledge/index.html">Self-Knowledge</a></h2>
+<h1 id="on-exercising-the-mind">On Exercising the Mind</h1>
+<p>In general, we are very much alive to the benefits of exercise. And not only around physical fitness. In learning to speak another language, drive a car or play an instrument, we recognise the value of going over things again and again, of rehearsing, memorising and testing according to established principles. We willingly follow the advice of the tennis coach to take the ball a fraction earlier on the backhand or to overcome a tendency to maintain too upright a posture going into the shot. Ultimately what we are trying to do is to form good habits so that, with sufficient practice, we won’t have to think (for example) about how to reverse the car into a parking bay or return the ball from the left hand corner. It will simply be easy and natural.</p>
+<p><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/PA-19767216-1.jpg" alt="Spain Madrid Open Tennis" /></p>
+<h5 id="he-didnt-mind-exercising-to-get-to-this-moment"><span class="s1">He didn’t mind exercising to get to this moment</span></h5>
+<p><span class="s1">However, for major cultural reasons, we are extremely selective in our enthusiasm for areas where we accept the utility of practice, teaching, systematic education, rehearsal and repetition.</span></p>
+<p><span class="s1">Very strangely and sadly, exercise has come to feel alien in the area of our intimate emotional and cultural lives. Jane Austen – for instance – would have readily accepted that people have to learn how to have conversations, that there are rules to be practiced in relationships, and that compassion is something that can be learnt. She spoke movingly about what she termed ‘the training of the heart’. But we have subsequently developed a highly negative take on the role of teaching, rules and exercises in emotional, social and cultural life. It has come to seem as if rules will always be oppressive. The idea of learning how to have a relationship, be a friend or have a conversation now sounds unbearably stiff, too formal, pompous or just fake. So, today we train the cook, but leave the lover alone.</span></p>
+<p><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/461278363.jpg" alt="ABC&#39;s &quot;The Taste&quot; - Season Two" /></p>
+<h5 id="here-we-accept-there-are-rules">Here, we accept there are rules…</h5>
+<p>People like to say that there are, at heart, no rules about conversation, bringing up a family or identifying a purpose to one’s life. There’s now a widespread dislike of generalisations and an assumption that no one knows the secrets of living well; we must simply make up the rules as best we can, there is no accumulated wisdom we can draw from. It’s about starting from scratch every time and cobbling together the answers through painful experiences, one mistake after another. Many influential 20th-century intellectual figures (Virginia Woolf, DH Lawrence, Sartre to start the list) were supporters of such spontaneity, naturalness and authenticity – and equal opponents of anything that looked like an ‘answer’ derived from Other People.</p>
+<h5 id="napola-boys"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/82947255.jpg" alt="Napola Boys" /></h5>
+<h5 id="at-one-point-rules-really-did-look-like-the-problem">At one point, rules really did look like the problem</h5>
+<p><span class="s1">Their praise of spontaneity was, at a certain point, very liberating and necessary. It was a plausible reaction to rigid, unimaginative and conformist societies – who in many areas followed extremely deficient rules. But our assumptions about training and exercise have stuck around even as the external environment has changed. Gradually, in part thanks to their influence, our society now is anything but oppressive or dogmatic.</span></p>
+<p><span class="s1">We are now more likely to suffer from a very different set of troubles. We feel chaotic – overwhelmed by our own appetites, very unsure about what we should do with our lives, fearful of wasting opportunities and afraid we won’t accomplish anything, paralysed at times by unstructured freedom.</span></p>
+<p><span class="s1">This is therefore a highly relevant moment to reconnect with the Ancient Greek idea that living well is crucially dependent upon education: upon learning emotional skills and good habits. This particular era of history seems ready for the founding insight of Greek philosophy: that the good life is something that can be taught.</span></p>
+<p><a href="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/662px-Da_Vinci_Vitruve_Luc_Viatour2.jpg"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/11/662px-Da_Vinci_Vitruve_Luc_Viatour2.jpg?resize=635%2C625" alt="662px-Da_Vinci_Vitruve_Luc_Viatour" /></a></p>
+<p><span class="s1">Across large swathes of existence (relationships, travel, family life, work, ambition, anxiety, attitudes to money …) there are things we can learn how to do more reliably. There are training exercises which can significantly improve how well parts of our lives will go.</span></p>
+<p><span class="s1">This training falls into two big kinds: <strong>Exercises of Clarification</strong> and <strong>Exercises of Reinforcement</strong>:</span></p>
+<p><strong><span class="s1">Exercises of Clarification</span></strong></p>
+<p><span class="s1">Many of our troubling experiences, as well as many hopeful ones, are cloudy and vague – even if they are strongly felt. Who do I envy? What career really excites me? What am I annoyed or anxious about? These are questions we don’t automatically know the answer to and can often get confused about (we shout at the wrong person, take the wrong job, miss opportunities…). Our instincts in these areas are hugely consequential for our lives – and the lives of those closest to us – and yet instinct will not be enough.</span></p>
+<p><span class="s1">An exercise in clarification is the deliberate practice of asking yourself searching questions about instincts and of getting into the habit of trying to answer them properly.</span></p>
+<p><span class="s1">For instance, one may frequently feel upset or frustrated in a relationship – yet also hopeful that things can go better. It might help to have these systematic questions to hand:</span></p>
+<p><span class="s1">What do I most resent about my partner? Have I tried to explain this properly to them (rather than complaining bitterly or remaining silent)?</span></p>
+<p><span class="s1">How would you like to be a better person in this relationship?</span></p>
+<p><span class="s1">What would you like to apologise about to your partner?</span></p>
+<p><span class="s1">The emphasis is on clarification: bringing into focus half-formed thoughts, more closely defining suspicions, hopes and anxieties. In most cases, you know the answers already, sort of. But the answers are out of focus – and this is the fatal problem that proper mental exercise is designed to help us overcome.</span></p>
+<p><strong><span class="s1">Exercises of Reinforcement</span></strong></p>
+<p><span class="s1">There’s a second species of exercise. Often enough our troubles cannot really be blamed on ignorance. We know what we should do. Only we don’t do it. Classically, this is the problem known by the Ancient Greeks as ‘akrasia’ – or ‘weakness of will’. We go wrong not so much because we don’t know, but because we lack the motivation to act on our best insights. So we need constant help in bolstering and reinforcing the wiser moments.</span></p>
+<p><span class="s1">There are numerous tactics for providing this assistance. For a start, it helps to hear another person say what we already kind of know; it gives the belief extra weight. It enhances our trust and makes us feel a little less alone. We aren’t looking for revelation, we’re looking for corroboration.</span></p>
+<p><span class="s1">Also, hearing truths put in elegant language or images is beneficial. Wisdom sticks better in the mind when conveyed with the sensuous force of art – in a picture, a song or a poem. For example, Buddhist thought stresses our need to build up resilience to difficult events. But it does so not only through lectures or intellectual arguments, in some of its denominations, it asks us to meditate on beautiful images of bamboo trees (some of the thinnest, strongest plants on the planet), to strengthen our sense of how we should be ready to meet with the tempests of our own lives.</span></p>
+<p><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/c01s01a01i01.jpg" alt="c01s01a01i01" /></p>
+<p><span class="s1">We also need big truths to be repeated to us. Once won’t be enough. Religions understood this. We might not agree with the messages they were trying to transmit. But they usefully pictured the mind like a bucket with holes in it. It can carry water, but only a short distance. Soon it has all leaked away. The insight that fired you up at 7.00pm – when you were driving home and the last rays of sunlight were falling across the trees of a suburban park and you felt a deep gratitude for existence and a longing to be more patient with your partner – will have vanished by 11.00pm. We need to keep going back and recovering the good ideas that are lost at every hour.</span></p>
+<p><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/107490482.jpg" alt="Life On Kandahar Air Base" /></p>
+<h5 id="now-we-need-one-for-the-mind"><span class="s1">Now we need one for the mind</span></h5>
+<p><span class="s1">We accept the need to exercise our bodies so as to get fit, but currently we are suspicious of any attempt to exercise the mind – in order to attempt to be wise.</span></p>
+<p><span class="s1">The first thing we do in a gym is make diagnoses: we go to a different area to work on a different part of ourselves. This would be similar to what should happen in an ideal Philosophers’ Gym of the future. Instead of thinking that we need to work on our biceps, we might decide we need to work on our envy or on our confidence, our frustration or our capacities for gratitude.</span></p>
+<p><span class="s1">Around current gyms, we understand the role of routine: we need to do the same thing many times to get results. We have developed some rather odd-looking but specially evolved exercise machines: various barbells, a contraption so you can flex your lower back muscles, routines with the exercise ball and so on… In the realm of the psyche there may be similar sets of odd-looking exercises, which we haven’t yet quite invented. There may be works of art you have to look at in certain ways, questions you have to ask yourself, texts to memorise, or situations to rehearse (being patient at the moment when you are irked; noting when you get defensive…).</span></p>
+<p><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/486269289.jpg" alt="Inside the Gatorade Sports Science Institute at IMG Academy" /></p>
+<p><span class="s1">In an ideal Philosophers’ Gym, we might walk into a room of people being tested in mock frustrating conversations, or rehearsing moments to step down during domestic rows. In a side room, we might find people analysing recent instances of particularly stubborn anxieties or breaking down hopeful fantasies into realistic plans.</span></p>
+<p><span class="s1">It seems a folly to abandon our inner lives to individual initiative alone. All education is based on the idea of saving people time by transmitting the best that people who came before them have said and thought. We readily accept the need to train in physics, molecular biology, cooking and advanced aeronautics: we don’t insist on stumbling our way to plausible answers on how to land a plane or operate on the frontal cortex. We should therefore cease the folly of not offering people systematic help with the no less important challenges of Relationships, Careers, Children, Friends, Meaning, Loving and Dying.</span></p>
+<p><strong><span class="s1">The Philosophers’ Gym</span></strong></p>
+<p><span class="s1">We suggest three initial exercises to start:</span></p>
+<p><a href="http://thephilosophersmail.com/wp-content/uploads/2014/04/Ten-Virtues.pdf"><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/PM-040414-goodC.jpg?resize=635%2C312" alt="PM-040414-goodC" /></a><a href="http://thephilosophersmail.com/PhilosophicalMeditation.pdf"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/PhilosophicalMeditation1.png?resize=635%2C312" alt="PhilosophicalMeditation1" /></a><a href="http://thephilosophersmail.com/EnvyPhilosophical.pdf"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/envy.png?resize=635%2C312" alt="envy" /></a></p>
+<title>thebookoflife</title>
+
+
+</body>
+</html>

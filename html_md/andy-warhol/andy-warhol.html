@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Computer Modern";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/computermodern/Sans/cmunss.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "scpro";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/sourcecodepro/SourceCodePro-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+    text-rendering: geometricPrecision;
+    font-family: "Dyslexie";
+    /*font-family:  "scpro Light";*/
+    font-family:  "Computer Modern";
+    font-size: 18px;
+    line-height: 150%;
+    color: rgba(242, 240, 205, 0.8);
+
+    background-color: #000;
+    background-color: #02090B;
+    margin: 10px 13px 10px 13px;
+    padding-bottom: 64px;
+}
+
+html * {
+    color-profile: sRGB;
+}
+
+strong {
+    font-weight: normal;
+    color: #ffd479;
+    color: rgba(100, 182, 138, 1);
+}
+
+em {
+
+    font-weight: normal;
+    font-style: normal;
+    color: #ffd479;
+    color: #64B68A;
+}
+
+table {
+    min-width: 1150px !important;
+    width: 100% !important;
+    margin: 10px 0 15px 0;
+    border-collapse: collapse;
+}
+
+table tr:nth-child(2n) {
+    background-color: #06181b;
+}
+
+td, th {
+    border: 1px solid #3C3C3E;
+    padding: 3px 10px;
+}
+
+th {
+    padding: 5px 10px;
+    color: #B3D8FD;
+    background-color: #06181b;
+}
+
+a {
+    color: #B4D9FB;
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+a:hover {
+    color: #2668D4;
+    text-decoration: none;
+}
+
+a img {
+    border: 2px solid;
+}
+
+p {
+    margin-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+img {
+    background-color: #7F7F7F;
+    max-width: 1600px;
+}
+
+ul, ol {
+    padding: 16px 0 8px 10px;
+    margin: 16px 0 8px 10px;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none; /* Hides the default checkbox style */
+    height: 15px !important;
+    width: 15px !important;
+    top: -4px !important;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: .15s;
+    border-radius: 4px;
+    background-color: #FCB8B0;
+    color: black
+}
+
+input[type="checkbox"]:checked {
+    background-color: #BCFBBA;
+}
+
+input[type="checkbox"]:before, input[type="checkbox"]:checked:before {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    height: 16px !important;
+    width: 16px !important;
+    line-height: 16px;
+    text-align: center;
+    font-weight: bold;
+    content: '✘';
+}
+
+input[type="checkbox"]:checked:before {
+    content: '✔';
+}
+
+input[type="checkbox"]:hover:before {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+li {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-left: 8px;
+    padding-left: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+li.task-list-item {
+    list-style-type: none;
+    margin-left: -20px;
+}
+
+li.task-list-item label {
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+
+li.task-list-item input {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+}
+
+ul li:nth-child(even) {
+    background-color: #06181b;
+}
+ol li:nth-child(even) {
+    background-color: #06181b;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    color: #b4d9fb;
+    margin-top: 18px;
+    text-rendering: geometricPrecision;
+    font-family: "scpro";
+    font-size: 18px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    text-transform: capitalize;
+}
+
+h1 {
+    color: #54B2BC;
+    color: rgba(255, 212, 121, 1);
+    font-weight: normal;
+    margin-top: 32px;
+    font-size: 26px;
+    margin-bottom: 12px;
+
+}
+
+h2 {
+
+    color: #ffd479;
+    color: rgba(255, 212, 121, 0.8);
+
+    margin-top: 24px;
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-size: 20px;
+
+    color: rgba(129, 206, 203, 1);
+    margin-top: 20px;
+}
+
+h4 {
+    color: rgba(129, 206, 203, 0.8);
+}
+
+h5 {
+    color: rgba(129, 206, 203, 0.7);
+}
+
+h6 {
+    color: rgba(129, 206, 203, 0.6);
+}
+
+ul, ol {
+    padding-left: 30px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+hr {
+    margin: 32px 12px;
+    border: 0;
+    border-bottom: 1px solid #B4C5C5;
+}
+
+blockquote {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-style: normal;
+}
+
+blockquote p {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+    padding-left: 8px;
+    border-left: 3px solid #54B2BC;
+}
+
+blockquote p a {
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+code, pre {
+    font-family: "scpro" !important;
+    color: #8EB1D0;
+    display: block;
+    padding: 12px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    border: 1px solid #3C3C3E;
+    background-color: #051012;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+* {
+    -webkit-print-color-adjust: exact;
+}
+
+@media screen and (min-width: 914px) {
+    body {
+        width: 1145px;
+        margin: 10px auto;
+    }
+}
+
+@media print {
+    body, code, pre code, h1, h2, h3, h4, h5, h6 {
+        color: black;
+        background: white;
+    }
+
+    table, pre {
+        page-break-inside: avoid;
+    }
+}
+
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    background-color: #051012;
+    color: #116CD6 white-space : pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+pre code {
+    background-color: #051012;
+    color: #81ddaf;
+    padding: 0;
+    border: none;
+margin-top: 0px !important;
+
+margin-bottom: 0px !important;
+}
+
+pre:not([class]) {
+    border: none;
+    padding: 0px !important;
+    color: #F2F0CD;
+
+}
+
+p {
+    white-space: pre-line;
+}
+
+
+div.sourceCode {
+    overflow-x: auto
+}
+
+table.sourceCode, td.lineNumbers, td.sourceCode, tr.sourceCode {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    border: none
+}
+
+table.sourceCode {
+    width: 100%;
+    line-height: 100%
+}
+
+td.lineNumbers {
+    text-align: right;
+    padding-right: 4px;
+    padding-left: 4px;
+    color: #aaa;
+    border-right: 1px solid #aaa
+}
+
+td.sourceCode {
+    padding-left: 5px
+}
+
+.codehilite code, .codehilite pre {
+    color: #fdce93;
+    background-color: #3f3f3f
+}
+
+code > span.kw {
+    color: #BCFBBA;
+    font-weight: 700
+}
+
+code > span.dt {
+    color: #e90
+}
+
+code > span.dv {
+    color: #8AF9F0
+}
+
+code > span.bn, code > span.fl {
+    color: #40a070
+}
+
+code > span.st {
+    color: #FBFBAB
+}
+
+code > span.ch {
+    color: #93DD9F
+}
+
+code > span.co {
+    color: #929292
+}
+
+code > span.ot {
+    color: #76AEF4
+}
+
+code > span.al {
+    color: #e90
+}
+
+code > span.fu {
+    color: #00B1B1
+}
+
+code > span.er {
+    color: #FB9BEA
+}
+img[src='Error.src']{
+    display: none;
+}
+
+</style>
+</head>
+<body>
+<h2 id="chapter-6-curriculum-artarchitecture">Chapter 6: curriculum: Art/Architecture</h2>
+<h2 id="artarchitecture"><a href="../category/curriculum/artarchitecture/index.html">Art/Architecture</a></h2>
+<h1 id="andy-warhol">Andy Warhol</h1>
+<p>Andy Warhol was the most glamorous figure of 20th-century American art. He is famous for making prints of tins of Campbell’s soup and brightly-coloured portraits of celebrities like Marilyn Monroe and Michael Jackson. Much about his life was eccentric – he wore a silver wig; he liked to peel potatoes while lying in bed; he liked to go to the dry cleaners and stand in the corner, to enjoy the smells and sounds of the chemicals and cleaning machines. He loved airports, and used to go through airport security multiple times because he said he found it fascinating and inspiring.</p>
+<p><a href="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/06/Andy_Warhol_by_Jack_Mitchell.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/06/Andy_Warhol_by_Jack_Mitchell.jpg?resize=635%2C508" alt="Andy_Warhol_by_Jack_Mitchell" /></a></p>
+<p><span class="s1">Andy Warhol’s great achievement was to develop a generous and helpful view of two major forces in modern society: commerce and celebrity. He spent most of his life as an international celebrity, but he was also keen on business. Warhol was born in Pennsylvania in 1928 to Czechoslovakian parents and lived most of his life in New York. Today his name is one of the most commercially-successful artistic brands on the planet (his pictures of Elvis sell for 50 to 100 million dollars).</span></p>
+<p><span class="s1">There are four big ideas behind Andy Warhol’s work, which can teach us a more inspired way of looking at the world, and prompts us to build a better society.</span></p>
+<p><span class="s1"><em>Appreciating everyday life</em> </span></p>
+<p><span class="s1">We spend much of our life working to reach some kind of better place: to have a nicer house, to buy better things, perhaps to move to a different country. We are often down on average things and positive about the exotic: a meal from Panama with Japanese infusions, a holiday in Tbilisi. It is normal to feel that the exciting things are not where we are.</span></p>
+<p><span class="s1">Andy Warhol aims to remedy this by getting us to look again at things in everyday life. The soup can is an intriguing object.</span></p>
+<p><a href="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/06/andy-warhol-campbells-soup-sitotisk-na-papire-copyright-slovenska-narodni-galerie.jpg"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/06/andy-warhol-campbells-soup-sitotisk-na-papire-copyright-slovenska-narodni-galerie.jpg?resize=635%2C613" alt="andy-warhol-campbells-soup-sitotisk-na-papire-copyright-slovenska-narodni-galerie" /></a></p>
+<p><span class="s1">Putting them on the wall and looking at them helps us to see their beauty, to notice their appealing labels, their strong but elegant form, perfectly fitted to their job. When they are in a picture, we look at them with the same interest we might bestow on a candlestick holder or a spoon dug up from Roman times. Art can put us in the mindset of appreciation, which is hard to hold onto when we are busy using or consuming the objects around us.</span></p>
+<p><span class="s1">In the same spirit of re-directing our attention, Andy Warhol made a video of himself eating a hamburger.</span></p>
+<p><span class="s1">He is trying to get us to practice a mental habit: feeling that the things we do in our daily life are interesting and worthy of note. Warhol wants us to realise that we are already living an appealing life – to stop being down on ourselves, and ignoring ordinary experiences – filling up a car with petrol, dropping something off at the dry cleaners, microwaving a pre-made meal… We don’t need to fantasise about other places. We just need to see that the things we do all the time and the objects around us have their own merits and are enchanting in their own ways.</span></p>
+<p><span class="s1"><em>Creating celebrities</em> </span></p>
+<p><span class="s1">During the 1960s, Warhol groomed a retinue of bohemian and countercultural eccentrics to whom he gave the title ‘Superstars’, including Nico, Joe Dallesando, Edie Sedgwick, Viva, Ultra Violet, Holly Woodlawn, Jackie Curtis, and Candy Darling. </span></p>
+<p><span class="s1">Warhol understood that celebrities have an important power: they can distribute glamour and prestige. He thought that glamour needed to be distributed in the right way for society to work well. </span></p>
+<p><span class="s1">For example, Warhol believed that the job of being a maid had too little status. He wrote: ‘They should have a college course now for maids and call it something glamorous, I think. People don’t want to work at something unless there’s a glamorous name tagged to it. The idea of America is theoretically so great because we’ve gotten rid of maids and janitors, but then, somebody still has to do it. I always think that even very intelligent people could get a lot out of being maids because they’d see so many interesting people and be working in the most beautiful houses. I mean, everybody does something for everybody else – your shoemaker does your shoes for you, and you do entertainment for him – it’s always an exchange, and if it weren’t for the stigma we give certain jobs, the exchange would always be equal. A mother is always doing things for her child, so what’s wrong with a person off the street doing things for you?’</span></p>
+<p><span class="s1">Warhol suggested that the President could use his status to shift perceptions. ‘If the President would go into a public bathroom in the Capitol, and have the TV cameras film him cleaning the toilets and saying “Why not? Somebody’s got to do it!” then that would do so much for the morale of the people who do the wonderful job of keeping the toilets clean.’</span></p>
+<p><span class="s1">Warhol saw that celebrity culture has great potential. But he wants us to get the right celebrities. If we were to anoint some ‘Superstars’ today we might choose, for example, a nurse, a janitor, an airport security manager, an engineer in a logistics warehouse, a philosophy student, an economist, or an 11-year-old who has just started drawing classes. </span></p>
+<p><span class="s1"><em>Combining art and business</em></span></p>
+<p><span class="s1">He didn’t call his place in New York a <em>studio –</em> the prestigious term used by artists since the Renaissance to describe their place of work. Instead he called it ‘The Factory’.<br />
+ </span></p>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/06/p357a.jpg"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/06/p357a.jpg?resize=635%2C314" alt="p357a" /></a></p>
+<h5 id="warhol-in-the-factory-1965">Warhol in the Factory, 1965</h5>
+<p><span class="s1">We tend to feel that the idea of art and the idea of a factory don’t mix. But Warhol’s point was that business and art actually do very much belong together: ‘Being good in business is the most fascinating kind of art. During the hippie era people put down the idea of business – they’d say, “Money is bad,” and “Working is bad,” but making money is art and working is art and good business is the best art.’ </span></p>
+<p><span class="s1">He began to like business when he made an agreement with a local theatre to make them one film per week. This moved his filmmaking from being something done on the side, to an organised production. He learnt more skills, and moved from short movies into longer movies and feature films (he also tried to learn the logistics of distributing movies, but decided he needed a partnership after all).</span></p>
+<p><span class="s1">The lesson of The Factory is that we can organise ourselves to produce good things more reliably and cheaply. One example of this for Warhol was Coke. He pointed out that wherever you go, Coke is always the same. Whether you’re the President or a cleaner, you still drink the same Coke – and it’s a good drink. Art has generally not been able to live up to this ideal of being good <em>and</em> widely distributed. Artists make a few things, and only a few people get to own them. Andy Warhol tried to counteract this. One day after reading that Picasso had made four thousand masterpieces in his lifetime, Warhol set out to make four thousand prints in one day. As it turned out, it took him a month to make five hundred. But he believed that art should be mass-produced and widely distributed. ‘If the one ‘master painting’ is good, they’re all good’.</span></p>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/06/vs-431.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/06/vs-431.jpg?resize=635%2C423" alt="vs-431" /></a></p>
+<h5 id="andy-warhol-with-the-american-man-portrait-of-watson-powell-at-the-factory-1964">Andy Warhol with ‘The American Man (Portrait of Watson Powell)’ at The Factory, 1964</h5>
+<p><span class="s1">The lesson we can draw from Warhol is that mass production needs to apply beyond making prints and other kinds of ‘high art’. We need the organising, commoditising and branding powers of business to reliably produce and distribute good clothing, high-quality childcare, psychotherapy, careers advice, and good architecture – to start the list.</span></p>
+<p><span class="s1"><em>Brand extension</em></span></p>
+<p><span class="s1">Most art does not have an impact on the world. But Warhol was keen to do so. He mastered many genres – from drawing, painting and printing, to photography, audio recording, sculpture and theatre; he started a magazine, designed clothes, managed a band, made 60 films and had plans to start his own TV chat show. What held all this together was his approach to life, which came through in everything he did. He was sensitive: he noticed details, he was aware of how he felt, he was moved by the surfaces of the world. He was also kind: he was unbullying. He was not vindictive against the world. He was untroubled by people’s strangeness. This openness and lack of vindictiveness gave him freedom to play and enjoy the world.</span></p>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/06/Ethel_Scull-1712x950.jpg"><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/06/Ethel_Scull-1712x950.jpg?resize=635%2C352" alt="Ethel_Scull-1712x950" /></a></p>
+<h5 id="ethel-scull-36-times">Ethel Scull 36 Times</h5>
+<p><span class="s1">All these values together make up his ‘brand’. ‘Brand extension’ means taking the values which have been realised in one thing, and making them real in another thing. For example, if we looked at the values embodied in the VW Golf car – we might say that it is a car which is unaware of class distinctions, practical, elegant, affordable. These qualities are needed in many places elsewhere in the world. Brand extension might take VW from making cars, to designing clothes, or setting up a school.</span></p>
+<p><span class="s1">Warhol was able to extend his work into different channels partly because of his populism. Being populist means he was unafraid to reach people where they started. The chat show is populist because it plays to what masses of people find funny or interesting. Warhol was populist out of generosity. He wanted to translate the things he cared about (sensitivity, love of glamour and spectacle, playfulness) into objects and experiences that touched many people.</span></p>
+<p><span class="s1">The only pity is that he finished where he did. He could have founded his planned TV chat show, then gone on – in ever broader and broader partnerships – to start a fashion label, design a hotel, a chain of schools, a financial advisory service, a medical centre, a supermarket chain and an airport…</span></p>
+<p><span class="s1">This is the task still open to people who are drawn to art, but also want to change the world.</span></p>
+<p><span class="s1">He died in 1987 when he was only 58, after complications following routine gallbladder surgery in New York Hospital. He is buried at a small cemetery near where he was born, in Bethel Park, Pennsylvania.</span></p>
+<p><a href="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/06/Andy-Warhol-shopping-in-Gristede’s-supermarket-in-New-York-1965.jpg"><embed src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/06/Andy-Warhol-shopping-in-Gristede’s-supermarket-in-New-York-1965.jpg?resize=635%2C632" /></a></p>
+<h5 id="andy-warhol-shopping-in-gristedes-supermarket-in-new-york-1965">Andy Warhol shopping in Gristede’s supermarket in New York, 1965</h5>
+<title>thebookoflife</title>
+
+
+</body>
+</html>

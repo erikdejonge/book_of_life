@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Computer Modern";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/computermodern/Sans/cmunss.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "scpro";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/sourcecodepro/SourceCodePro-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+    text-rendering: geometricPrecision;
+    font-family: "Dyslexie";
+    /*font-family:  "scpro Light";*/
+    font-family:  "Computer Modern";
+    font-size: 18px;
+    line-height: 150%;
+    color: rgba(242, 240, 205, 0.8);
+
+    background-color: #000;
+    background-color: #02090B;
+    margin: 10px 13px 10px 13px;
+    padding-bottom: 64px;
+}
+
+html * {
+    color-profile: sRGB;
+}
+
+strong {
+    font-weight: normal;
+    color: #ffd479;
+    color: rgba(100, 182, 138, 1);
+}
+
+em {
+
+    font-weight: normal;
+    font-style: normal;
+    color: #ffd479;
+    color: #64B68A;
+}
+
+table {
+    min-width: 1150px !important;
+    width: 100% !important;
+    margin: 10px 0 15px 0;
+    border-collapse: collapse;
+}
+
+table tr:nth-child(2n) {
+    background-color: #06181b;
+}
+
+td, th {
+    border: 1px solid #3C3C3E;
+    padding: 3px 10px;
+}
+
+th {
+    padding: 5px 10px;
+    color: #B3D8FD;
+    background-color: #06181b;
+}
+
+a {
+    color: #B4D9FB;
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+a:hover {
+    color: #2668D4;
+    text-decoration: none;
+}
+
+a img {
+    border: 2px solid;
+}
+
+p {
+    margin-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+img {
+    background-color: #7F7F7F;
+    max-width: 1600px;
+}
+
+ul, ol {
+    padding: 16px 0 8px 10px;
+    margin: 16px 0 8px 10px;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none; /* Hides the default checkbox style */
+    height: 15px !important;
+    width: 15px !important;
+    top: -4px !important;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: .15s;
+    border-radius: 4px;
+    background-color: #FCB8B0;
+    color: black
+}
+
+input[type="checkbox"]:checked {
+    background-color: #BCFBBA;
+}
+
+input[type="checkbox"]:before, input[type="checkbox"]:checked:before {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    height: 16px !important;
+    width: 16px !important;
+    line-height: 16px;
+    text-align: center;
+    font-weight: bold;
+    content: '✘';
+}
+
+input[type="checkbox"]:checked:before {
+    content: '✔';
+}
+
+input[type="checkbox"]:hover:before {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+li {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-left: 8px;
+    padding-left: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+li.task-list-item {
+    list-style-type: none;
+    margin-left: -20px;
+}
+
+li.task-list-item label {
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+
+li.task-list-item input {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+}
+
+ul li:nth-child(even) {
+    background-color: #06181b;
+}
+ol li:nth-child(even) {
+    background-color: #06181b;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    color: #b4d9fb;
+    margin-top: 18px;
+    text-rendering: geometricPrecision;
+    font-family: "scpro";
+    font-size: 18px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    text-transform: capitalize;
+}
+
+h1 {
+    color: #54B2BC;
+    color: rgba(255, 212, 121, 1);
+    font-weight: normal;
+    margin-top: 32px;
+    font-size: 26px;
+    margin-bottom: 12px;
+
+}
+
+h2 {
+
+    color: #ffd479;
+    color: rgba(255, 212, 121, 0.8);
+
+    margin-top: 24px;
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-size: 20px;
+
+    color: rgba(129, 206, 203, 1);
+    margin-top: 20px;
+}
+
+h4 {
+    color: rgba(129, 206, 203, 0.8);
+}
+
+h5 {
+    color: rgba(129, 206, 203, 0.7);
+}
+
+h6 {
+    color: rgba(129, 206, 203, 0.6);
+}
+
+ul, ol {
+    padding-left: 30px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+hr {
+    margin: 32px 12px;
+    border: 0;
+    border-bottom: 1px solid #B4C5C5;
+}
+
+blockquote {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-style: normal;
+}
+
+blockquote p {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+    padding-left: 8px;
+    border-left: 3px solid #54B2BC;
+}
+
+blockquote p a {
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+code, pre {
+    font-family: "scpro" !important;
+    color: #8EB1D0;
+    display: block;
+    padding: 12px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    border: 1px solid #3C3C3E;
+    background-color: #051012;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+* {
+    -webkit-print-color-adjust: exact;
+}
+
+@media screen and (min-width: 914px) {
+    body {
+        width: 1145px;
+        margin: 10px auto;
+    }
+}
+
+@media print {
+    body, code, pre code, h1, h2, h3, h4, h5, h6 {
+        color: black;
+        background: white;
+    }
+
+    table, pre {
+        page-break-inside: avoid;
+    }
+}
+
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    background-color: #051012;
+    color: #116CD6 white-space : pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+pre code {
+    background-color: #051012;
+    color: #81ddaf;
+    padding: 0;
+    border: none;
+margin-top: 0px !important;
+
+margin-bottom: 0px !important;
+}
+
+pre:not([class]) {
+    border: none;
+    padding: 0px !important;
+    color: #F2F0CD;
+
+}
+
+p {
+    white-space: pre-line;
+}
+
+
+div.sourceCode {
+    overflow-x: auto
+}
+
+table.sourceCode, td.lineNumbers, td.sourceCode, tr.sourceCode {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    border: none
+}
+
+table.sourceCode {
+    width: 100%;
+    line-height: 100%
+}
+
+td.lineNumbers {
+    text-align: right;
+    padding-right: 4px;
+    padding-left: 4px;
+    color: #aaa;
+    border-right: 1px solid #aaa
+}
+
+td.sourceCode {
+    padding-left: 5px
+}
+
+.codehilite code, .codehilite pre {
+    color: #fdce93;
+    background-color: #3f3f3f
+}
+
+code > span.kw {
+    color: #BCFBBA;
+    font-weight: 700
+}
+
+code > span.dt {
+    color: #e90
+}
+
+code > span.dv {
+    color: #8AF9F0
+}
+
+code > span.bn, code > span.fl {
+    color: #40a070
+}
+
+code > span.st {
+    color: #FBFBAB
+}
+
+code > span.ch {
+    color: #93DD9F
+}
+
+code > span.co {
+    color: #929292
+}
+
+code > span.ot {
+    color: #76AEF4
+}
+
+code > span.al {
+    color: #e90
+}
+
+code > span.fu {
+    color: #00B1B1
+}
+
+code > span.er {
+    color: #FB9BEA
+}
+img[src='Error.src']{
+    display: none;
+}
+
+</style>
+</head>
+<body>
+<h2 id="chapter-6-curriculum-artarchitecture">Chapter 6: curriculum: Art/Architecture</h2>
+<h2 id="artarchitecture"><a href="../category/curriculum/artarchitecture/index.html">Art/Architecture</a></h2>
+<h1 id="dieter-rams">Dieter Rams</h1>
+<p>Dieter Rams is one of the world’s greatest designers of everyday objects. His mind, which might in other eras have been employed making sculptures for altarpieces or precision scales for diamond traders, is devoted to producing carefully-made calculators, shelving, office chairs, TVs, radios, watches, record players, egg-beaters, fruit juicers, video cameras, and electric shavers.</p>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/Dieter-Rams.jpg"><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/Dieter-Rams.jpg?resize=635%2C461" alt="Dieter-Rams" /></a></p>
+<p><span class="s1">His career has been extraordinarily successful. The company he made famous, Braun, was – when he joined – a medium-sized manufacturer of radios in Germany and grew to become a global titan of consumer goods production. As head of design, Rams’s work ended up in hundreds of millions of homes. Apple took up his work with enthusiasm, finding inspiration in his T3 pocket radio for the first iPod.</span></p>
+<p><a href="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/T3-and-iPod.jpg"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/T3-and-iPod.jpg?resize=635%2C419" alt="T3 and iPod" /></a></p>
+<p><span class="s1">Why is design important? Partly because poorly designed things slow us down and sadden us – the stapler that doesn’t work, the bag of walnuts that doesn’t open, the TV remote control that is impossible to figure out. All are symbols of miscommunication and lack of empathy. Bad design is also depressing given the price it exacts on the planet. Modern capitalism can seem to be stuck filling the world with junk, much of which ends up floating around the Pacific Ocean choking sea turtles and albatrosses.</span></p>
+<p><span class="s1">Rams shows us that capitalism need not produce </span>poor-quality products. His life and work are a guide to the values that we might make more central to our lives and our businesses. There are five underlying lessons to be taken from his work:</p>
+<p><strong><span class="s1">1. The value of simplicity</span></strong></p>
+<p><span class="s1">Rams wanted to reduce everything back to just a few things that matter most. You can see this in one of his early products, the PC3SV radio.</span></p>
+<p><a href="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/PC3SV-radio1.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/PC3SV-radio1.jpg?resize=635%2C313" alt="PC3SV radio" /></a></p>
+<p><span class="s1">There are many more things which could be done with a radio: one could add in bass and tenor controls, separate AM and FM dials, an alarm clock, an output cord for larger speakers, and so on. Rams pushed in the opposite direction. He sacrificed things that were valuable, but not top-priority in order to achieve simplicity. He made the on-off switch a part of the volume control, which hadn’t been done before, and which people argued against. But the end result is satisfying.</span></p>
+<p><span class="s1">Simplicity is so satisfying because our lives are cluttered, and the experience of having too many options is a constant drag on us. When we see simplicity, we know that we value it. But in many other contexts in our lives we find it difficult, even embarrassing, to be simple. If we get promoted to manager we might find ourselves feeling a bit awkward around still using a biro. Or we might feel the need to beef up a report a little, even though all we really wanted to say could be said in one paragraph.</span></p>
+<p><span class="s1">Our true selves might secretly yearn for something basic, but we might have lost touch with ourselves so much that it feels weird to seek it out. For example, in an expensive restaurant, there is a pressure to order something elaborate, even though deep down we might actually just feel like ordering cheese on toast.</span></p>
+<p><a href="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/302.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/302.jpg?resize=635%2C350" alt="302" /></a></p>
+<p><span class="s1">Being simple can make you feel vulnerable. But simplicity is really an achievement – it follows from hard-won clarity about what matters.</span></p>
+<p><strong><span class="s1">2. The value of modesty</span></strong></p>
+<p><span class="s1">When designing a toothbrush, Rams spent weeks thinking about and experimenting with the ratio of the handle to the bristles, the width of the handle, the number of ridges for the thumb to grip onto. But this large amount of work is not obvious in the final product. This follows from a principle of modesty which Rams lives by, and which goes back to the Roman poet Horace: “the art lies in concealing the art.”</span></p>
+<p><a href="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/Picture2.png"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/Picture2.png?resize=635%2C613" alt="Picture2" /></a></p>
+<p><span class="s1">Rams had modesty as a person. Although he originally trained as an architect (and a carpenter), he wanted to make products that improved people’s lives, rather than design spectacular one-off buildings to promote his own glory. And the products he designed are also imbued with modesty: they don’t try to attract your attention for no reason. They are happy to sit in the background and do the work.</span></p>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/braun-sk-4.jpg"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/braun-sk-4.jpg?resize=635%2C476" alt="braun-sk-4" /></a></p>
+<p><a href="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/KM3-mixer.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/KM3-mixer.jpg?resize=635%2C635" alt="KM3 mixer" /></a></p>
+<p><a href="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/DesignMuseum-braun9.jpg"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/DesignMuseum-braun9.jpg?resize=635%2C418" alt="DesignMuseum-braun9" /></a></p>
+<h5 id="he-spent-18-weeks-agonising-over-the-placement-of-the-buttons"><span class="s1">He spent 18 weeks agonising over the placement of the buttons</span></h5>
+<p><span class="s1">Modesty is the opposite of being showy. It is part of a broader ideal of service – which is a central ideal of good capitalism. One is not there to attract attention; one is there to help the customer to live a better life – like a discrete waiter. There can be few more quietly helpful tools out there than the 606 Universal Shelving System which Rams designed for the company Vitsoe, and which has been in continuous production since 1960.</span></p>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/606-shelves.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/606-shelves.jpg?resize=635%2C466" alt="606 shelves" /></a></p>
+<h5 id="the-shelves-stay-in-the-background-modestly-helping-to-maintain-some-order-in-the-life-of-their-owner"><span class="s1">The shelves stay in the background, modestly helping to maintain some order in the life of their owner</span></h5>
+<p><span class="s1">True modesty comes from confidence. Modesty is a lack of anxiety about being ignored.</span></p>
+<p><strong><span class="s1">3. Empathy with the customer</span></strong></p>
+<p><span class="s1">One of Rams’s principles is that an object should be easy to live with, and easy to encounter for the first time. Rams was the first product designer to get rid of instruction manuals. The object should be obvious from the beginning.</span></p>
+<p><a href="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/post0007_1.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/post0007_1.jpg?resize=635%2C422" alt="post0007_1" /></a></p>
+<p><span class="s1">The ability to create a welcoming experience for another person is a great skill. Not many people can do it well, however, because it derives from an unusual source. That is, Rams’s user-experience is guided by remembering what it is like to be distressed. He is in touch with what it is like to be lost – to feel abandoned, frustrated. Although his work looks serene, it comes from knowing how easily we get angry and muddled and ashamedly confused by instructions which any normal adult should be able to understand.</span></p>
+<p><a href="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/rams.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/rams.jpg?resize=635%2C572" alt="rams" /></a></p>
+<p><span class="s1">We are more like simpletons than we pretend to be. We actually want things to be easy and user-friendly. But we don’t readily tell other people that we are a bit stupid – although everyone is in many ways. Which is why it is the job of the designer (or the hotelier, or the customer feedback agent) to remember with tenderness the fact that we are all childlike and a little bit lost. Rams is like a parent: he is making the world friendlier for us. </span></p>
+<p>Rams is not making things for actual 6-year-olds. Rather, he mixes insights about our childlike nature with a context of elegance and dignity. For example, this calculator with colour buttons to show you where the main functions are.</p>
+<p><a href="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/ET-66-calculator.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/ET-66-calculator.jpg?resize=635%2C635" alt="ET 66 calculator" /></a></p>
+<p><span class="s1">Remembering that everyone is more easily confused than they pretend to be should be a basis for the reform of architecture, hotels, street design, websites, car manufacturing, phone companies, and writing books.</span></p>
+<p><strong><span class="s1">4. Being classic</span></strong></p>
+<p><span class="s1">Rams was classic, which means he tapped into things that don’t change. This means we don’t have to buy new things all the time. A classic book, for instance, is La Rochefoucauld’s Maxims. It is a classic because the essential lessons in it are still useful for us to hear, many hundreds of years after it was written.</span></p>
+<p><span class="s1">Overall, the global economy needs to be more classic. The fashion industry, to take what is currently the least classic business, could play more to our need to have items of clothing that are versatile and dignified in many contexts and less to our drive to set ourselves apart.</span></p>
+<p><span class="s1">We have a Romantic ideology, which tends to emphasise what is new. Rams, in contrast, is interested in what is permanent. His goal was to create a product that wouldn’t go out of date, so we would never have to throw it away.</span></p>
+<p><a href="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/SM2-shaver.jpg"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/SM2-shaver.jpg?resize=635%2C558" alt="SM2 shaver" /></a></p>
+<p><strong><span class="s1">5. Art and product design</span></strong></p>
+<p><span class="s1">If you cared about bringing more attention and care to the little things of everyday life in 1650, you might have gone into painting. The Dutch painter Johannes Vermeer was an advocate for paying more attention to the humble objects in daily life. In <em>The Little Street</em> (valued at £100 million) he portrays a life governed by simplicity and modesty.</span></p>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/732px-Jan_Vermeer_van_Delft_025-1.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/732px-Jan_Vermeer_van_Delft_025-1.jpg?resize=635%2C552" alt="732px-Jan_Vermeer_van_Delft_025 (1)" /></a></p>
+<p><span class="s1">Vermeer notices the details: the lived-in neatness and order, the sturdy seats outside, the basic broom. Rams values the same things that Vermeer does, but he has turned these values into products we can use in our own lives.</span></p>
+<p><a href="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/vitsoe-606-universal-shelving-system-living-room-003.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/vitsoe-606-universal-shelving-system-living-room-003.jpg?resize=635%2C477" alt="vitsoe-606-universal-shelving-system-living-room-003" /></a></p>
+<p><span class="s1">There is no dividing line between art and product design. Paintings were originally meant to be part of daily life, to hang in your kitchen or the hallway, so they would seep into your life. Nowadays, we might only see Vermeer’s work once or twice every few years. Whereas Rams’s work we can buy and live with every day.</span></p>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/il_570xN.351138068.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/il_570xN.351138068.jpg?resize=635%2C580" alt="il_570xN.351138068" /></a></p>
+<p><a href="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/796px-Johannes_Vermeer_-_Woman_Holding_a_Balance_-_Google_Art_Project.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/796px-Johannes_Vermeer_-_Woman_Holding_a_Balance_-_Google_Art_Project.jpg?resize=635%2C592" alt="796px-Johannes_Vermeer_-_Woman_Holding_a_Balance_-_Google_Art_Project" /></a></p>
+<h5 id="vermeer-loved-the-precision-of-the-scales.-rams-loved-this-too-but-his-work-reached-many-more-people"><span class="s1">Vermeer loved the precision of the scales. Rams loved this too, but his work reached many more people</span></h5>
+<p><span class="s1">Rams raises product design to new heights. The true artist of our age designs phones and alarm clocks, rather than pieces of canvas. All the intensity, focus, high-standards, and the pursuit of integrity that is found in art can be brought into the realm of everyday design. And this is where it stands more chance of affecting people, as they check the time, or press the snooze button on their alarm.</span></p>
+<p><a href="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/BN2BKBKGB.jpg"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2015/07/BN2BKBKGB.jpg?resize=635%2C635" alt="BN2BKBKGB" /></a></p>
+<p><strong><span class="s1">Conclusion</span></strong></p>
+<p><span class="s1">Rams shows us what good business could be: elegant, long-lasting, dignified. All capitalism should be like this. Ideally, entrepreneurs would study his work and devote themselves to the values of simplicity and modesty at the heart of his worldview. Rams’s mindset is currently unique, but it should become mainstream and widespread.</span></p>
+<title>thebookoflife</title>
+
+
+</body>
+</html>

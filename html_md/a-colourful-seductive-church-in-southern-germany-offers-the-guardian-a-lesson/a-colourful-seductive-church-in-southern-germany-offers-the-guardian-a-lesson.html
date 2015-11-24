@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Computer Modern";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/computermodern/Sans/cmunss.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "scpro";
+    src: url('file:///Users/rabshakeh/workspace/devenv/fonts/sourcecodepro/SourceCodePro-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+    text-rendering: geometricPrecision;
+    font-family: "Dyslexie";
+    /*font-family:  "scpro Light";*/
+    font-family:  "Computer Modern";
+    font-size: 18px;
+    line-height: 150%;
+    color: rgba(242, 240, 205, 0.8);
+
+    background-color: #000;
+    background-color: #02090B;
+    margin: 10px 13px 10px 13px;
+    padding-bottom: 64px;
+}
+
+html * {
+    color-profile: sRGB;
+}
+
+strong {
+    font-weight: normal;
+    color: #ffd479;
+    color: rgba(100, 182, 138, 1);
+}
+
+em {
+
+    font-weight: normal;
+    font-style: normal;
+    color: #ffd479;
+    color: #64B68A;
+}
+
+table {
+    min-width: 1150px !important;
+    width: 100% !important;
+    margin: 10px 0 15px 0;
+    border-collapse: collapse;
+}
+
+table tr:nth-child(2n) {
+    background-color: #06181b;
+}
+
+td, th {
+    border: 1px solid #3C3C3E;
+    padding: 3px 10px;
+}
+
+th {
+    padding: 5px 10px;
+    color: #B3D8FD;
+    background-color: #06181b;
+}
+
+a {
+    color: #B4D9FB;
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+a:hover {
+    color: #2668D4;
+    text-decoration: none;
+}
+
+a img {
+    border: 2px solid;
+}
+
+p {
+    margin-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+img {
+    background-color: #7F7F7F;
+    max-width: 1600px;
+}
+
+ul, ol {
+    padding: 16px 0 8px 10px;
+    margin: 16px 0 8px 10px;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none; /* Hides the default checkbox style */
+    height: 15px !important;
+    width: 15px !important;
+    top: -4px !important;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: .15s;
+    border-radius: 4px;
+    background-color: #FCB8B0;
+    color: black
+}
+
+input[type="checkbox"]:checked {
+    background-color: #BCFBBA;
+}
+
+input[type="checkbox"]:before, input[type="checkbox"]:checked:before {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    height: 16px !important;
+    width: 16px !important;
+    line-height: 16px;
+    text-align: center;
+    font-weight: bold;
+    content: '✘';
+}
+
+input[type="checkbox"]:checked:before {
+    content: '✔';
+}
+
+input[type="checkbox"]:hover:before {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+li {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-left: 8px;
+    padding-left: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+li.task-list-item {
+    list-style-type: none;
+    margin-left: -20px;
+}
+
+li.task-list-item label {
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+
+li.task-list-item input {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+}
+
+ul li:nth-child(even) {
+    background-color: #06181b;
+}
+ol li:nth-child(even) {
+    background-color: #06181b;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    color: #b4d9fb;
+    margin-top: 18px;
+    text-rendering: geometricPrecision;
+    font-family: "scpro";
+    font-size: 18px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    text-transform: capitalize;
+}
+
+h1 {
+    color: #54B2BC;
+    color: rgba(255, 212, 121, 1);
+    font-weight: normal;
+    margin-top: 32px;
+    font-size: 26px;
+    margin-bottom: 12px;
+
+}
+
+h2 {
+
+    color: #ffd479;
+    color: rgba(255, 212, 121, 0.8);
+
+    margin-top: 24px;
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-size: 20px;
+
+    color: rgba(129, 206, 203, 1);
+    margin-top: 20px;
+}
+
+h4 {
+    color: rgba(129, 206, 203, 0.8);
+}
+
+h5 {
+    color: rgba(129, 206, 203, 0.7);
+}
+
+h6 {
+    color: rgba(129, 206, 203, 0.6);
+}
+
+ul, ol {
+    padding-left: 30px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+hr {
+    margin: 32px 12px;
+    border: 0;
+    border-bottom: 1px solid #B4C5C5;
+}
+
+blockquote {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-style: normal;
+}
+
+blockquote p {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+    padding-left: 8px;
+    border-left: 3px solid #54B2BC;
+}
+
+blockquote p a {
+    text-decoration: none;
+    border-bottom: 1px solid #2A595F;
+}
+
+code, pre {
+    font-family: "scpro" !important;
+    color: #8EB1D0;
+    display: block;
+    padding: 12px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    border: 1px solid #3C3C3E;
+    background-color: #051012;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+* {
+    -webkit-print-color-adjust: exact;
+}
+
+@media screen and (min-width: 914px) {
+    body {
+        width: 1145px;
+        margin: 10px auto;
+    }
+}
+
+@media print {
+    body, code, pre code, h1, h2, h3, h4, h5, h6 {
+        color: black;
+        background: white;
+    }
+
+    table, pre {
+        page-break-inside: avoid;
+    }
+}
+
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.1;
+    background-color: #051012;
+    color: #116CD6 white-space : pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border-radius: 3px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+pre code {
+    background-color: #051012;
+    color: #81ddaf;
+    padding: 0;
+    border: none;
+margin-top: 0px !important;
+
+margin-bottom: 0px !important;
+}
+
+pre:not([class]) {
+    border: none;
+    padding: 0px !important;
+    color: #F2F0CD;
+
+}
+
+p {
+    white-space: pre-line;
+}
+
+
+div.sourceCode {
+    overflow-x: auto
+}
+
+table.sourceCode, td.lineNumbers, td.sourceCode, tr.sourceCode {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    border: none
+}
+
+table.sourceCode {
+    width: 100%;
+    line-height: 100%
+}
+
+td.lineNumbers {
+    text-align: right;
+    padding-right: 4px;
+    padding-left: 4px;
+    color: #aaa;
+    border-right: 1px solid #aaa
+}
+
+td.sourceCode {
+    padding-left: 5px
+}
+
+.codehilite code, .codehilite pre {
+    color: #fdce93;
+    background-color: #3f3f3f
+}
+
+code > span.kw {
+    color: #BCFBBA;
+    font-weight: 700
+}
+
+code > span.dt {
+    color: #e90
+}
+
+code > span.dv {
+    color: #8AF9F0
+}
+
+code > span.bn, code > span.fl {
+    color: #40a070
+}
+
+code > span.st {
+    color: #FBFBAB
+}
+
+code > span.ch {
+    color: #93DD9F
+}
+
+code > span.co {
+    color: #929292
+}
+
+code > span.ot {
+    color: #76AEF4
+}
+
+code > span.al {
+    color: #e90
+}
+
+code > span.fu {
+    color: #00B1B1
+}
+
+code > span.er {
+    color: #FB9BEA
+}
+img[src='Error.src']{
+    display: none;
+}
+
+</style>
+</head>
+<body>
+<h2 id="chapter-1-capitalism-media">Chapter 1: capitalism: Media</h2>
+<h2 id="media"><a href="../category/capitalism/media/index.html">Media</a></h2>
+<h1 id="on-guilt-trips-and-charm">On Guilt-trips and Charm</h1>
+<p>The church of the fourteen helpers in Bavaria was built about two hundred and fifty years ago. But, strange as it might sound, the ideas that led to its construction are more important than ever.</p>
+<p><span class="s1">At that time, the Catholic Church wanted to enforce a specific moral. They wanted to say that everyday compassion and care, however humble and ordinary it might look from the outside, is hugely important. The Church wanted to make this message more active in peoples lives, edging us away from our natural selfishness and busy indifference. They had a key idea about something important and wanted to bring more people on board.</span></p>
+<p><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/PM-050214-monbiotA.jpg" alt="PM-050214-monbiotA" /></p>
+<h5 id="the-carrot">The carrot</h5>
+<p><span class="s1">They were also keen to avoid a technique which theyd been trying for centuries and that hadnt worked so well: that of terrifying and guilt-tripping people into being good. So, in this part of Southern Germany, for a time at least, they settled on a different, much more intelligent technique. They werent going to talk about hell and damnation any more, they were going to try to seduce people into being good.</span></p>
+<p><a href="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/PM-050214-monbiotB.jpg"><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/PM-050214-monbiotB.jpg?resize=633%2C566" alt="PM-050214-monbiotB" /></a></p>
+<h5 id="the-stick"><span class="s1">The stick</span></h5>
+<p><span class="s1">Making people better is a task that obsesses a lot of people today as well. In the last few days, for example, the Guardian newspaper has sought to get its readers to care more about many bad things: not enough women sitting on government panels, excess pay at the top of UK companies, parents who dont play enough with their children, excessive reliance on private transport, and too many hamburgers from fast-food restaurants. That is just the start. The Guardians strategy to overcome laziness, greed and sin is to induce a persistent feeling of guilt in the reader. There could only be a single conclusion were you not to care about the issues being outlined: you are a bit mean, rather callous and quietly complicit with repression and cruelty.</span></p>
+<p><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/PM-050214-monbiotC.jpg" alt="PM-050214-monbiotC" /></p>
+<h6 id="getty">Getty</h6>
+<h5 id="the-limits-of-guilt"><span class="s1">The limits of guilt</span></h5>
+<p><span class="s1">The urge to nag is very understandable. The problem is its not terribly effective. It will work for a small number of people but for most of us it is off-putting. We instinctively resent being told we are heartless when we we are just harassed; we are already doing our best to be decent people.</span></p>
+<p>The Bavarian church is important today because it explores a very different approach. It doesnt nag, it does not issue stern warnings or upbraid us for being selfish. It does not make us feel guilty about our failings.</p>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/PM-050214-monbiotD.jpg"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/PM-050214-monbiotD.jpg?resize=635%2C525" alt="PM-050214-monbiotD" /></a></p>
+<h5 id="uplift"><span class="s1">Uplift</span></h5>
+<p><span class="s1">Instead the architect used every possible means to persuade people through excitement, pleasure, awe and delight. The interlocking domes and vaults are exceptionally beautiful inducing a mood of lightness and vitality. It is splendid but for a reason. It is expressing the true glory of modest goodwill. It wants to seduce us, charm us, into kindness. It acknowledges we might need a lot of encouragement.</span></p>
+<p><span class="s1">There is a big lesson here for modern culture. There are so many serious things we need collective persuading about. The rich need to be persuaded to be much more generous than they are currently being, bankers need to be encouraged to be more prudent around money, we should be more cautious about damaging the environment, more considered about what we eat and nicer to our children. Good ideas about all of these matters are very prominent already. But the news has to date largely attempted to motivate us by guilt, rather than charm us into goodness.</span></p>
+<p>Maybe it is time to take a broad lesson from one rather extraordinary church in Bavaria.</p>
+<p>Let’s zero in on a specific example: the arctic ice is melting and this is going to have major, lasting implications for sea levels and weather around the world.</p>
+<p>A few people care a lot but, strangely and shamefully, Taylor Swifts legs are far more captivating. They are lovely in ways that seem to defy description: somehow they look ordinary, yet perfect. They are long, yet not freakish. They seem unbowed by their implausible length; both utterly firm and yet yielding and soft.</p>
+<p><a href="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/PM-290114-swiftA1.jpg"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/PM-290114-swiftA1.jpg?resize=635%2C550" alt="EXCLUSIVE Taylor Swift,Hailee Steinfeld, Jessica Szohr" /></a></p>
+<h6 id="wenn.com">WENN.com</h6>
+<h5 id="thrilling"><span class="s1">Thrilling</span></h5>
+<p><span class="s1">People who take global warming seriously tend to get apoplectic at this point. Theyre not wrong. While delightful, Taylor Swifts legs are of little significance in comparison with the fate of the planet. But getting angry at our fascination with the thighs of a singer is counter-productive in a democracy. We cannot be collectively dragged into being more responsible through guilt. And for a very simple reason. We dont have to pay attention. If those who care about arctic melt are going to get angry, bitter and stern, theyll just be ignored.</span></p>
+<p><img src="http://i1.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/PM-290114-swiftC.jpg" alt="Antarctica Mission" /></p>
+<h5 id="boring"><span class="s1">Boring</span></h5>
+<p><span class="s1">The problem is, we really do need to do something about that ice. But the starting point has to be indulgence towards the way our minds work. We are interested in Taylor Swifts legs not because we are evil but because we are wired in unhelpful ways. If we are going to be interested en masse in the defrosting poles, we need to take our fragilities on board and therefore get serious, very serious, about trying to make important news not just important, but also beguiling almost as tempting to hear about as Taylors legs. Then things stand a chance of changing.</span></p>
+<p><img src="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/09/PM-290114-swiftD.jpg" alt="Cold Weather" /></p>
+<h5 id="not-appealing-just-important">Not appealing just important</h5>
+<p><a href="http://i2.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/18302976982_aca4ab635d_k.jpg"><img src="http://i0.wp.com/www.thebookoflife.org/wp-content/uploads/2014/10/18302976982_aca4ab635d_k.jpg?resize=550%2C665" alt="18302976982_aca4ab635d_k" /></a></p>
+<h5 id="not-important-just-appealing"><span class="s1">Not important just appealing</span></h5>
+<title>thebookoflife</title>
+
+
+</body>
+</html>
